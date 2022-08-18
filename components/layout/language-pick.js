@@ -11,11 +11,12 @@ import { IconChevronDown } from "@tabler/icons";
 import Context from "../../store/context";
 
 const data = [
-  { label: "English", image: "/images/english.png" },
-  { label: "German", image: "/images/german.png" },
-  { label: "Italian", image: "/images/italian.png" },
-  { label: "Arabic", image: "/images/arabic.png" },
-  { label: "Spanish", image: "/images/spanish.png" },
+  { language: "English", label: "English", image: "/images/english.png" },
+  { language: "Deutsch", label: "German", image: "/images/german.png" },
+  { language: "Italian", label: "Italian", image: "/images/italian.png" },
+  { language: "عربي", label: "Arabic", image: "/images/arabic.png" },
+  { language: "Español", label: "Spanish", image: "/images/spanish.png" },
+  //data.language --> display , data.label --> logic
 ];
 
 const useStyles = createStyles((theme, { opened }) => ({
@@ -82,7 +83,7 @@ export function LanguagePicker() {
       onClick={() => languageHandler(item)}
       key={item.label}
     >
-      {item.label}
+      {item.language}
     </Menu.Item>
   ));
 

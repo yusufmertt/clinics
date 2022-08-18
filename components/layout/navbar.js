@@ -4,6 +4,8 @@ import { LanguagePicker } from "./language-pick";
 
 const Navbar = (props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { language } = props;
+
   return (
     <nav className="px-4 py-5 sm:max-w-xl md:max-w-full md:px-24 lg:px-8">
       <div className="relative flex items-center justify-between">
@@ -30,7 +32,7 @@ const Navbar = (props) => {
               <rect x="14" y="11" width="7" height="12" />
             </svg>
             <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-              Company
+             Company
             </span>
           </a>
         </Link>
@@ -41,9 +43,10 @@ const Navbar = (props) => {
                 href="#"
                 aria-label="Our product"
                 title="Our product"
-                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-500"
+                className="font-medium tracking-wide text-white bg-green-500 px-4 py-2 rounded-xl transition-colors duration-200 hover:bg-green-700"
               >
-                Clinics
+                 {(!language || language === "English") && "Clinics"}
+                 {language==="German" && "Kliniken"}
               </a>
             </Link>
           </li>
@@ -56,7 +59,8 @@ const Navbar = (props) => {
                 title="Product pricing"
                 className="font-medium tracking-wide text-gray-700 hover:text-green-500 transition duration-200"
               >
-                Pricing
+                {(!language || language === "English") && "Pricing"}
+                 {language==="German" && "Preisgestaltung"}
               </a>
             </Link>
           </li>
@@ -68,7 +72,8 @@ const Navbar = (props) => {
                 title="About us"
                 className="font-medium tracking-wide text-gray-700 hover:text-green-500 transition duration-200"
               >
-                Blog
+                {(!language || language === "English") && "Blog"}
+                 {language==="German" && "Bloggen"}
               </a>
             </Link>
           </li>
@@ -80,7 +85,8 @@ const Navbar = (props) => {
                 title="About us"
                 className="font-medium tracking-wide text-gray-700 hover:text-green-500 transition duration-200"
               >
-                Contact
+                {(!language || language === "English") && "Contact"}
+                 {language==="German" && "Kontakt"}
               </a>
             </Link>
           </li>

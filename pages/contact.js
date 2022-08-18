@@ -5,6 +5,7 @@ function ContactPage() {
   const emailRef = useRef();
   const topicRef = useRef();
   const messageRef = useRef();
+  const phoneRef = useRef();
 
   const [emailError, setEmailError] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -19,10 +20,10 @@ function ContactPage() {
     const message = messageRef.current.value;
     const formData = { name, email, topic, message };
 
-    if (email.trim() === "") {
+/*     if (email.trim() === "") {
       setEmailError(true);
       //setClasses("border-red-500")
-    } else {
+    } else { */
       fetch("/api/email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -34,11 +35,11 @@ function ContactPage() {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData),
           });
-          setEmailError(false)
-          setSuccess(true)
+          setEmailError(false);
+          setSuccess(true);
         }
       });
-    }
+    
   }
   return (
     <section className="text-gray-600 body-font relative">
@@ -58,8 +59,8 @@ function ContactPage() {
                 className="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800"
                 role="alert"
               >
-                <span className="font-medium">Error!</span> We need your email to
-                reach you.
+                <span className="font-medium">Error!</span> We need your email
+                to reach you.
               </div>
             )}
             {success && (
@@ -67,7 +68,8 @@ function ContactPage() {
                 className="p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800"
                 role="alert"
               >
-                <span className="font-medium">Success!</span> We have received your email, we will get back to you as soon as possile.
+                <span className="font-medium">Success!</span> We have received
+                your email, we will get back to you as soon as possile.
               </div>
             )}
             <div className="flex flex-wrap -m-2">
@@ -94,7 +96,7 @@ function ContactPage() {
                     htmlFor="email"
                     className="leading-7 text-sm text-gray-600"
                   >
-                    Email<span className="text-red-600"> *</span>
+                    Email{/* <span className="text-red-600"> *</span> */}
                   </label>
                   <input
                     ref={emailRef}
@@ -108,9 +110,30 @@ function ContactPage() {
                   />
                 </div>
               </div>
-              <div className="w-full md:w-1/3 px-1 mb-3 md:mb-0 mt-2  flex-1">
+
+              <div className="w-full md:w-full px-1 mb-3 md:mb-0 mt-2">
                 <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs mb-2"
+                  className="block tracking-wide text-gray-700 text-xs mb-2"
+                  htmlFor="grid-state"
+                >
+                  Phone Number <span className="text-xs font-thin">(With country/area code)</span>
+                </label>
+                <div className="relative">
+                  <input
+                    ref={phoneRef}
+                    type="phone"
+                    id="email"
+                    name="email"
+                    className={
+                      "w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-500 focus:bg-white focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out " +
+                      classes
+                    }
+                  />
+                </div>
+              </div>
+              <div className="w-full md:w-full px-1 mb-3 md:mb-0 mt-2">
+                <label
+                  className="block tracking-wide text-gray-700 text-xs mb-2"
                   htmlFor="grid-state"
                 >
                   Topic

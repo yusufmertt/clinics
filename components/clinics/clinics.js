@@ -1,4 +1,5 @@
 import { useEffect, useState, useContext, useRef, Fragment } from "react";
+import Context from "../../store/context";
 
 import Menu from "../clinic-menu/menu";
 import { useRouter } from "next/router";
@@ -9,6 +10,18 @@ import ClinicItemNew from "./clinic-item-new";
 import { Pagination } from "@mantine/core";
 
 const Clinics = (props) => {
+  const appCtx = useContext(Context);
+  const [language, setLanguage] = useState("English");
+
+  useEffect(() => {
+    if (localStorage.getItem("language")) {
+      const localLanguage = localStorage.getItem("language");
+      const parsedLocalLanguage = JSON.parse(localLanguage);
+
+      setLanguage(parsedLocalLanguage.label);
+    }
+  }, [appCtx]);
+
   const router = useRouter();
 
   const isMounted = useRef(false);
@@ -63,7 +76,7 @@ const Clinics = (props) => {
   const [pageCount, setPageCount] = useState();
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostsPerPage] = useState(6);
+  const [postsPerPage, setPostsPerPage] = useState(12);
 
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
@@ -127,7 +140,7 @@ const Clinics = (props) => {
   return (
     <div className="lg:px-28 m-5 xl:px-48 xxl:px-48">
       <div>
-        <Menu />
+        <Menu language={language}/>
       </div>
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 mt-3">
         {clinicsCtx.filteredClinics &&
@@ -137,7 +150,7 @@ const Clinics = (props) => {
             <Fragment>
               {/* Results(Filtered) */}
               {currentFilteredClinics.map((clinic) => (
-                <ClinicItemNew key={clinic._id} clinicData={clinic} />
+                <ClinicItemNew key={clinic._id} clinicData={clinic} language={language}/>
               ))}
             </Fragment>
           )}
@@ -146,7 +159,7 @@ const Clinics = (props) => {
             <Fragment>
               {/* Initial Flicker (loading) */}
               {clinics.map((clinic) => (
-                <ClinicItemNew key={clinic._id} clinicData={clinic} />
+                <ClinicItemNew key={clinic._id} clinicData={clinic} language={language}/>
               ))}
             </Fragment>
           )}
@@ -154,7 +167,7 @@ const Clinics = (props) => {
           <Fragment>
             {/* Results(Not Filtered) */}
             {currentAllClinics.map((clinic) => (
-              <ClinicItemNew key={clinic._id} clinicData={clinic} />
+              <ClinicItemNew key={clinic._id} clinicData={clinic} language={language}/>
             ))}
           </Fragment>
         )}

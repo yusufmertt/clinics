@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Landing from "./../components/landing/landing";
 
-export default function Home() {
+function Home() {
   return (
     <div className={styles.container}>
       <Head>
@@ -18,3 +18,13 @@ export default function Home() {
     </div>
   );
 }
+
+/* export async function getStaticProps(){
+  return {
+    props:{
+
+    }
+  }
+} */
+
+export default Home;

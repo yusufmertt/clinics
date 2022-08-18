@@ -9,9 +9,9 @@ import {
 } from "@material-tailwind/react";
 
 export function SearchInput2(props) {
-  const router = useRouter();
+  const { language } = props;
 
-  const [searchValue, setSearchValue] = useState("");
+  //const [searchValue, setSearchValue] = useState("");
   const [allClinics, setAllClinics] = useState();
   const [filteredClinics, setFilteredClinics] = useState([]);
 
@@ -304,7 +304,8 @@ export function SearchInput2(props) {
         <div className="bg-green-500 my-3 rounded-xl md:w-full flex px-4 text-white">
           <Accordion open={open === 1}>
             <AccordionHeader onClick={() => handleOpen(1)} className="py-1.5">
-              Filters
+              {(!language || language === "English") && "Filters"}
+              {language === "German" && "Filter"}
             </AccordionHeader>
             <AccordionBody className="mt-2">
               <div className="md:flex">
@@ -358,21 +359,23 @@ export function SearchInput2(props) {
               <div className="flex justify-between">
                 <button
                   onClick={clearHandler}
-                  className="px-3 py-2 mt-1 text-sm rounded-lg text-white hover:text-slate-200"
+                  className="px-3 py-2 mt-1 text-sm rounded-lg text-gray-300 hover:text-slate-200"
                 >
-                  Clear Filters
+                  {(!language || language === "English") && "Clear Filters"}
+                  {language === "German" && "Klare Filter"}
                 </button>
                 <button
                   onClick={filterHandler}
                   className="px-3 py-2 mt-1 text-sm rounded-lg text-green-500 bg-white hover:bg-slate-200 transition duration-200"
                 >
-                  Apply Filters
+                  {(!language || language === "English") && "Apply Filters"}
+                  {language === "German" && "Filter anwenden"}
                 </button>
               </div>
             </AccordionBody>
           </Accordion>
         </div>
-      {/*   <div className="">
+        {/*   <div className="">
           <button
             id="dropdownRadioButton"
             data-dropdown-toggle="dropdownDefaultRadio"

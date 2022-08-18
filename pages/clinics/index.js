@@ -22,7 +22,7 @@ export async function getStaticProps() {
 
   return {
     props: { clinics: clinicsConverted },
-    revalidate: 600,  //??
+    revalidate: 86400,  //dbye eklenen datalar 1 gün sonra yansıyacak
   };
 }
 

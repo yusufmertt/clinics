@@ -1,31 +1,23 @@
 import Link from "next/link";
-//import Image from "next/image"
 import ImageGallery from "react-image-gallery";
 import { Card, Image, Text, Badge, Button, Group } from "@mantine/core";
 
-/* import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Typography,
-} from "@material-tailwind/react"; */
 
-/* const images = [
-  {
-    original: "https://picsum.photos/id/1018/1000/600/",
-  },
-  {
-    original: "https://picsum.photos/id/1015/1000/600/",
-  },
-  {
-    original: "https://picsum.photos/id/1019/1000/600/",
-  },
-]; */
 
 const ClinicItemNew = (props) => {
-  const { name, description, slug, features, featuring, location, images, featured } =
-    props.clinicData;
+  const {
+    name,
+    description,
+    slug,
+    features,
+    featuring,
+    location,
+    images,
+    featured,
+    city
+  } = props.clinicData;
+
+  const { language } = props;
 
   return (
     /*  <div className="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row hover:bg-gray-100 my-6 mx-4 md:my-8">
@@ -79,17 +71,17 @@ const ClinicItemNew = (props) => {
     <Link href={`/clinics/${slug}`} className="hidden">
       <Card shadow="sm" p="lg" radius="md" withBorder>
         <Card.Section>
-          {/* <Image
+          <Image
           src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80"
           height={160}
           alt="Norway"
-        /> */}
-          <ImageGallery
+        />
+          {/* <ImageGallery
             items={images}
             showThumbnails={false}
             showPlayButton={false}
             showFullscreenButton={false}
-          />
+          /> */}
         </Card.Section>
         <Group position="apart" mt="md" mb="xs">
           <Text weight={500}>{name}</Text>
@@ -99,18 +91,36 @@ const ClinicItemNew = (props) => {
             </Badge>
           )}
         </Group>
+        {/* 
         <Badge color="blue" variant="light">
           {featuring}
-        </Badge>
-        <Text size="sm" color="dimmed">
-          {description}
-        </Text>
-        <Group>
-          <Image src="/images/location.svg" height={12} width={12} alt="location" />
-          {location}
+        </Badge> */}
+        {features.map((feature) => {
+          return (
+            <Badge color="blue" variant="light" key={feature}>
+              {feature}
+            </Badge>
+          );
+        })}
+        {/* <Text size="sm" color="dimmed">
+            {description}
+        </Text> */}
+        <Group className="mt-2">
+          <Image
+            src="/images/location.svg"
+            height={12}
+            width={12}
+            alt="location"
+          />
+          {city}
         </Group>
         <Button variant="light" color="green" fullWidth mt="md" radius="md">
-          <Link href={`/clinics/${slug}`}>See Details</Link>
+          {(!language || language === "English") && (
+            <Link href={`/clinics/${slug}`}>See Details</Link>
+          )}
+          {language === "German" && (
+            <Link href={`/clinics/${slug}`}>Siehe Einzelheiten</Link>
+          )}
         </Button>
       </Card>
     </Link>

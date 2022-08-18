@@ -41,6 +41,8 @@ const ClinicDetails = (props) => {
     location,
     featured,
     mapsURL,
+    address,
+    website
   } = clinicObject;
 
   return (
@@ -68,7 +70,7 @@ const ClinicDetails = (props) => {
                 width={12}
                 alt="phone"
               />
-              <span className="mx-2">+90 545 867 6066</span>
+              <a href="tel:+905458676066" className="mx-2">+90 545 867 6066</a>
             </div>
             <div>
               <Image
@@ -79,12 +81,12 @@ const ClinicDetails = (props) => {
               />
 
               <a
-                href="https://www.google.com"
+                href={website}
                 target="_blank"
                 rel="noreferrer"
                 className="mx-2 text-blue-900 hover:text-blue-700"
               >
-                www.google.com
+                {website}
               </a>
             </div>
           </div>
@@ -96,7 +98,7 @@ const ClinicDetails = (props) => {
               alt="location"
             />
             <span className="mx-2">
-              Esenevler Mah. Devran Sok. No:5/3 Ümraniye İstanbul
+              {address}
             </span>
           </div>
         </div>
@@ -167,7 +169,7 @@ const ClinicDetails = (props) => {
         </div> */}
           <div className="m-2 text-center">
             <Image src="/images/location.svg" height={12} width={12} />
-            <span className="mx-2">Istanbul/Kadiköy</span>
+            <span className="mx-2">{location}</span>
           </div>
         </div>
         <div className="flex flex-col">
