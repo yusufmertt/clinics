@@ -1,0 +1,467 @@
+import { useState, useContext, useEffect, useRef } from "react";
+import ClinicsContext from "../../store/clinics-context";
+import { useRouter } from "next/router";
+
+import {
+  Accordion,
+  AccordionHeader,
+  AccordionBody,
+} from "@material-tailwind/react";
+
+export function SearchInput2(props) {
+  const router = useRouter();
+
+  const [searchValue, setSearchValue] = useState("");
+  const [allClinics, setAllClinics] = useState();
+  const [filteredClinics, setFilteredClinics] = useState([]);
+
+  const textRef = useRef();
+
+  const features = [
+    { name: "Hair Transplant", id: "f1" },
+    { name: "IVF", id: "f2" },
+    { name: "Fat Removal", id: "f3" },
+    { name: "Non-Cosmetic Surgery", id: "f4" },
+    { name: "Cosmetic Surgery", id: "f5" },
+  ];
+
+  const locations = [
+    { city: "All" },
+    { city: "Istanbul" },
+    { city: "Ankara" },
+    { city: "Antalya" },
+    { city: "Izmir" },
+  ];
+
+  const [checkbox, setCheckbox] = useState([
+    { id: "f1", checked: false, feature: "Hair Transplant" },
+    { id: "f2", checked: false, feature: "IVF" },
+    { id: "f3", checked: false, feature: "Fat Removal" },
+    { id: "f4", checked: false, feature: "Non-Cosmetic Surgery" },
+    { id: "f5", checked: false, feature: "Cosmetic surgery" },
+  ]);
+
+  const [trueCheckboxes, setTrueCheckboxes] = useState([]);
+
+  const [city, setCity] = useState("");
+
+  const clinicsCtx = useContext(ClinicsContext);
+
+  const [open, setOpen] = useState(0);
+
+  const handleOpen = (value) => {
+    setOpen(open === value ? 0 : value);
+  };
+
+  useEffect(() => {
+    if (clinicsCtx.clinics) {
+      const allClinics = clinicsCtx.clinics;
+      setAllClinics(allClinics);
+    }
+  }, [clinicsCtx]);
+
+  useEffect(() => {
+    setTrueCheckboxes(checkbox.filter((checkbox) => checkbox.checked === true));
+  }, [checkbox]);
+
+  function filterHandler(event) {
+    event.preventDefault();
+
+    const searchQuery = textRef.current.value;
+
+    if (
+      (searchQuery === "" && trueCheckboxes.length === 0 && !city) ||
+      city === "All"
+    ) {
+      //add client side validation
+      //clinicsCtx.setFilteredClinics(allClinics);
+      clinicsCtx.setFilteredClinics(undefined);
+      return;
+    }
+    if (
+      (trueCheckboxes.length > 0 && searchQuery === "" && !city) ||
+      city === "All"
+    ) {
+      const filteredArray = [];
+
+      trueCheckboxes.forEach((checkbox) => {
+        filteredArray.push(
+          allClinics.filter((clinic) => {
+            return clinic.features.find((feature) => {
+              return feature === checkbox.feature;
+            });
+          })
+        );
+      });
+
+      setFilteredClinics(filteredArray);
+
+      clinicsCtx.setFilteredClinics(filteredArray);
+    }
+    if (
+      (trueCheckboxes.length === 0 && searchQuery !== "" && !city) ||
+      city === "All"
+    ) {
+      const filtered = allClinics.filter((clinic) =>
+        clinic.name.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+
+      setFilteredClinics(filtered);
+      //console.log(filtered);
+      clinicsCtx.setFilteredClinics(filtered);
+    }
+    if (
+      (trueCheckboxes.length > 0 && searchQuery !== "" && !city) ||
+      city === "All"
+    ) {
+      const nameFiltered = allClinics.filter((clinic) =>
+        clinic.name.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+
+      const filteredArray = [];
+
+      trueCheckboxes.forEach((checkbox) => {
+        filteredArray.push(
+          nameFiltered.filter((clinic) => {
+            return clinic.features.find((feature) => {
+              return feature === checkbox.feature;
+            });
+          })
+        );
+      });
+      setFilteredClinics(filteredArray);
+      const newArray = filteredArray.flat();
+      clinicsCtx.setFilteredClinics(newArray);
+    }
+    if (
+      searchQuery === "" &&
+      trueCheckboxes.length === 0 &&
+      city !== "All" &&
+      city
+    ) {
+      const filtered = allClinics.filter((clinic) =>
+        clinic.location.toLowerCase().includes(city.toLowerCase())
+      );
+      setFilteredClinics(filtered);
+      //console.log(filtered);
+      clinicsCtx.setFilteredClinics(filtered);
+    }
+    if (
+      searchQuery !== "" &&
+      trueCheckboxes.length === 0 &&
+      city !== "All" &&
+      city
+    ) {
+      const nameFiltered = allClinics.filter((clinic) =>
+        clinic.name.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+      const cityFiltered = nameFiltered.filter((clinic) =>
+        clinic.location.toLowerCase().includes(city.toLowerCase())
+      );
+      setFilteredClinics(cityFiltered);
+      clinicsCtx.setFilteredClinics(cityFiltered);
+    }
+    if (
+      searchQuery === "" &&
+      trueCheckboxes.length !== 0 &&
+      city !== "All" &&
+      city
+    ) {
+      const cityFiltered = allClinics.filter((clinic) =>
+        clinic.location.toLowerCase().includes(city.toLowerCase())
+      );
+
+      const filteredArray = [];
+
+      trueCheckboxes.forEach((checkbox) => {
+        filteredArray.push(
+          cityFiltered.filter((clinic) => {
+            return clinic.features.find((feature) => {
+              return feature === checkbox.feature;
+            });
+          })
+        );
+      });
+      setFilteredClinics(filteredArray);
+      const newArray = filteredArray.flat();
+      clinicsCtx.setFilteredClinics(newArray);
+    }
+    if (
+      searchQuery !== "" &&
+      trueCheckboxes.length !== 0 &&
+      city !== "All" &&
+      city
+    ) {
+      const nameFiltered = allClinics.filter((clinic) =>
+        clinic.name.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+      const cityFiltered = nameFiltered.filter((clinic) =>
+        clinic.location.toLowerCase().includes(city.toLowerCase())
+      );
+      const filteredArray = [];
+
+      trueCheckboxes.forEach((checkbox) => {
+        filteredArray.push(
+          cityFiltered.filter((clinic) => {
+            return clinic.features.find((feature) => {
+              return feature === checkbox.feature;
+            });
+          })
+        );
+      });
+      setFilteredClinics(filteredArray);
+      const newArray = filteredArray.flat();
+      clinicsCtx.setFilteredClinics(newArray);
+    }
+  }
+
+  function checkboxHandler(event) {
+    const isChecked = event.target.checked;
+    const id = event.target.id;
+
+    setCheckbox((prevState) => {
+      const selectedCheckbox = prevState.find((checkbox) => checkbox.id === id);
+      selectedCheckbox.checked = isChecked;
+      const newState = [...prevState];
+
+      return newState;
+    });
+  }
+  function clearHandler() {
+    //clinicsCtx.setFilteredClinics(allClinics);
+    clinicsCtx.setFilteredClinics(undefined);
+    //router.reload(); // *******APP RELOAD**********
+    return;
+  }
+
+  const [sortOpen, setSortOpen] = useState(false);
+  function sortDropdown() {
+    setSortOpen((prev) => !prev);
+  }
+
+  function cityChangeHandler(event) {
+    setCity(event.target.value);
+  }
+
+  return (
+    <div>
+      <form
+        className="flex items-center"
+        onSubmit={filterHandler}
+        id="formSubmit"
+      >
+        <label htmlFor="simple-search" className="sr-only">
+          Search
+        </label>
+        <div className="relative w-full">
+          <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+            <svg
+              aria-hidden="true"
+              className="w-5 h-5 text-gray-500"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fillRule="evenodd"
+                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                clipRule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          <input
+            type="text"
+            ref={textRef}
+            //onChange={filterHandler}
+            //value={searchValue}
+            id="simple-search"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full pl-10 p-2.5 "
+            placeholder="Search"
+          />
+        </div>
+        <button
+          type="submit"
+          className="p-2.5 ml-2 transition duration-200 text-sm font-medium text-white bg-green-500 rounded-lg border border-green-500 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300"
+        >
+          <svg
+            className="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            ></path>
+          </svg>
+          <span className="sr-only">Search</span>
+        </button>
+      </form>
+      <div className="md:flex md:justify-between md:mt-2 md:items-baseline">
+        <div className="bg-green-500 my-3 rounded-xl md:w-full flex px-4 text-white">
+          <Accordion open={open === 1}>
+            <AccordionHeader onClick={() => handleOpen(1)} className="py-1.5">
+              Filters
+            </AccordionHeader>
+            <AccordionBody className="mt-2">
+              <div className="md:flex">
+                {features.map((feature) => (
+                  <div className="flex items-center mr-4" key={feature.id}>
+                    <input
+                      id={`${feature.id}`}
+                      type="checkbox"
+                      onChange={checkboxHandler}
+                      className="w-4 h-4 text-green-600 bg-gray-100 rounded border-gray-300 focus:ring-green-500 "
+                    />
+                    <label
+                      htmlFor={`${feature.id}`}
+                      className="ml-2 text-sm font-medium text-gray-100"
+                    >
+                      {feature.name}
+                    </label>
+                  </div>
+                ))}
+              </div>
+              <div className="w-full md:w-1/3 px-3 mb-3 md:mb-0 mt-2">
+                <label
+                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  htmlFor="grid-state"
+                >
+                  City
+                </label>
+                <div className="relative">
+                  <select
+                    className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    id="grid-state"
+                    onChange={cityChangeHandler}
+                  >
+                    {locations.map((location) => {
+                      return (
+                        <option key={location.city}>{location.city}</option>
+                      );
+                    })}
+                  </select>
+                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                    <svg
+                      className="fill-current h-4 w-4"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div className="flex justify-between">
+                <button
+                  onClick={clearHandler}
+                  className="px-3 py-2 mt-1 text-sm rounded-lg text-white hover:text-slate-200"
+                >
+                  Clear Filters
+                </button>
+                <button
+                  onClick={filterHandler}
+                  className="px-3 py-2 mt-1 text-sm rounded-lg text-green-500 bg-white hover:bg-slate-200 transition duration-200"
+                >
+                  Apply Filters
+                </button>
+              </div>
+            </AccordionBody>
+          </Accordion>
+        </div>
+      {/*   <div className="">
+          <button
+            id="dropdownRadioButton"
+            data-dropdown-toggle="dropdownDefaultRadio"
+            className="text-white bg-green-500 hover:bg-green-700 transition duration-200 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center"
+            type="button"
+            onClick={sortDropdown}
+          >
+            Sort
+            <svg
+              className="ml-2 w-4 h-4"
+              aria-hidden="true"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+          <div
+            id="dropdownDefaultRadio"
+            className={`${sortOpen && "absolute"} ${
+              !sortOpen && "hidden"
+            } z-10 w-48 mt-2 bg-white rounded divide-y divide-gray-100 shadow`}
+          >
+            <ul
+              className="p-3 space-y-3 text-sm text-gray-700 "
+              aria-labelledby="dropdownRadioButton"
+            >
+              <li>
+                <div className="flex items-center">
+                  <input
+                    id="default-radio-1"
+                    type="radio"
+                    value=""
+                    name="default-radio"
+                    className="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 "
+                  />
+                  <label
+                    htmlFor="default-radio-1"
+                    className="ml-2 text-sm font-medium text-gray-900"
+                  >
+                    Default radio
+                  </label>
+                </div>
+              </li>
+              <li>
+                <div className="flex items-center">
+                  <input
+                    id="default-radio-2"
+                    type="radio"
+                    value=""
+                    name="default-radio"
+                    className="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 "
+                  />
+                  <label
+                    htmlFor="default-radio-2"
+                    className="ml-2 text-sm font-medium text-gray-900 "
+                  >
+                    Checked state
+                  </label>
+                </div>
+              </li>
+              <li>
+                <div className="flex items-center">
+                  <input
+                    id="default-radio-3"
+                    type="radio"
+                    value=""
+                    name="default-radio"
+                    className="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 "
+                  />
+                  <label
+                    htmlFor="default-radio-3"
+                    className="ml-2 text-sm font-medium text-gray-900 "
+                  >
+                    Default radio
+                  </label>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div> */}
+      </div>
+    </div>
+  );
+}
