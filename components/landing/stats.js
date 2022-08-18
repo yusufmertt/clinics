@@ -39,12 +39,12 @@ function Stats() {
       </div> */}
         </div>
         <div className="lg:w-1/2 sm:w-1/3 w-full rounded-lg overflow-hidden mt-6 sm:mt-0">
-          <img
+     {/*      <img
             className="object-cover object-center w-full h-full"
             src="/images/satisfied-patient.jpg"
             alt="stats"
-            
-          />
+
+          /> */}
         </div>
       </div>
     </section>
