@@ -11,10 +11,12 @@ function Landing() {
   const [language, setLanguage] = useState("English");
 
   useEffect(() => {
-    const localLanguage = localStorage.getItem("language");
-    const parsedLocalLanguage = JSON.parse(localLanguage)
+    if (localStorage.getItem("language")) {
+      const localLanguage = localStorage.getItem("language");
+      const parsedLocalLanguage = JSON.parse(localLanguage);
 
-    setLanguage(parsedLocalLanguage.label);
+      setLanguage(parsedLocalLanguage.label);
+    }
   }, [appCtx]);
 
   return (

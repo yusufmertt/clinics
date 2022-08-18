@@ -64,9 +64,11 @@ export function LanguagePicker() {
   const [selected, setSelected] = useState(data[0]);
 
   useEffect(() => {
-    const selected = localStorage.getItem("language");
-    const parsedSelected = JSON.parse(selected);
-    setSelected(parsedSelected)
+    if (localStorage.getItem("language")) {
+      const selected = localStorage.getItem("language");
+      const parsedSelected = JSON.parse(selected);
+      setSelected(parsedSelected);
+    }
   }, []);
   function languageHandler(item) {
     setSelected(item);
