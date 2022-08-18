@@ -19,6 +19,11 @@ function MyApp({ Component, pageProps }) {
           {/* 
           <GoogleAnalytics /> */}
           <Script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9235140354760044"
+            crossorigin="anonymous"
+          ></Script>
+          <Script
             strategy="afterInteractive"
             src={`https://www.googletagmanager.com/gtag/js?id=G-HW23HL84Q5`}
           />
