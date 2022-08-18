@@ -83,7 +83,7 @@ function Info() {
             <div className="bg-gray-100 p-6 rounded-lg shadow-md shadow-gray-200">
               <Image
                 className="h-40 rounded w-full object-cover object-center mb-6"
-                src="/photos/hero.jpg"
+                src="/images/dentist.jpg"
                 alt="content"
                 width={700}
                 height={400}
