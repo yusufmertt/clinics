@@ -106,7 +106,7 @@ const ClinicItemNew = (props) => {
           {description}
         </Text>
         <Group>
-          <Image src="/images/location.svg" height={12} width={12} />
+          <Image src="/images/location.svg" height={12} width={12} alt="location" />
           {location}
         </Group>
         <Button variant="light" color="green" fullWidth mt="md" radius="md">

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 function Stats() {
   return (
     <section className="text-gray-600 body-font">
@@ -41,6 +43,7 @@ function Stats() {
             className="object-cover object-center w-full h-full"
             src="/images/satisfied-patient.jpg"
             alt="stats"
+            
           />
         </div>
       </div>

@@ -37,7 +37,7 @@ const Clinics = (props) => {
   }, [clinicsCtx, props.clinics]);
 
   useEffect(() => {
-    if (clinicsCtx.filteredClinics===undefined) {
+    if (clinicsCtx.filteredClinics === undefined) {
       setFilteredMode(false);
     } else {
       setFilteredMode(true);
@@ -104,7 +104,9 @@ const Clinics = (props) => {
 
       setPageCount(pageNumberFilteredClinics);
     }
-  }, [clinicsCtx,filteredMode]);
+  }, [clinicsCtx, filteredMode]);
+
+  //only clinicsCtx and filteredMode
 
   /* let pageNumberFilteredClinics;
     if (pageNumberFilteredClinics) {
@@ -119,7 +121,7 @@ const Clinics = (props) => {
     } */
 
   useEffect(() => {
-    setCurrentPage(1)
+    setCurrentPage(1);
   }, [clinicsCtx]);
 
   return (

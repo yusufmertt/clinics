@@ -62,11 +62,11 @@ const ClinicDetails = (props) => {
         <div className="shadow-sm shadow-gray-300 bg-green-400 mb-6 rounded-2xl p-6 md:mt-0 flex flex-col ">
           <div className="flex justify-between mb-2">
             <div>
-              <Image src="/images/phone.svg" height={12} width={12} />
+              <Image src="/images/phone.svg" height={12} width={12} alt="phone"/>
               <span className="mx-2">+90 545 867 6066</span>
             </div>
             <div>
-              <Image src="/images/website.svg" height={12} width={12} />
+              <Image src="/images/website.svg" height={12} width={12} alt="website"/>
 
               <a
                 href="https://www.google.com"
@@ -79,7 +79,7 @@ const ClinicDetails = (props) => {
             </div>
           </div>
           <div>
-            <Image src="/images/location.svg" height={12} width={12} />
+            <Image src="/images/location.svg" height={12} width={12} alt="location" />
             <span className="mx-2">
               Esenevler Mah. Devran Sok. No:5/3 Ümraniye İstanbul
             </span>
@@ -133,7 +133,7 @@ const ClinicDetails = (props) => {
             <div className="grid gap-10 mx-auto sm:grid-cols-2 lg:grid-cols-4 lg:max-w-screen-lg">
               <div>
                 <div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
-                  <img
+                  <Image
                     className="absolute object-cover w-full h-full rounded"
                     src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
                     alt="Person"
@@ -172,7 +172,7 @@ const ClinicDetails = (props) => {
               </div>
               <div>
                 <div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
-                  <img
+                  <Image
                     className="absolute object-cover w-full h-full rounded"
                     src="https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
                     alt="Person"
@@ -211,7 +211,7 @@ const ClinicDetails = (props) => {
               </div>
               <div>
                 <div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
-                  <img
+                  <Image
                     className="absolute object-cover w-full h-full rounded"
                     src="https://images.pexels.com/photos/3747435/pexels-photo-3747435.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
                     alt="Person"
@@ -250,7 +250,7 @@ const ClinicDetails = (props) => {
               </div>
               <div>
                 <div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
-                  <img
+                  <Image
                     className="absolute object-cover w-full h-full rounded"
                     src="https://images.pexels.com/photos/3931603/pexels-photo-3931603.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
                     alt="Person"

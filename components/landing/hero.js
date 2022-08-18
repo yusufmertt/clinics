@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useEffect } from "react";
 import ReactDOM from "react-dom";
+import Image from "next/image";
 
 function Hero(props) {
   const { language } = props;
@@ -235,10 +236,11 @@ function Hero(props) {
 
   return (
     <section className="relative bg-white">
-      <img
+      <Image
         className="absolute inset-0 object-[50%] sm:object-[25%] object-cover w-full h-full opacity-25 sm:opacity-100"
         src="/images/hair-transplant2.jpg"
         alt="Couple on a bed with a dog"
+        layout="fill"
       />
 
       <div className="hidden sm:block sm:inset-0 sm:absolute sm:bg-gradient-to-r sm:from-white sm:to-transparent"></div>
