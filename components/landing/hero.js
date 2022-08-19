@@ -249,7 +249,7 @@ function Hero(props) {
   if (language === "Spanish") {
     content = (
       <section className="relative bg-white">
-        Turkey's most qualified doctors in hair transplant
+        Los médicos más calificados de Turquía en trasplante de cabello
         <Image
           className="absolute inset-0 object-[50%] sm:object-[25%] object-cover w-full h-full opacity-50 sm:opacity-100"
           src="/images/landing/hair-transplant4.jpg"
