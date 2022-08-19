@@ -1,5 +1,5 @@
-import { getClinics, getOneClinic } from "../../lib/clinics-util";
-import ClinicDetails from "../../components/clinic-details/clinic-details";
+import { getClinics, getOneClinic } from "../../../lib/clinics-util"
+import ClinicDetails from "../../../components/clinic-details/clinic-details";
 
 const ClinicDetailsPage = (props) => {
   const clinic = props.clinic

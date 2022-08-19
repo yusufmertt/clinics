@@ -289,7 +289,7 @@ const Footer = (props) => {
                 <rect x="14" y="11" width="7" height="12"></rect>
               </svg>
               <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                Company
+                FindClinicsTurkey
               </span>
             </a>
           </Link>

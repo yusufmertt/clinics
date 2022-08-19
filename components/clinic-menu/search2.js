@@ -18,11 +18,11 @@ export function SearchInput2(props) {
   const textRef = useRef();
 
   const features = [
-    { name: "Hair Transplant", id: "f1" },
-    { name: "IVF", id: "f2" },
-    { name: "Fat Removal", id: "f3" },
-    { name: "Non-Cosmetic Surgery", id: "f4" },
-    { name: "Cosmetic Surgery", id: "f5" },
+    { name: "Hair transplant", id: "f1" },
+   // { name: "IVF", id: "f2" },
+   // { name: "Fat Removal", id: "f3" },
+    { name: "Dental aesthetics", id: "f4" },
+    { name: "Esthetic surgeries", id: "f5" },
   ];
 
   const locations = [
@@ -34,11 +34,11 @@ export function SearchInput2(props) {
   ];
 
   const [checkbox, setCheckbox] = useState([
-    { id: "f1", checked: false, feature: "Hair Transplant" },
-    { id: "f2", checked: false, feature: "IVF" },
-    { id: "f3", checked: false, feature: "Fat Removal" },
-    { id: "f4", checked: false, feature: "Non-Cosmetic Surgery" },
-    { id: "f5", checked: false, feature: "Cosmetic surgery" },
+    { id: "f1", checked: false, feature: "Hair transplant" },
+   // { id: "f2", checked: false, feature: "IVF" },
+   // { id: "f3", checked: false, feature: "Fat Removal" },
+    { id: "f4", checked: false, feature: "Dental aesthetics" },
+    { id: "f5", checked: false, feature: "Esthetic surgeries" },
   ]);
 
   const [trueCheckboxes, setTrueCheckboxes] = useState([]);
@@ -70,8 +70,8 @@ export function SearchInput2(props) {
     const searchQuery = textRef.current.value;
 
     if (
-      (searchQuery === "" && trueCheckboxes.length === 0 && !city) ||
-      city === "All"
+      searchQuery === "" && trueCheckboxes.length === 0 && (!city ||
+      city === "All")
     ) {
       //add client side validation
       //clinicsCtx.setFilteredClinics(allClinics);
@@ -79,8 +79,8 @@ export function SearchInput2(props) {
       return;
     }
     if (
-      (trueCheckboxes.length > 0 && searchQuery === "" && !city) ||
-      city === "All"
+      trueCheckboxes.length > 0 && searchQuery === "" && (!city ||
+        city === "All")
     ) {
       const filteredArray = [];
 
@@ -99,8 +99,8 @@ export function SearchInput2(props) {
       clinicsCtx.setFilteredClinics(filteredArray);
     }
     if (
-      (trueCheckboxes.length === 0 && searchQuery !== "" && !city) ||
-      city === "All"
+      trueCheckboxes.length === 0 && searchQuery !== "" && (!city ||
+        city === "All")
     ) {
       const filtered = allClinics.filter((clinic) =>
         clinic.name.toLowerCase().includes(searchQuery.toLowerCase())
@@ -111,8 +111,8 @@ export function SearchInput2(props) {
       clinicsCtx.setFilteredClinics(filtered);
     }
     if (
-      (trueCheckboxes.length > 0 && searchQuery !== "" && !city) ||
-      city === "All"
+      trueCheckboxes.length > 0 && searchQuery !== "" && (!city ||
+        city === "All")
     ) {
       const nameFiltered = allClinics.filter((clinic) =>
         clinic.name.toLowerCase().includes(searchQuery.toLowerCase())

@@ -16,6 +16,7 @@ const data = [
   { language: "Italian", label: "Italian", image: "/images/icons/italian.png" },
   { language: "عربي", label: "Arabic", image: "/images/icons/arabic.png" },
   { language: "Español", label: "Spanish", image: "/images/icons/spanish.png" },
+  { language: "עִברִית", label: "Hebrew", image: "/images/icons/israel.jpg" },
   //data.language --> display , data.label --> logic
 ];
 

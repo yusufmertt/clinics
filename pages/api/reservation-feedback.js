@@ -17,9 +17,9 @@ function handler(req, res) {
 
   const feedbackData = {
     to: body.email,
-    from: "contact@findclinicsturkey.com",
+    from: "reservation@findclinicsturkey.com",
     subject: "Your request has been received!",
-    text: `Dear ${name}, \r\n Your request to us has been received and we will get back to you as soon as possible. Thank you for your patience.`,
+    text: `Dear ${name}, \r\n Your reservation has been sent to the clinic and they will get in touch with you. If you want, you can directly email to reservation@findclinicsturkey.com and we will make your reservation. Thank you for your patience.`,
   };
 
   mail.send(feedbackData);

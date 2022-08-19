@@ -1,39 +1,41 @@
 import { useRef, useState } from "react";
 import Head from "next/head";
+import Link from "next/link";
 
-function ContactPage() {
+function Reservation(props) {
+  const parsedClinic = JSON.parse(props.clinic);
+  const clinicEmail = parsedClinic[0].email;
+  const slug = parsedClinic[0].slug
+
   const nameRef = useRef();
   const emailRef = useRef();
-  const topicRef = useRef();
   const messageRef = useRef();
   const phoneRef = useRef();
+  
+  const timeStamp = new Date()
 
   const [emailError, setEmailError] = useState(false);
   const [success, setSuccess] = useState(false);
 
-  const timeStamp = new Date()
-
-  const [classes, setClasses] = useState("");
-
-  async function submitHandler(event) {
+  function submitHandler(event) {
     event.preventDefault();
     const name = nameRef.current.value;
     const email = emailRef.current.value;
-    const topic = topicRef.current.value;
     const message = messageRef.current.value;
-    const formData = { name, email, topic, message, timeStamp };
+    const phone = phoneRef.current.value;
+    const formData = { name, email, message, phone, clinicEmail, timeStamp };
 
     /*     if (email.trim() === "") {
       setEmailError(true);
       //setClasses("border-red-500")
     } else { */
-    fetch("/api/email", {
+    fetch("/api/reservation", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
     }).then((response) => {
       if (response.ok) {
-        fetch("/api/feedback-email", {
+        fetch("/api/reservation-feedback", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(formData),
@@ -46,21 +48,31 @@ function ContactPage() {
   return (
     <section className="text-gray-600 body-font relative">
       <Head>
-        <title>Contact</title>
-        <meta
-          name="description"
-          content="Contact us to find clinics in Turkey."
-        />
+        <title>Reservation</title>
+        <meta name="description" content="Contact us to reservation." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <form onSubmit={submitHandler}>
         <div className="container px-5 py-24 mx-auto">
+          <Link href={`/clinics/${slug}`}>
+            <div className="flex p-3 text-green-500 hover:cursor-pointer hover:text-green-700 transition duration-200">
+              <svg viewBox="0 0 50 50" fill="currentColor" className="h-7">
+                <path
+                  d="M45.506,33.532c-1.741-7.42-7.161-17.758-23.554-19.942V7.047c0-1.364-0.826-2.593-2.087-3.113
+		c-1.261-0.521-2.712-0.229-3.675,0.737L1.305,19.63c-1.739,1.748-1.74,4.572-0.001,6.32L16.19,40.909
+		c0.961,0.966,2.415,1.258,3.676,0.737c1.261-0.521,2.087-1.75,2.087-3.113v-6.331c5.593,0.007,13.656,0.743,19.392,4.313
+		c0.953,0.594,2.168,0.555,3.08-0.101C45.335,35.762,45.763,34.624,45.506,33.532z"
+                />
+              </svg>
+              Go back
+            </div>
+          </Link>
           <div className="flex flex-col text-center w-full mb-12">
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
-              Contact Us
+              Make your reservation!
             </h1>
             <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-              Feel free to reach us!
+              Make your reservation from this page and get 10% discount!
             </p>
           </div>
           <div className="lg:w-1/2 md:w-2/3 mx-auto">
@@ -114,8 +126,7 @@ function ContactPage() {
                     id="email"
                     name="email"
                     className={
-                      "w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-500 focus:bg-white focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out " +
-                      classes
+                      "w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-500 focus:bg-white focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out "
                     }
                   />
                 </div>
@@ -138,8 +149,7 @@ function ContactPage() {
                     id="email"
                     name="email"
                     className={
-                      "w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-500 focus:bg-white focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out " +
-                      classes
+                      "w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-500 focus:bg-white focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out "
                     }
                   />
                 </div>
@@ -152,30 +162,15 @@ function ContactPage() {
                   Topic
                 </label>
                 <div className="relative">
-                  <select
-                    ref={topicRef}
-                    className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                    id="grid-state"
-                    //onChange={cityChangeHandler}
-                  >
-                    {/* {locations.map((location) => {
-                      return (
-                        <option key={location.city}>{location.city}</option>
-                      );
-                    })} */}
-                    <option>Reservation</option>
-                    <option>Feedback</option>
-                    <option>Other</option>
-                  </select>
-                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                    <svg
-                      className="fill-current h-4 w-4"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                    </svg>
-                  </div>
+                  <input
+                    type="text"
+                    id="disabled-input-2"
+                    aria-label="disabled input 2"
+                    className="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded block w-full p-2.5 cursor-not-allowed"
+                    value="Reservation"
+                    disabled
+                    readOnly
+                  />
                 </div>
               </div>
               <div className="p-2 w-full">
@@ -184,7 +179,7 @@ function ContactPage() {
                     htmlFor="message"
                     className="leading-7 text-sm text-gray-600"
                   >
-                    Message
+                    Notes/Questions for the doctor
                   </label>
                   <textarea
                     ref={messageRef}
@@ -202,7 +197,7 @@ function ContactPage() {
                   Send
                 </button>
               </div>
-              <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
+              {/*    <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
                 <a className="text-green-500">example@email.com</a>
                 <p className="leading-normal my-5">
                   49 Smith St.
@@ -268,7 +263,7 @@ function ContactPage() {
                     </svg>
                   </a>
                 </span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -277,4 +272,4 @@ function ContactPage() {
   );
 }
 
-export default ContactPage;
+export default Reservation;

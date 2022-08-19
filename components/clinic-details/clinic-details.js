@@ -90,7 +90,7 @@ const ClinicDetails = (props) => {
             />
           </div>
         </div>
-        <div className="shadow-sm shadow-gray-300 bg-green-400 mb-6 rounded-2xl p-6 md:mt-0 flex flex-col ">
+        <div className="shadow-sm shadow-gray-300 bg-green-400 mb-6 rounded-2xl p-6 mt-4 flex flex-col text-gray-800">
           <div className="flex justify-between mb-2">
             <div>
               <Image
@@ -135,7 +135,7 @@ const ClinicDetails = (props) => {
           <div>
             <iframe
               src={mapsURL}
-              width="550"
+              width="800"
               height="450"
               allowFullScreen=""
               loading="lazy"
@@ -145,44 +145,43 @@ const ClinicDetails = (props) => {
           </div>
         )}
       </div>
-      <div className="flex flex-col md:w-1/4 py-4 md:mt-24 px-5 rounded-lg md:h-1/2 bg-green-400 shadow-sm shadow-gray-300">
-        {featured && (
-          <div className="md:text-end mb-5">
-            <Badge color="red" variant="dark">
-              Recommended!
-            </Badge>
+      <div className="md:w-1/4 py-4 md:mt-24 rounded-lg md:h-1/2">
+        <div className="flex flex-col w-full rounded-lg bg-green-400 shadow-2xl shadow-gray-500 p-4">
+          {featured && (
+            <div className="md:text-end mb-5">
+              <Badge color="red" variant="dark">
+                Recommended!
+              </Badge>
+            </div>
+          )}
+          <div className="flex-1">
+            <p className="text-xl uppercase text-center mb-2 text-slate-700 font-semibold">
+              {name}
+            </p>
+            <div>
+              {features.map((feature) => {
+                return (
+                  <p
+                    key={feature}
+                    className="bg-blue-100 inline-block text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800"
+                  >
+                    {feature}
+                  </p>
+                );
+              })}
+            </div>
+            <div className="m-2 text-center">
+              <Image src="/images/icons/location.svg" height={12} width={12} />
+              <span className="mx-2">{location}</span>
+            </div>
           </div>
-        )}
-        <div className="flex-1">
-          <p className="text-xl uppercase text-center mb-2 text-slate-700 font-semibold">
-            {name}
+        </div>{" "}
+        <div className="flex flex-col bg-red-600 sm:mt-10 mt-5 rounded-lg p-5 shadow-2xl shadow-gray-500">
+          <p className="mb-2 text-white rounded-lg text-sm uppercase p-3 font-bold">
+            Get 10% discount by making reservation with our refferal code!
           </p>
-          <div>
-            {features.map((feature) => {
-              return (
-                <p
-                  key={feature}
-                  className="bg-blue-100 inline-block text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800"
-                >
-                  {feature}
-                </p>
-              );
-            })}
-          </div>
-          {/*      <div className="my-4">
-          <p>{description}</p>
-        </div> */}
-          <div className="m-2 text-center">
-            <Image src="/images/icons/location.svg" height={12} width={12} />
-            <span className="mx-2">{location}</span>
-          </div>
-        </div>
-        <div className="flex flex-col">
-          <p className="mb-2 text-red-600 rounded-lg text-sm uppercase p-3 font-bold">
-            Get 10% discount by making reservation with us!
-          </p>
-          <Link href="/contact">
-            <a className="bg-green-500 w-full uppercase text-center text-white hover:bg-green-600 px-3 py-1.5 transition duration-200 rounded-lg">
+          <Link href={`/clinics/${slug}/reservation`}>
+            <a className="bg-white w-full uppercase text-center text-red-600 font-semibold hover:bg-gray-300 px-3 py-1.5 transition duration-200 rounded-lg">
               Get Reservation!
             </a>
           </Link>

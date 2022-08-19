@@ -20,16 +20,16 @@ async function handler(req, res) {
   let subject;
 
   if (body.message) {
-    message = `Name:${body.name}  \r\n Email:${body.email}\r\n Topic:${body.topic} \r\n Message:${body.message}`;
+    message = `Name:${body.name}  \r\n Email:${body.email}\r\n Topic:${body.topic} \r\n Message:${body.message} \r\n Phone:${body.phone}`;
     subject = "New web form message!";
   } else {
-    message = `Name:${body.name} \r\n Email:${body.email}`;
+    message = `Name:${body.name} \r\n Email:${body.email} \r\n Phone:${body.phone}`;
     subject = "New contact request!";
   }
 
   const data = {
     to: "ymert60@hotmail.com",
-    from: "demo@ymcakmak.com",
+    from: "contact@findclinicsturkey.com",
     subject: subject,
     text: message,
     html: message.replace(/\r\n/g, "<br>"),
@@ -46,7 +46,7 @@ async function handler(req, res) {
  // mail.send(feedbackData);
 
 
-  res.status(200).json({ name: "John Doe" });
+  res.status(200).json({ message: "Email sent!" });
 }
 
 export default handler;

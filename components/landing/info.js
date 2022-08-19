@@ -6,14 +6,15 @@ function Info() {
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-wrap w-full mb-20">
           <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
-            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
-              Pitchfork Kickstarter Taxidermy
+            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900 upperg">
+              Best doctors in Turkey!
             </h1>
             <div className="h-1 w-20 bg-green-500 rounded"></div>
           </div>
           <p className="lg:w-1/2 w-full leading-relaxed text-gray-500">
             You can get your operation done by the most qualified experts and
-            enjoy Turkey&apos;s culture, views, foods in Istanbul, Antalya, Izmir...
+            enjoy Turkey&apos;s culture, views, foods in Istanbul, Antalya,
+            Izmir...
           </p>
         </div>
         <div className="flex flex-wrap -m-4">
@@ -21,7 +22,7 @@ function Info() {
             <div className="bg-gray-100 p-6 rounded-lg shadow-md shadow-gray-200">
               <Image
                 className="h-40 rounded w-full object-cover object-center mb-6"
-                src="/images/hero.jpg"
+                src="/images/landing/quality.png"
                 alt="content"
                 width={700}
                 height={400}
@@ -29,12 +30,12 @@ function Info() {
               <h3 className="tracking-widest text-green-500 text-xs font-medium title-font">
                 EXPERTS
               </h3>
-              <h2 className="text-lg text-gray-900 font-medium title-font mb-4">
+              <h2 className="text-lg text-gray-900 font-medium title-font mb-4 uppercase">
                 Best Quality
               </h2>
               <p className="leading-relaxed text-base">
-                Fingerstache flexitarian street art 8-bit waistcoat. Distillery
-                hexagon disrupt edison bulbche.
+                Get your operation done in full-fledged hospitals by best
+                doctors in Turkey.
               </p>
             </div>
           </div>
@@ -42,7 +43,7 @@ function Info() {
             <div className="bg-gray-100 p-6 rounded-lg shadow-md shadow-gray-200">
               <Image
                 className="h-40 rounded w-full object-cover object-center mb-6"
-                src="/images/hair-transplant.jpg"
+                src="/images/landing/hair-transplant.jpg"
                 alt="content"
                 width={700}
                 height={400}
@@ -50,7 +51,7 @@ function Info() {
               <h3 className="tracking-widest text-green-500 text-xs font-medium title-font">
                 RELIABLE
               </h3>
-              <h2 className="text-lg text-gray-900 font-medium title-font mb-4">
+              <h2 className="text-lg text-gray-900 font-medium title-font mb-4  uppercase">
                 Most visited
               </h2>
               <p className="leading-relaxed text-base">
@@ -62,7 +63,7 @@ function Info() {
             <div className="bg-gray-100 p-6 rounded-lg shadow-md shadow-gray-200">
               <Image
                 className="h-40 rounded w-full object-cover object-center mb-6"
-                src="/images/dentist.jpg"
+                src="/images/landing/service.jpg"
                 alt="content"
                 width={700}
                 height={400}
@@ -70,12 +71,11 @@ function Info() {
               <h3 className="tracking-widest text-green-500 text-xs font-medium title-font">
                 SUBTITLE
               </h3>
-              <h2 className="text-lg text-gray-900 font-medium title-font mb-4">
-                Great Pyramid of Giza
+              <h2 className="text-lg text-gray-900 font-medium title-font mb-4 uppercase">
+                Best Service
               </h2>
               <p className="leading-relaxed text-base">
-                Fingerstache flexitarian street art 8-bit waistcoat. Distillery
-                hexagon disrupt edison bulbche.
+                Our doctors will provide before-after procedure medicines, routines with you.
               </p>
             </div>
           </div>
@@ -83,7 +83,7 @@ function Info() {
             <div className="bg-gray-100 p-6 rounded-lg shadow-md shadow-gray-200">
               <Image
                 className="h-40 rounded w-full object-cover object-center mb-6"
-                src="/images/dentist.jpg"
+                src="/images/landing/dentist.jpg"
                 alt="content"
                 width={700}
                 height={400}
@@ -91,7 +91,7 @@ function Info() {
               <h3 className="tracking-widest text-green-500 text-xs font-medium title-font">
                 FOR EVERYONE
               </h3>
-              <h2 className="text-lg text-gray-900 font-medium title-font mb-4">
+              <h2 className="text-lg text-gray-900 font-medium title-font mb-4 uppercase">
                 Best Price
               </h2>
               <p className="leading-relaxed text-base">

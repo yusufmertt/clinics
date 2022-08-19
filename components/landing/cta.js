@@ -9,12 +9,15 @@ function Cta() {
 
   const [emailError, setEmailError] = useState(false);
   const [success, setSuccess] = useState(false);
+  
+  const timeStamp = new Date()
 
   async function submitHandler(event) {
     event.preventDefault();
     const name = nameRef.current.value;
     const email = emailRef.current.value;
-    const formData = { name, email };
+    const phone = phoneRef.current.value
+    const formData = { name, email, timeStamp, phone };
 
     /*    if (email.trim() === "") {
       setEmailError(true);

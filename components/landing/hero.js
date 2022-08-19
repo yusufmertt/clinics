@@ -10,7 +10,7 @@ function Hero(props) {
       <section className="relative bg-white">
         <Image
           className="absolute inset-0 object-[50%] sm:object-[25%] object-cover w-full h-full opacity-25 sm:opacity-100"
-          src="/images/hair-transplant2.jpg"
+          src="/images/landing/hair-transplant2.jpg"
           alt="Couple on a bed with a dog"
           layout="fill"
         />
