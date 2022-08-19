@@ -1,5 +1,7 @@
 import { getClinics } from "../../lib/clinics-util";
 import Clinics from "./../../components/clinics/clinics";
+import Head from "next/head";
+import { Fragment } from "react";
 
 const ClinicsPage = (props) => {
   const { clinics } = props;
@@ -10,7 +12,19 @@ const ClinicsPage = (props) => {
     return <p>Loading...</p>;
   }
   if (clinics) {
-    return <Clinics clinics={parsedClinics} />;
+    return (
+      <Fragment>
+        <Head>
+          <title>Clinics</title>
+          <meta
+            name="description"
+            content="Find world-class doctors and experts qualified in hair transplant, aethetics, dental and much more in Turkey."
+          />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <Clinics clinics={parsedClinics} />
+      </Fragment>
+    );
   }
 };
 
@@ -22,7 +36,7 @@ export async function getStaticProps() {
 
   return {
     props: { clinics: clinicsConverted },
-    revalidate: 86400,  //dbye eklenen datalar 1 gün sonra yansıyacak
+    revalidate: 86400, //dbye eklenen datalar 1 gün sonra yansıyacak
   };
 }
 

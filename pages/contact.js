@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import Head from "next/head";
 
 function ContactPage() {
   const nameRef = useRef();
@@ -20,29 +21,36 @@ function ContactPage() {
     const message = messageRef.current.value;
     const formData = { name, email, topic, message };
 
-/*     if (email.trim() === "") {
+    /*     if (email.trim() === "") {
       setEmailError(true);
       //setClasses("border-red-500")
     } else { */
-      fetch("/api/email", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      }).then((response) => {
-        if (response.ok) {
-          fetch("/api/feedback-email", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(formData),
-          });
-          setEmailError(false);
-          setSuccess(true);
-        }
-      });
-    
+    fetch("/api/email", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    }).then((response) => {
+      if (response.ok) {
+        fetch("/api/feedback-email", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        });
+        setEmailError(false);
+        setSuccess(true);
+      }
+    });
   }
   return (
     <section className="text-gray-600 body-font relative">
+      <Head>
+        <title>Contact</title>
+        <meta
+          name="description"
+          content="Contact us to find clinics in Turkey."
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <form onSubmit={submitHandler}>
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-12">
@@ -116,7 +124,10 @@ function ContactPage() {
                   className="block tracking-wide text-gray-700 text-xs mb-2"
                   htmlFor="grid-state"
                 >
-                  Phone Number <span className="text-xs font-thin">(With country/area code)</span>
+                  Phone Number{" "}
+                  <span className="text-xs font-thin">
+                    (With country/area code)
+                  </span>
                 </label>
                 <div className="relative">
                   <input

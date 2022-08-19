@@ -11,11 +11,11 @@ import { IconChevronDown } from "@tabler/icons";
 import Context from "../../store/context";
 
 const data = [
-  { language: "English", label: "English", image: "/images/english.png" },
-  { language: "Deutsch", label: "German", image: "/images/german.png" },
-  { language: "Italian", label: "Italian", image: "/images/italian.png" },
-  { language: "عربي", label: "Arabic", image: "/images/arabic.png" },
-  { language: "Español", label: "Spanish", image: "/images/spanish.png" },
+  { language: "English", label: "English", image: "/images/icons/english.png" },
+  { language: "Deutsch", label: "German", image: "/images/icons/german.png" },
+  { language: "Italian", label: "Italian", image: "/images/icons/italian.png" },
+  { language: "عربي", label: "Arabic", image: "/images/icons/arabic.png" },
+  { language: "Español", label: "Spanish", image: "/images/icons/spanish.png" },
   //data.language --> display , data.label --> logic
 ];
 

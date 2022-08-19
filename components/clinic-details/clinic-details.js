@@ -3,32 +3,6 @@ import { Card, Text, Badge, Button, Group } from "@mantine/core";
 import Image from "next/image";
 import Link from "next/link";
 
-const images = [
-  {
-    original: "https://picsum.photos/id/1018/1000/600/",
-    thumbnail: "https://picsum.photos/id/1018/250/150/",
-  },
-  {
-    original: "https://picsum.photos/id/1015/1000/600/",
-    thumbnail: "https://picsum.photos/id/1015/250/150/",
-  },
-  {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
-  },
-  {
-    original: "https://picsum.photos/id/1018/1000/600/",
-    thumbnail: "https://picsum.photos/id/1018/250/150/",
-  },
-  {
-    original: "https://picsum.photos/id/1015/1000/600/",
-    thumbnail: "https://picsum.photos/id/1015/250/150/",
-  },
-  {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
-  },
-];
 const ClinicDetails = (props) => {
   const [clinicObject] = props.clinic;
 
@@ -42,8 +16,36 @@ const ClinicDetails = (props) => {
     featured,
     mapsURL,
     address,
-    website
+    website,
+    phone,
+    slug,
   } = clinicObject;
+  const images = [
+    {
+      original: `/images/clinics/${slug}/1.png`,
+      thumbnail: `/images/clinics/${slug}/1.png`,
+    },
+    {
+      original: `/images/clinics/${slug}/2.png`,
+      thumbnail: `/images/clinics/${slug}/2.png`,
+    },
+    {
+      original: `/images/clinics/${slug}/3.png`,
+      thumbnail: `/images/clinics/${slug}/3.png`,
+    },
+    {
+      original: `/images/clinics/${slug}/4.png`,
+      thumbnail: `/images/clinics/${slug}/4.png`,
+    },
+    {
+      original: `/images/clinics/${slug}/5.png`,
+      thumbnail: `/images/clinics/${slug}/5.png`,
+    },
+    {
+      original: `/images/clinics/${slug}/6.png`,
+      thumbnail: `/images/clinics/${slug}/6.png`,
+    },
+  ];
 
   return (
     <div className="md:flex-row lg:px-28 m-5 flex-col flex mt-2 justify-between xl:px-36">
@@ -61,60 +63,6 @@ const ClinicDetails = (props) => {
             Go back
           </div>
         </Link>
-        <div className="shadow-sm shadow-gray-300 bg-green-400 mb-6 rounded-2xl p-6 md:mt-0 flex flex-col ">
-          <div className="flex justify-between mb-2">
-            <div>
-              <Image
-                src="/images/phone.svg"
-                height={12}
-                width={12}
-                alt="phone"
-              />
-              <a href="tel:+905458676066" className="mx-2">+90 545 867 6066</a>
-            </div>
-            <div>
-              <Image
-                src="/images/website.svg"
-                height={12}
-                width={12}
-                alt="website"
-              />
-
-              <a
-                href={website}
-                target="_blank"
-                rel="noreferrer"
-                className="mx-2 text-blue-900 hover:text-blue-700"
-              >
-                {website}
-              </a>
-            </div>
-          </div>
-          <div>
-            <Image
-              src="/images/location.svg"
-              height={12}
-              width={12}
-              alt="location"
-            />
-            <span className="mx-2">
-              {address}
-            </span>
-          </div>
-        </div>
-        {mapsURL && (
-          <div>
-            <iframe
-              src={mapsURL}
-              width="550"
-              height="450"
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="w-full"
-            ></iframe>
-          </div>
-        )}
         <div className="shadow-sm shadow-gray-300 p-6">
           <div className="mb-5">
             <h1 className="text-3xl uppercase text-center mb-4 font-bold tracking-wide text-gray-700">
@@ -135,10 +83,67 @@ const ClinicDetails = (props) => {
             <p>{longDescription}</p>
           </div>
           <div>
-            <ImageGallery items={images} showPlayButton={false} />
+            <ImageGallery
+              items={images}
+              showPlayButton={false}
+              showFullscreenButton={false}
+            />
           </div>
-
         </div>
+        <div className="shadow-sm shadow-gray-300 bg-green-400 mb-6 rounded-2xl p-6 md:mt-0 flex flex-col ">
+          <div className="flex justify-between mb-2">
+            <div>
+              <Image
+                src="/images/icons/phone.svg"
+                height={12}
+                width={12}
+                alt="phone"
+              />
+              <a href="tel:+905458676066" className="mx-2">
+                {phone}
+              </a>
+            </div>
+            <div>
+              <Image
+                src="/images/icons/website.svg"
+                height={12}
+                width={12}
+                alt="website"
+              />
+
+              <a
+                href={website}
+                target="_blank"
+                rel="noreferrer"
+                className="mx-2 text-blue-900 hover:text-blue-700"
+              >
+                {website}
+              </a>
+            </div>
+          </div>
+          <div>
+            <Image
+              src="/images/icons/location.svg"
+              height={12}
+              width={12}
+              alt="location"
+            />
+            <span className="mx-2">{address}</span>
+          </div>
+        </div>
+        {mapsURL && (
+          <div>
+            <iframe
+              src={mapsURL}
+              width="550"
+              height="450"
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full"
+            ></iframe>
+          </div>
+        )}
       </div>
       <div className="flex flex-col md:w-1/4 py-4 md:mt-24 px-5 rounded-lg md:h-1/2 bg-green-400 shadow-sm shadow-gray-300">
         {featured && (
@@ -168,7 +173,7 @@ const ClinicDetails = (props) => {
           <p>{description}</p>
         </div> */}
           <div className="m-2 text-center">
-            <Image src="/images/location.svg" height={12} width={12} />
+            <Image src="/images/icons/location.svg" height={12} width={12} />
             <span className="mx-2">{location}</span>
           </div>
         </div>

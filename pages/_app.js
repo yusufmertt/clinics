@@ -10,12 +10,19 @@ import React from "react";
 config.autoAddCss = false;
 
 import Script from "next/script";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
   return (
     <ContextProvider>
       <ClinicsContextProvider>
         <Layout>
+          <Head>
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1"
+            />
+          </Head>
           {/* 
           <GoogleAnalytics /> */}
           <Script
