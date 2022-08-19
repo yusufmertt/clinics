@@ -32,7 +32,7 @@ const Navbar = (props) => {
               <rect x="14" y="11" width="7" height="12" />
             </svg>
             <span className="ml-2 text-lg font-bold tracking-wide text-gray-800 uppercase">
-             FindClinicsTurkey
+              FindClinicsTurkey
             </span>
           </a>
         </Link>
@@ -45,13 +45,18 @@ const Navbar = (props) => {
                 title="Our product"
                 className="font-medium tracking-wide text-white bg-green-500 px-4 py-2 rounded-xl transition-colors duration-200 hover:bg-green-700"
               >
-                 {(!language || language === "English") && "Clinics"}
-                 {language==="German" && "Kliniken"}
+                {(!language || language === "English") && "Clinics"}
+                {language === "German" && "Kliniken"}
+                {language === "Arabic" && "عيادات"}
+                {language === "Italian" && "Cliniche"}
+                {language === "Spanish" && "Clínicas"}
+                {language === "Hebrew" && "מרפאות"}
+                {language === "Russian" && "Клиники"}
               </a>
             </Link>
           </li>
 
-          <li>
+         {/*  <li>
             <Link href="/pricing">
               <a
                 href="#"
@@ -60,10 +65,15 @@ const Navbar = (props) => {
                 className="font-medium tracking-wide text-gray-700 hover:text-green-500 transition duration-200"
               >
                 {(!language || language === "English") && "Pricing"}
-                 {language==="German" && "Preisgestaltung"}
+                {language === "German" && "Preisgestaltung"}
+                {language === "Arabic" && "التسعير"}
+                {language === "Italian" && "Prezzo"}
+                {language === "Spanish" && "Precios"}
+                {language === "Hebrew" && "תמחור"}
+                {language === "Russian" && "Цены"}
               </a>
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link href="/blog">
               <a
@@ -73,7 +83,12 @@ const Navbar = (props) => {
                 className="font-medium tracking-wide text-gray-700 hover:text-green-500 transition duration-200"
               >
                 {(!language || language === "English") && "Blog"}
-                 {language==="German" && "Bloggen"}
+                {language === "German" && "Bloggen"}
+                {language === "Arabic" && "مقالات"}
+                {language === "Italian" && "Blog"}
+                {language === "Spanish" && "Blog"}
+                {language === "Hebrew" && "בלוג"}
+                {language === "Russian" && "блог"}
               </a>
             </Link>
           </li>
@@ -86,7 +101,12 @@ const Navbar = (props) => {
                 className="font-medium tracking-wide text-gray-700 hover:text-green-500 transition duration-200"
               >
                 {(!language || language === "English") && "Contact"}
-                 {language==="German" && "Kontakt"}
+                {language === "German" && "Kontakt"}
+                {language === "Arabic" && "اتصل"}
+                {language === "Italian" && "Contatto"}
+                {language === "Spanish" && "Contacto"}
+                {language === "Hebrew" && "איש קשר"}
+                {language === "Russian" && "Контакт"}
               </a>
             </Link>
           </li>
@@ -151,7 +171,7 @@ const Navbar = (props) => {
                         <rect x="14" y="11" width="7" height="12" />
                       </svg>
                       <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                        Company
+                        FindClinicsTurkey
                       </span>
                     </a>
                   </div>
@@ -174,55 +194,68 @@ const Navbar = (props) => {
                 <nav>
                   <ul className="space-y-4">
                     <li>
-                      <a
-                        href="#"
-                        aria-label="Our product"
-                        title="Our product"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                      >
-                        Clinics
-                      </a>
+                      <Link href="/clinics">
+                        <a
+                          href="#"
+                          aria-label="Product pricing"
+                          title="Product pricing"
+                          className="font-medium tracking-wide text-green-500 hover:text-green-700 transition duration-200"
+                        >
+                          {(!language || language === "English") && "Clinics"}
+                          {language === "German" && "Kliniken"}
+                        </a>
+                      </Link>
+                    </li>
+
+                {/*     <li>
+                      <Link href="/pricing">
+                        <a
+                          href="#"
+                          aria-label="Product pricing"
+                          title="Product pricing"
+                          className="font-medium tracking-wide text-gray-700 hover:text-green-500 transition duration-200"
+                        >
+                          {(!language || language === "English") && "Pricing"}
+                          {language === "German" && "Preisgestaltung"}
+                        </a>
+                      </Link>
+                    </li> */}
+                    <li>
+                      <Link href="/blog">
+                        <a
+                          href="#"
+                          aria-label="About us"
+                          title="About us"
+                          className="font-medium tracking-wide text-gray-700 hover:text-green-500 transition duration-200"
+                        >
+                          {(!language || language === "English") && "Blog"}
+                          {language === "German" && "Bloggen"}
+                        </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        aria-label="Our product"
-                        title="Our product"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                      >
-                        Pricing
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        aria-label="Product pricing"
-                        title="Product pricing"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                      >
-                        Blog
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        aria-label="About us"
-                        title="About us"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                      >
-                        Contact
-                      </a>
+                      <Link href="/contact">
+                        <a
+                          href="#"
+                          aria-label="About us"
+                          title="About us"
+                          className="font-medium tracking-wide text-gray-700 hover:text-green-500 transition duration-200"
+                        >
+                          {(!language || language === "English") && "Contact"}
+                          {language === "German" && "Kontakt"}
+                        </a>
+                      </Link>
                     </li>
                     <li>
                       <LanguagePicker />
-                      {/* <a
-                        href="#"
-                        className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-green-500 hover:bg-green-700 focus:shadow-outline focus:outline-none"
-                        aria-label="Sign up"
-                        title="Sign up"
-                      >
-                        Sign up
-                      </a> */}
+                      {/*             <a
+              href="#"
+              className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-green-400 hover:bg-green-700 focus:shadow-outline focus:outline-none"
+              aria-label="Sign up"
+              title="Sign up"
+            >
+              Get Help
+            </a> */}
                     </li>
                   </ul>
                 </nav>

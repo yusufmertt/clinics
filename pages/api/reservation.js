@@ -19,11 +19,11 @@ async function handler(req, res) {
   let message;
   let subject;
 
-  message = `Müşteri Adı:${body.name}  \r\n Müşteri Email:${body.email}\r\n  Mesaj:${body.message} \r\n Müşteri Tel:${body.phone} \r\n Bu müşteri size FindClinicsTurkey.com tarfından yönlendirilmiştir. Kod:KSN51K`;
-  subject = "Yeni rezervasyon isteği!";
+  message = `Müşteri Adı:${body.name}  \r\n Müşteri Email:${body.email}\r\n  Mesaj:${body.message} \r\n Müşteri Tel:${body.phone} \r\n  Bu müşteri size FindClinicsTurkey.com tarfından yönlendirilmiştir. Kod:KSN51K`;
+  subject = `Yeni rezervasyon isteği! Klinik:${body.clinic}`;
 
   const data = {
-    to: body.clinicEmail,
+    to: "ymert60@hotmail.com" ,//body.clinicEmail,
     from: "reservation@findclinicsturkey.com",
     subject: subject,
     text: message,

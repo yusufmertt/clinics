@@ -2,8 +2,6 @@ import Link from "next/link";
 import ImageGallery from "react-image-gallery";
 import { Card, Image, Text, Badge, Button, Group } from "@mantine/core";
 
-
-
 const ClinicItemNew = (props) => {
   const {
     name,
@@ -14,7 +12,7 @@ const ClinicItemNew = (props) => {
     location,
     images,
     featured,
-    city
+    city,
   } = props.clinicData;
 
   const { language } = props;
@@ -72,10 +70,10 @@ const ClinicItemNew = (props) => {
       <Card shadow="sm" p="lg" radius="md" withBorder>
         <Card.Section>
           <Image
-          src={`/images/clinics/${slug}/1.png`}
-          height={160}
-          alt="clinic thumbnail"
-        />
+            src={`/images/clinics/${slug}/1.png`}
+            height={160}
+            alt="clinic thumbnail"
+          />
           {/* <ImageGallery
             items={images}
             showThumbnails={false}
@@ -120,6 +118,26 @@ const ClinicItemNew = (props) => {
           )}
           {language === "German" && (
             <Link href={`/clinics/${slug}`}>Siehe Einzelheiten</Link>
+          )}
+
+          {language === "Arabic" && (
+            <Link href={`/clinics/${slug}`}>انظر التفاصيل</Link>
+          )}
+
+          {language === "Hebrew" && (
+            <Link href={`/clinics/${slug}`}>ראה פרטים</Link>
+          )}
+
+          {language === "Russian" && (
+            <Link href={`/clinics/${slug}`}>Смотрите подробности</Link>
+          )}
+
+          {language === "Spanish" && (
+            <Link href={`/clinics/${slug}`}>Ver detalles</Link>
+          )}
+
+          {language === "Italian" && (
+            <Link href={`/clinics/${slug}`}>Guarda i detagli</Link>
           )}
         </Button>
       </Card>

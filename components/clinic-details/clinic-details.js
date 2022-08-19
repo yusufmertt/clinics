@@ -2,6 +2,7 @@ import ImageGallery from "react-image-gallery";
 import { Card, Text, Badge, Button, Group } from "@mantine/core";
 import Image from "next/image";
 import Link from "next/link";
+import Head from "next/head";
 
 const ClinicDetails = (props) => {
   const [clinicObject] = props.clinic;
@@ -49,6 +50,11 @@ const ClinicDetails = (props) => {
 
   return (
     <div className="md:flex-row lg:px-28 m-5 flex-col flex mt-2 justify-between xl:px-36">
+       <Head>
+        <title>{name}</title>
+        <meta name="description" content="Contact us to reservation." />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className="md:w-2/3 order-last md:order-first">
         <Link href="/clinics">
           <div className="flex p-3 text-green-500 hover:cursor-pointer hover:text-green-700 transition duration-200">

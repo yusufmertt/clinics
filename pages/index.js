@@ -7,7 +7,7 @@ function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Best clinics in Turkey</title>
+        <title>FindClinicsTurkey-Best clinics in Turkey</title>
         <meta
           name="description"
           content="Find world-class doctors and experts qualified in hair transplant, aethetics, dental and much more in Turkey."

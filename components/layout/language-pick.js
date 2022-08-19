@@ -13,10 +13,12 @@ import Context from "../../store/context";
 const data = [
   { language: "English", label: "English", image: "/images/icons/english.png" },
   { language: "Deutsch", label: "German", image: "/images/icons/german.png" },
-  { language: "Italian", label: "Italian", image: "/images/icons/italian.png" },
   { language: "عربي", label: "Arabic", image: "/images/icons/arabic.png" },
-  { language: "Español", label: "Spanish", image: "/images/icons/spanish.png" },
   { language: "עִברִית", label: "Hebrew", image: "/images/icons/israel.jpg" },
+  { language: "Русский", label: "Russian", image: "/images/icons/russian.png" },
+  { language: "Español", label: "Spanish", image: "/images/icons/spanish.png" },
+  { language: "Italian", label: "Italian", image: "/images/icons/italian.png" },
+
   //data.language --> display , data.label --> logic
 ];
 
@@ -99,7 +101,7 @@ export function LanguagePicker() {
         <UnstyledButton className={classes.control}>
           <Group spacing="xs">
             <Image src={selected.image} width={22} height={22} />
-            <span className={classes.label}>{selected.label}</span>
+            <span className={classes.label}>{selected.language}</span>
           </Group>
           <IconChevronDown size={16} className={classes.icon} stroke={1.5} />
         </UnstyledButton>

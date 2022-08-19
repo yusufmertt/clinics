@@ -21,7 +21,8 @@ function ContactPage() {
     const email = emailRef.current.value;
     const topic = topicRef.current.value;
     const message = messageRef.current.value;
-    const formData = { name, email, topic, message, timeStamp };
+    const phone = phoneRef.current.value
+    const formData = { name, email, topic, message, timeStamp, phone };
 
     /*     if (email.trim() === "") {
       setEmailError(true);
@@ -117,6 +118,7 @@ function ContactPage() {
                       "w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-500 focus:bg-white focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out " +
                       classes
                     }
+                    placeholder="example@gmail.com"
                   />
                 </div>
               </div>
@@ -134,13 +136,14 @@ function ContactPage() {
                 <div className="relative">
                   <input
                     ref={phoneRef}
-                    type="phone"
-                    id="email"
-                    name="email"
+                    type="tel"
+                    id="phone"
+                    name="phone"
                     className={
                       "w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-500 focus:bg-white focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out " +
                       classes
                     }
+                    placeholder="+905859515361"
                   />
                 </div>
               </div>
@@ -191,6 +194,7 @@ function ContactPage() {
                     id="message"
                     name="message"
                     className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-500 focus:bg-white focus:ring-2 focus:ring-green-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                    placeholder="You can ask anything!"
                   ></textarea>
                 </div>
               </div>

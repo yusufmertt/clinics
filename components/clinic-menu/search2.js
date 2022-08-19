@@ -19,8 +19,8 @@ export function SearchInput2(props) {
 
   const features = [
     { name: "Hair transplant", id: "f1" },
-   // { name: "IVF", id: "f2" },
-   // { name: "Fat Removal", id: "f3" },
+    // { name: "IVF", id: "f2" },
+    // { name: "Fat Removal", id: "f3" },
     { name: "Dental aesthetics", id: "f4" },
     { name: "Esthetic surgeries", id: "f5" },
   ];
@@ -35,8 +35,8 @@ export function SearchInput2(props) {
 
   const [checkbox, setCheckbox] = useState([
     { id: "f1", checked: false, feature: "Hair transplant" },
-   // { id: "f2", checked: false, feature: "IVF" },
-   // { id: "f3", checked: false, feature: "Fat Removal" },
+    // { id: "f2", checked: false, feature: "IVF" },
+    // { id: "f3", checked: false, feature: "Fat Removal" },
     { id: "f4", checked: false, feature: "Dental aesthetics" },
     { id: "f5", checked: false, feature: "Esthetic surgeries" },
   ]);
@@ -70,8 +70,9 @@ export function SearchInput2(props) {
     const searchQuery = textRef.current.value;
 
     if (
-      searchQuery === "" && trueCheckboxes.length === 0 && (!city ||
-      city === "All")
+      searchQuery === "" &&
+      trueCheckboxes.length === 0 &&
+      (!city || city === "All")
     ) {
       //add client side validation
       //clinicsCtx.setFilteredClinics(allClinics);
@@ -79,8 +80,9 @@ export function SearchInput2(props) {
       return;
     }
     if (
-      trueCheckboxes.length > 0 && searchQuery === "" && (!city ||
-        city === "All")
+      trueCheckboxes.length > 0 &&
+      searchQuery === "" &&
+      (!city || city === "All")
     ) {
       const filteredArray = [];
 
@@ -99,8 +101,9 @@ export function SearchInput2(props) {
       clinicsCtx.setFilteredClinics(filteredArray);
     }
     if (
-      trueCheckboxes.length === 0 && searchQuery !== "" && (!city ||
-        city === "All")
+      trueCheckboxes.length === 0 &&
+      searchQuery !== "" &&
+      (!city || city === "All")
     ) {
       const filtered = allClinics.filter((clinic) =>
         clinic.name.toLowerCase().includes(searchQuery.toLowerCase())
@@ -111,8 +114,9 @@ export function SearchInput2(props) {
       clinicsCtx.setFilteredClinics(filtered);
     }
     if (
-      trueCheckboxes.length > 0 && searchQuery !== "" && (!city ||
-        city === "All")
+      trueCheckboxes.length > 0 &&
+      searchQuery !== "" &&
+      (!city || city === "All")
     ) {
       const nameFiltered = allClinics.filter((clinic) =>
         clinic.name.toLowerCase().includes(searchQuery.toLowerCase())
@@ -306,6 +310,11 @@ export function SearchInput2(props) {
             <AccordionHeader onClick={() => handleOpen(1)} className="py-1.5">
               {(!language || language === "English") && "Filters"}
               {language === "German" && "Filter"}
+              {language === "Arabic" && "منقي"}
+              {language === "Hebrew" && "לְסַנֵן"}
+              {language === "Russian" && "фильтр"}
+              {language === "Spanish" && "Filtrar"}
+              {language === "Italian" && "Filtro"}
             </AccordionHeader>
             <AccordionBody className="mt-2">
               <div className="md:flex">
@@ -363,6 +372,11 @@ export function SearchInput2(props) {
                 >
                   {(!language || language === "English") && "Clear Filters"}
                   {language === "German" && "Klare Filter"}
+                  {language === "Arabic" && "مسح عوامل التصفية"}
+                  {language === "Hebrew" && "נקה מסננים"}
+                  {language === "Russian" && "Очистить фильтры"}
+                  {language === "Spanish" && "Borrar filtros"}
+                  {language === "Italian" && "Cancella filtri"}
                 </button>
                 <button
                   onClick={filterHandler}
@@ -370,6 +384,11 @@ export function SearchInput2(props) {
                 >
                   {(!language || language === "English") && "Apply Filters"}
                   {language === "German" && "Filter anwenden"}
+                  {language === "Arabic" && "تطبيق المرشحات"}
+                  {language === "Hebrew" && "החל מסננים"}
+                  {language === "Russian" && "Применить фильтры"}
+                  {language === "Spanish" && "Aplicar filtros"}
+                  {language === "Italian" && "Applica filtri"}
                 </button>
               </div>
             </AccordionBody>

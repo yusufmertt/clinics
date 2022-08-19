@@ -5,14 +5,15 @@ import Link from "next/link";
 function Reservation(props) {
   const parsedClinic = JSON.parse(props.clinic);
   const clinicEmail = parsedClinic[0].email;
-  const slug = parsedClinic[0].slug
+  const slug = parsedClinic[0].slug;
+  const clinic = parsedClinic[0].name;
 
   const nameRef = useRef();
   const emailRef = useRef();
   const messageRef = useRef();
   const phoneRef = useRef();
-  
-  const timeStamp = new Date()
+
+  const timeStamp = new Date();
 
   const [emailError, setEmailError] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -23,7 +24,15 @@ function Reservation(props) {
     const email = emailRef.current.value;
     const message = messageRef.current.value;
     const phone = phoneRef.current.value;
-    const formData = { name, email, message, phone, clinicEmail, timeStamp };
+    const formData = {
+      name,
+      email,
+      message,
+      phone,
+      clinicEmail,
+      timeStamp,
+      clinic,
+    };
 
     /*     if (email.trim() === "") {
       setEmailError(true);
