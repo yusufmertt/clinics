@@ -35,7 +35,10 @@ export default class MyDocument extends Document {
             });
           `,
             }}
+            
           />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato"/>
+
         </Head>
         <body>
           <Main />

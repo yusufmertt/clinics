@@ -7,10 +7,11 @@ function Stats() {
         <div className="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-1/2 sm:w-2/3 content-start sm:pr-10">
           <div className="w-full sm:p-4 px-4 mb-6">
             <h1 className="title-font font-medium text-xl mb-2 text-gray-900">
-              Best hair transplant in the world
+              Best hair transplant in the world!
             </h1>
             <div className="leading-relaxed">
-              Get your transplant done by most trusted experts all over Turkey.
+              20% of whole world&apos;s hair transplants are done in Turkey. Get
+              your transplant done by most trusted experts all over Turkey.
             </div>
           </div>
           <div className="flex justify-between">
@@ -41,9 +42,8 @@ function Stats() {
         <div className="lg:w-1/2 sm:w-1/3 w-full rounded-lg overflow-hidden mt-6 sm:mt-0">
           <img
             className="object-cover object-center w-full h-full"
-            src="/images/landing/hair-transplant3.jpg"
+            src="/images/landing/hair-transplant2.jpg"
             alt="stats"
-            
           />
         </div>
       </div>

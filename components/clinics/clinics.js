@@ -188,7 +188,7 @@ const Clinics = (props) => {
           page={currentPage}
           onChange={setCurrentPage}
           total={pageCount}
-          color="green"
+          color="grape"
         />
       </div>
     </div>

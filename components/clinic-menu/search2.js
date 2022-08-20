@@ -10,6 +10,7 @@ import {
 
 export function SearchInput2(props) {
   const { language } = props;
+  const router = useRouter();
 
   //const [searchValue, setSearchValue] = useState("");
   const [allClinics, setAllClinics] = useState();
@@ -95,6 +96,7 @@ export function SearchInput2(props) {
           })
         );
       });
+
 
       setFilteredClinics(filteredArray);
 
@@ -285,7 +287,7 @@ export function SearchInput2(props) {
         </div>
         <button
           type="submit"
-          className="p-2.5 ml-2 transition duration-200 text-sm font-medium text-white bg-green-500 rounded-lg border border-green-500 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300"
+          className="p-2.5 ml-2 transition duration-200 text-sm font-medium text-white bg-brightPrimary rounded-lg border border-green-500 hover:bg-darkPrimary focus:ring-4 focus:outline-none focus:ring-green-300"
         >
           <svg
             className="w-5 h-5"
@@ -305,7 +307,7 @@ export function SearchInput2(props) {
         </button>
       </form>
       <div className="md:flex md:justify-between md:mt-2 md:items-baseline">
-        <div className="bg-green-500 my-3 rounded-xl md:w-full flex px-4 text-white">
+        <div className="bg-brightPrimary my-3 rounded-xl md:w-full flex px-4 text-white">
           <Accordion open={open === 1}>
             <AccordionHeader onClick={() => handleOpen(1)} className="py-1.5">
               {(!language || language === "English") && "Filters"}
@@ -380,7 +382,7 @@ export function SearchInput2(props) {
                 </button>
                 <button
                   onClick={filterHandler}
-                  className="px-3 py-2 mt-1 text-sm rounded-lg text-green-500 bg-white hover:bg-slate-200 transition duration-200"
+                  className="px-3 py-2 mt-1 text-sm rounded-lg text-brightPrimary bg-white hover:bg-slate-200 transition duration-200"
                 >
                   {(!language || language === "English") && "Apply Filters"}
                   {language === "German" && "Filter anwenden"}

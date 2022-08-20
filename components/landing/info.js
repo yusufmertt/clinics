@@ -9,7 +9,7 @@ function Info() {
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900 upperg">
               Best doctors in Turkey!
             </h1>
-            <div className="h-1 w-20 bg-green-500 rounded"></div>
+            <div className="h-1 w-20 bg-brightPrimary rounded"></div>
           </div>
           <p className="lg:w-1/2 w-full leading-relaxed text-gray-500">
             You can get your operation done by the most qualified experts and
@@ -22,19 +22,19 @@ function Info() {
             <div className="bg-gray-100 p-6 rounded-lg shadow-md shadow-gray-200">
               <Image
                 className="h-40 rounded w-full object-cover object-center mb-6"
-                src="/images/landing/satisfied.jpg"
+                src="/images/landing/rhinoplasty.jpg"
                 alt="content"
                 width={700}
                 height={400}
               />
-              <h3 className="tracking-widest text-green-500 text-xs font-medium title-font">
-                EXPERTS
+              <h3 className="tracking-widest text-brightPrimary text-xs font-medium title-font">
+                BEST PRICE
               </h3>
               <h2 className="text-lg text-gray-900 font-medium title-font mb-4 uppercase">
-                Best Quality
+                RHINOPLASTY
               </h2>
               <p className="leading-relaxed text-base">
-                Get your operation done in full-fledged hospitals by best
+                Get your rhinoplasty operation done in full-fledged hospitals by best
                 doctors in Turkey.
               </p>
             </div>
@@ -43,16 +43,16 @@ function Info() {
             <div className="bg-gray-100 p-6 rounded-lg shadow-md shadow-gray-200">
               <Image
                 className="h-40 rounded w-full object-cover object-center mb-6"
-                src="/images/landing/hair-transplant.jpg"
+                src="/images/landing/laser-eye.jpg"
                 alt="content"
                 width={700}
                 height={400}
               />
-              <h3 className="tracking-widest text-green-500 text-xs font-medium title-font">
-                RELIABLE
+              <h3 className="tracking-widest text-brightPrimary text-xs font-medium title-font">
+                MOST VISITED
               </h3>
               <h2 className="text-lg text-gray-900 font-medium title-font mb-4  uppercase">
-                Most visited
+                LASER EYE SURGERY
               </h2>
               <p className="leading-relaxed text-base">
                 20% of world&apos;s hair transplants are done in Turkey.
@@ -68,7 +68,7 @@ function Info() {
                 width={700}
                 height={400}
               />
-              <h3 className="tracking-widest text-green-500 text-xs font-medium title-font">
+              <h3 className="tracking-widest text-brightPrimary text-xs font-medium title-font">
                 SUBTITLE
               </h3>
               <h2 className="text-lg text-gray-900 font-medium title-font mb-4 uppercase">
@@ -88,7 +88,7 @@ function Info() {
                 width={700}
                 height={400}
               />
-              <h3 className="tracking-widest text-green-500 text-xs font-medium title-font">
+              <h3 className="tracking-widest text-brightPrimary text-xs font-medium title-font">
                 FOR EVERYONE
               </h3>
               <h2 className="text-lg text-gray-900 font-medium title-font mb-4 uppercase">

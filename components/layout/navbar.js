@@ -43,7 +43,7 @@ const Navbar = (props) => {
                 href="#"
                 aria-label="Our product"
                 title="Our product"
-                className="font-medium tracking-wide text-white bg-green-500 px-4 py-2 rounded-xl transition-colors duration-200 hover:bg-green-700"
+                className="font-medium tracking-wide text-white bg-brightPrimary px-4 py-2 rounded-xl transition-colors duration-200 hover:bg-darkPrimary"
               >
                 {(!language || language === "English") && "Clinics"}
                 {language === "German" && "Kliniken"}
@@ -62,7 +62,7 @@ const Navbar = (props) => {
                 href="#"
                 aria-label="Product pricing"
                 title="Product pricing"
-                className="font-medium tracking-wide text-gray-700 hover:text-green-500 transition duration-200"
+                className="font-medium tracking-wide text-gray-700 hover:text-brightPrimary transition duration-200"
               >
                 {(!language || language === "English") && "Pricing"}
                 {language === "German" && "Preisgestaltung"}
@@ -80,7 +80,7 @@ const Navbar = (props) => {
                 href="#"
                 aria-label="About us"
                 title="About us"
-                className="font-medium tracking-wide text-gray-700 hover:text-green-500 transition duration-200"
+                className="font-medium tracking-wide text-gray-700 hover:text-brightPrimary transition duration-200"
               >
                 {(!language || language === "English") && "Blog"}
                 {language === "German" && "Bloggen"}
@@ -98,7 +98,7 @@ const Navbar = (props) => {
                 href="#"
                 aria-label="About us"
                 title="About us"
-                className="font-medium tracking-wide text-gray-700 hover:text-green-500 transition duration-200"
+                className="font-medium tracking-wide text-gray-700 hover:text-brightPrimary transition duration-200"
               >
                 {(!language || language === "English") && "Contact"}
                 {language === "German" && "Kontakt"}
@@ -199,7 +199,7 @@ const Navbar = (props) => {
                           href="#"
                           aria-label="Product pricing"
                           title="Product pricing"
-                          className="font-medium tracking-wide text-green-500 hover:text-green-700 transition duration-200"
+                          className="font-medium tracking-wide text-brightPrimary hover:text-darkPrimary transition duration-200"
                         >
                           {(!language || language === "English") && "Clinics"}
                           {language === "German" && "Kliniken"}
@@ -213,7 +213,7 @@ const Navbar = (props) => {
                           href="#"
                           aria-label="Product pricing"
                           title="Product pricing"
-                          className="font-medium tracking-wide text-gray-700 hover:text-green-500 transition duration-200"
+                          className="font-medium tracking-wide text-gray-700 hover:text-brightPrimary transition duration-200"
                         >
                           {(!language || language === "English") && "Pricing"}
                           {language === "German" && "Preisgestaltung"}
@@ -226,7 +226,7 @@ const Navbar = (props) => {
                           href="#"
                           aria-label="About us"
                           title="About us"
-                          className="font-medium tracking-wide text-gray-700 hover:text-green-500 transition duration-200"
+                          className="font-medium tracking-wide text-gray-700 hover:text-brightPrimary transition duration-200"
                         >
                           {(!language || language === "English") && "Blog"}
                           {language === "German" && "Bloggen"}
@@ -239,7 +239,7 @@ const Navbar = (props) => {
                           href="#"
                           aria-label="About us"
                           title="About us"
-                          className="font-medium tracking-wide text-gray-700 hover:text-green-500 transition duration-200"
+                          className="font-medium tracking-wide text-gray-700 hover:text-brightPrimary transition duration-200"
                         >
                           {(!language || language === "English") && "Contact"}
                           {language === "German" && "Kontakt"}

@@ -112,7 +112,7 @@ const ClinicItemNew = (props) => {
           />
           {city}
         </Group>
-        <Button variant="light" color="green" fullWidth mt="md" radius="md">
+        <Button variant="light" className="text-brightPrimary hover:bg-purple-100" fullWidth mt="md" radius="md">
           {(!language || language === "English") && (
             <Link href={`/clinics/${slug}`}>See Details</Link>
           )}

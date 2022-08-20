@@ -9,9 +9,9 @@ function Hero(props) {
     content = (
       <section className="relative bg-white">
         <Image
-          className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-50 sm:opacity-100"
-          src="/images/landing/hair-transplant4.jpg"
-          alt="Couple on a bed with a dog"
+          className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-40 sm:opacity-100"
+          src="/images/landing/hero2.jpg"
+          alt="Hair Transplant"
           layout="fill"
         />
 
@@ -21,20 +21,20 @@ function Hero(props) {
           <div className="max-w-xl text-center sm:text-left">
             <h1 className="text-3xl font-extrabold sm:text-5xl">
               Turkey&apos;s most qualified doctors in&nbsp;
-              <strong className="font-extrabold text-green-500 sm:block">
-                hair transplant
+              <strong className="font-extrabold text-brightPrimary block">
+                aesthetic operations
               </strong>
             </h1>
 
             <p className="max-w-lg mt-4 sm:leading-relaxed sm:text-xl">
-              Meet with best doctors in hair transplant, dental operations, IVF,
-              aesthetic operations and much more...
+              Meet with best doctors in <strong>hair transplant, dental operations, eye surgeries,
+              rhinoplasty, liposuction, breast augmentation</strong> and much more...
             </p>
 
             <div className="flex flex-wrap gap-4 mt-8 text-center">
               <Link href="/clinics">
                 <a
-                  className="block w-full px-12 py-3 text-sm font-medium text-white rounded shadow bg-green-500 sm:w-auto active:bg-green-500 hover:bg-green-700 transition duration-200 focus:outline-none focus:ring"
+                  className="block w-full px-12 py-3 text-sm font-medium text-white rounded shadow bg-brightPrimary sm:w-auto active:bg-brightPrimary hover:bg-darkPrimary transition duration-200 focus:outline-none focus:ring"
                   href="#"
                 >
                   Find Clinics
@@ -42,7 +42,7 @@ function Hero(props) {
               </Link>
               <Link href="/contact">
                 <a
-                  className="block w-full px-12 py-3 text-sm font-medium bg-white rounded shadow text-green-600 sm:w-auto hover:text-green-700 active:text-green-500 focus:outline-none focus:ring"
+                  className="block w-full px-12 py-3 text-sm font-medium bg-white rounded shadow text-brightPrimary sm:w-auto hover:text-darkPrimary active:text-brightPrimary focus:outline-none focus:ring"
                   href="#"
                 >
                   Learn More
@@ -61,7 +61,7 @@ function Hero(props) {
         <Image
           className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-50 sm:opacity-100"
           src="/images/landing/hair-transplant4.jpg"
-          alt="Couple on a bed with a dog"
+          alt="Haartransplantationen"
           layout="fill"
         />
 
@@ -71,7 +71,7 @@ function Hero(props) {
           <div className="max-w-xl text-center sm:text-left">
             <h1 className="text-3xl font-extrabold sm:text-5xl">
               Die qualifiziertesten Experten der Türkei für
-              <strong className="font-extrabold text-green-500 sm:block">
+              <strong className="font-extrabold text-brightPrimary sm:block">
                 Haartransplantationen
               </strong>
             </h1>
@@ -84,7 +84,7 @@ function Hero(props) {
             <div className="flex flex-wrap gap-4 mt-8 text-center">
               <Link href="/clinics">
                 <a
-                  className="block w-full px-12 py-3 text-sm font-medium text-white rounded shadow bg-green-500 sm:w-auto active:bg-green-500 hover:bg-green-700 transition duration-200 focus:outline-none focus:ring"
+                  className="block w-full px-12 py-3 text-sm font-medium text-white rounded shadow bg-brightPrimary sm:w-auto active:bg-brightPrimary hover:bg-darkPrimary transition duration-200 focus:outline-none focus:ring"
                   href="#"
                 >
                   Kliniken finden
@@ -92,7 +92,7 @@ function Hero(props) {
               </Link>
               <Link href="/contact">
                 <a
-                  className="block w-full px-12 py-3 text-sm font-medium bg-white rounded shadow text-green-600 sm:w-auto hover:text-green-700 active:text-green-500 focus:outline-none focus:ring"
+                  className="block w-full px-12 py-3 text-sm font-medium bg-white rounded shadow text-brightPrimary sm:w-auto hover:text-darkPrimary active:text-brightPrimary focus:outline-none focus:ring"
                   href="#"
                 >
                   Lern mehr
@@ -110,7 +110,7 @@ function Hero(props) {
         <Image
           className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-50 sm:opacity-100"
           src="/images/landing/hair-transplant4.jpg"
-          alt="Couple on a bed with a dog"
+          alt="Hair transplant"
           layout="fill"
         />
 
@@ -130,7 +130,7 @@ function Hero(props) {
             <div className="flex flex-wrap gap-4 mt-8 text-center">
               <Link href="/clinics">
                 <a
-                  className="block w-full px-12 py-3 text-sm font-medium text-white rounded shadow bg-green-500 sm:w-auto active:bg-green-500 hover:bg-green-700 transition duration-200 focus:outline-none focus:ring"
+                  className="block w-full px-12 py-3 text-sm font-medium text-white rounded shadow bg-brightPrimary sm:w-auto active:bg-brightPrimary hover:bg-darkPrimary transition duration-200 focus:outline-none focus:ring"
                   href="#"
                 >
                   ابحث عن العيادات
@@ -138,7 +138,7 @@ function Hero(props) {
               </Link>
               <Link href="/contact">
                 <a
-                  className="block w-full px-12 py-3 text-sm font-medium bg-white rounded shadow text-green-600 sm:w-auto hover:text-green-700 active:text-green-500 focus:outline-none focus:ring"
+                  className="block w-full px-12 py-3 text-sm font-medium bg-white rounded shadow text-brightPrimary sm:w-auto hover:text-darkPrimary active:text-brightPrimary focus:outline-none focus:ring"
                   href="#"
                 >
                   يتعلم أكثر
@@ -156,7 +156,7 @@ function Hero(props) {
         <Image
           className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-50 sm:opacity-100"
           src="/images/landing/hair-transplant4.jpg"
-          alt="Couple on a bed with a dog"
+          alt="Hair transplant"
           layout="fill"
         />
 
@@ -176,7 +176,7 @@ function Hero(props) {
             <div className="flex flex-wrap gap-4 mt-8 text-center">
               <Link href="/clinics">
                 <a
-                  className="block w-full px-12 py-3 text-sm font-medium text-white rounded shadow bg-green-500 sm:w-auto active:bg-green-500 hover:bg-green-700 transition duration-200 focus:outline-none focus:ring"
+                  className="block w-full px-12 py-3 text-sm font-medium text-white rounded shadow bg-brightPrimary sm:w-auto active:bg-brightPrimary hover:bg-darkPrimary transition duration-200 focus:outline-none focus:ring"
                   href="#"
                 >
                   מצא מרפאות
@@ -184,7 +184,7 @@ function Hero(props) {
               </Link>
               <Link href="/contact">
                 <a
-                  className="block w-full px-12 py-3 text-sm font-medium bg-white rounded shadow text-green-600 sm:w-auto hover:text-green-700 active:text-green-500 focus:outline-none focus:ring"
+                  className="block w-full px-12 py-3 text-sm font-medium bg-white rounded shadow text-brightPrimary sm:w-auto hover:text-darkPrimary active:text-brightPrimary focus:outline-none focus:ring"
                   href="#"
                 >
                   למד עוד
@@ -202,7 +202,7 @@ function Hero(props) {
         <Image
           className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-50 sm:opacity-100"
           src="/images/landing/hair-transplant4.jpg"
-          alt="Couple on a bed with a dog"
+          alt="пересадке волос"
           layout="fill"
         />
 
@@ -212,7 +212,7 @@ function Hero(props) {
           <div className="max-w-xl text-center sm:text-left">
             <h1 className="text-3xl font-extrabold sm:text-5xl">
               Самые квалифицированные врачи Турции по{" "}
-              <strong className="font-extrabold text-green-500 sm:block">
+              <strong className="font-extrabold text-brightPrimary sm:block">
                 пересадке волос{" "}
               </strong>
             </h1>
@@ -226,7 +226,7 @@ function Hero(props) {
             <div className="flex flex-wrap gap-4 mt-8 text-center">
               <Link href="/clinics">
                 <a
-                  className="block w-full px-12 py-3 text-sm font-medium text-white rounded shadow bg-green-500 sm:w-auto active:bg-green-500 hover:bg-green-700 transition duration-200 focus:outline-none focus:ring"
+                  className="block w-full px-12 py-3 text-sm font-medium text-white rounded shadow bg-brightPrimary sm:w-auto active:bg-brightPrimary hover:bg-darkPrimary transition duration-200 focus:outline-none focus:ring"
                   href="#"
                 >
                   Найти клиники
@@ -234,7 +234,7 @@ function Hero(props) {
               </Link>
               <Link href="/contact">
                 <a
-                  className="block w-full px-12 py-3 text-sm font-medium bg-white rounded shadow text-green-600 sm:w-auto hover:text-green-700 active:text-green-500 focus:outline-none focus:ring"
+                  className="block w-full px-12 py-3 text-sm font-medium bg-white rounded shadow text-brightPrimary sm:w-auto hover:text-darkPrimary active:text-brightPrimary focus:outline-none focus:ring"
                   href="#"
                 >
                   учить больше
@@ -252,7 +252,7 @@ function Hero(props) {
         <Image
           className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-50 sm:opacity-100"
           src="/images/landing/hair-transplant4.jpg"
-          alt="Couple on a bed with a dog"
+          alt="trasplante de cabello"
           layout="fill"
         />
         <div className="hidden sm:block sm:inset-0 sm:absolute sm:bg-gradient-to-r sm:from-white sm:to-transparent"></div>
@@ -260,7 +260,7 @@ function Hero(props) {
           <div className="max-w-xl text-center sm:text-left">
             <h1 className="text-3xl font-extrabold sm:text-5xl">
               Los médicos más calificados de Turquía en
-              <strong className="font-extrabold text-green-500 sm:block">
+              <strong className="font-extrabold text-brightPrimary sm:block">
                 trasplante de cabello
               </strong>
             </h1>
@@ -273,7 +273,7 @@ function Hero(props) {
             <div className="flex flex-wrap gap-4 mt-8 text-center">
               <Link href="/clinics">
                 <a
-                  className="block w-full px-12 py-3 text-sm font-medium text-white rounded shadow bg-green-500 sm:w-auto active:bg-green-500 hover:bg-green-700 transition duration-200 focus:outline-none focus:ring"
+                  className="block w-full px-12 py-3 text-sm font-medium text-white rounded shadow bg-brightPrimary sm:w-auto active:bg-brightPrimary hover:bg-darkPrimary transition duration-200 focus:outline-none focus:ring"
                   href="#"
                 >
                   Encuentre Clínicas
@@ -281,7 +281,7 @@ function Hero(props) {
               </Link>
               <Link href="/contact">
                 <a
-                  className="block w-full px-12 py-3 text-sm font-medium bg-white rounded shadow text-green-600 sm:w-auto hover:text-green-700 active:text-green-500 focus:outline-none focus:ring"
+                  className="block w-full px-12 py-3 text-sm font-medium bg-white rounded shadow text-brightPrimary sm:w-auto hover:text-darkPrimary active:text-brightPrimary focus:outline-none focus:ring"
                   href="#"
                 >
                   Aprende Más
@@ -299,7 +299,7 @@ function Hero(props) {
         <Image
           className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-50 sm:opacity-100"
           src="/images/landing/hair-transplant4.jpg"
-          alt="Couple on a bed with a dog"
+          alt="trapianto di capelli"
           layout="fill"
         />
 
@@ -309,7 +309,7 @@ function Hero(props) {
           <div className="max-w-xl text-center sm:text-left">
             <h1 className="text-3xl font-extrabold sm:text-5xl">
               I medici più qualificati della Turchia nel
-              <strong className="font-extrabold text-green-500 sm:block">
+              <strong className="font-extrabold text-brightPrimary sm:block">
                 trapianto di capelli
               </strong>
             </h1>
@@ -323,7 +323,7 @@ function Hero(props) {
             <div className="flex flex-wrap gap-4 mt-8 text-center">
               <Link href="/clinics">
                 <a
-                  className="block w-full px-12 py-3 text-sm font-medium text-white rounded shadow bg-green-500 sm:w-auto active:bg-green-500 hover:bg-green-700 transition duration-200 focus:outline-none focus:ring"
+                  className="block w-full px-12 py-3 text-sm font-medium text-white rounded shadow bg-brightPrimary sm:w-auto active:bg-brightPrimary hover:bg-darkPrimary transition duration-200 focus:outline-none focus:ring"
                   href="#"
                 >
                   Trova cliniche
@@ -331,7 +331,7 @@ function Hero(props) {
               </Link>
               <Link href="/contact">
                 <a
-                  className="block w-full px-12 py-3 text-sm font-medium bg-white rounded shadow text-green-600 sm:w-auto hover:text-green-700 active:text-green-500 focus:outline-none focus:ring"
+                  className="block w-full px-12 py-3 text-sm font-medium bg-white rounded shadow text-brightPrimary sm:w-auto hover:text-darkPrimary active:text-brightPrimary focus:outline-none focus:ring"
                   href="#"
                 >
                   Per saperne di più
