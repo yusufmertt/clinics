@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Landing from "./../components/landing/landing";
+import Script from "next/script";
 
 function Home() {
   return (
@@ -12,6 +13,7 @@ function Home() {
           name="description"
           content="Find world-class doctors and experts qualified in hair transplant, aethetics, dental and much more in Turkey."
         />
+      
       </Head>
 
       <main>

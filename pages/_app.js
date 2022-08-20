@@ -26,17 +26,8 @@ function MyApp({ Component, pageProps }) {
           </Head>
           {/* 
           <GoogleAnalytics /> */}
-          <Script
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9235140354760044"
-            crossorigin="anonymous"
-          ></Script>
-          <Script
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9235140354760044"
-            crossorigin="anonymous"
-          ></Script>
-          <Script
+
+          {/* <Script
             strategy="afterInteractive"
             src={`https://www.googletagmanager.com/gtag/js?id=G-HW23HL84Q5`}
           />
@@ -47,7 +38,7 @@ function MyApp({ Component, pageProps }) {
         gtag('js', new Date());
         gtag('config', 'G-HW23HL84Q5');
     `}
-          </Script>
+          </Script> */}
           <Component {...pageProps} />
         </Layout>
       </ClinicsContextProvider>
