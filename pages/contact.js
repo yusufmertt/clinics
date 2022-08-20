@@ -67,7 +67,7 @@ function ContactPage() {
           <div className="lg:w-1/2 md:w-2/3 mx-auto">
             {emailError && (
               <div
-                className="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800"
+                className="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg"
                 role="alert"
               >
                 <span className="font-medium">Error!</span> We need your email
@@ -76,7 +76,7 @@ function ContactPage() {
             )}
             {success && (
               <div
-                className="p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800"
+                className="p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg"
                 role="alert"
               >
                 <span className="font-medium">Success!</span> We have received
@@ -201,13 +201,13 @@ function ContactPage() {
               <div className="p-2 w-full">
                 <button
                   type="submit"
-                  className="flex mx-auto text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg"
+                  className="flex mx-auto text-white bg-brightPrimary border-0 py-2 px-8 focus:outline-none hover:bg-darkPrimary rounded text-lg"
                 >
                   Send
                 </button>
               </div>
               <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
-                <a className="text-green-500">example@email.com</a>
+                <a className="text-brightPrimary">example@email.com</a>
                 <p className="leading-normal my-5">
                   49 Smith St.
                   <br />

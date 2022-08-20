@@ -57,7 +57,7 @@ const ClinicDetails = (props) => {
       </Head>
       <div className="md:w-2/3 order-last md:order-first">
         <Link href="/clinics">
-          <div className="flex p-3 text-green-500 hover:cursor-pointer hover:text-green-700 transition duration-200">
+          <div className="flex p-3 text-brightPrimary hover:cursor-pointer hover:text-darkPrimary transition duration-200">
             <svg viewBox="0 0 50 50" fill="currentColor" className="h-7">
               <path
                 d="M45.506,33.532c-1.741-7.42-7.161-17.758-23.554-19.942V7.047c0-1.364-0.826-2.593-2.087-3.113
@@ -96,7 +96,7 @@ const ClinicDetails = (props) => {
             />
           </div>
         </div>
-        <div className="shadow-sm shadow-gray-300 bg-green-400 mb-6 rounded-2xl p-6 mt-4 flex flex-col text-gray-800">
+        <div className="shadow-sm shadow-gray-300 bg-slate-100 mb-6 rounded-2xl p-6 mt-4 flex flex-col text-gray-800">
           <div className="flex justify-between mb-2">
             <div>
               <Image
@@ -152,7 +152,7 @@ const ClinicDetails = (props) => {
         )}
       </div>
       <div className="md:w-1/4 py-4 md:mt-24 rounded-lg md:h-1/2">
-        <div className="flex flex-col w-full rounded-lg bg-green-400 shadow-2xl shadow-gray-500 p-4">
+        <div className="flex flex-col w-full rounded-lg bg-slate-100 shadow-lg shadow-gray-300 p-4">
           {featured && (
             <div className="md:text-end mb-5">
               <Badge color="red" variant="dark">

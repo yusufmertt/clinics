@@ -24,6 +24,7 @@ export function SearchInput2(props) {
     // { name: "Fat Removal", id: "f3" },
     { name: "Dental aesthetics", id: "f4" },
     { name: "Esthetic surgeries", id: "f5" },
+    { name:"Obesity Surgery",id:"f6"}
   ];
 
   const locations = [
@@ -40,6 +41,8 @@ export function SearchInput2(props) {
     // { id: "f3", checked: false, feature: "Fat Removal" },
     { id: "f4", checked: false, feature: "Dental aesthetics" },
     { id: "f5", checked: false, feature: "Esthetic surgeries" },
+    { id: "f6", checked: false, feature: "Obesity Surgery" },
+
   ]);
 
   const [trueCheckboxes, setTrueCheckboxes] = useState([]);
@@ -53,6 +56,10 @@ export function SearchInput2(props) {
   const handleOpen = (value) => {
     setOpen(open === value ? 0 : value);
   };
+
+  useEffect(()=>{
+    setOpen(1)
+  },[])
 
   useEffect(() => {
     if (clinicsCtx.clinics) {
@@ -240,11 +247,11 @@ export function SearchInput2(props) {
     return;
   }
 
-  const [sortOpen, setSortOpen] = useState(false);
+/*   const [sortOpen, setSortOpen] = useState(false);
   function sortDropdown() {
     setSortOpen((prev) => !prev);
   }
-
+ */
   function cityChangeHandler(event) {
     setCity(event.target.value);
   }
@@ -308,7 +315,7 @@ export function SearchInput2(props) {
       </form>
       <div className="md:flex md:justify-between md:mt-2 md:items-baseline">
         <div className="bg-brightPrimary my-3 rounded-xl md:w-full flex px-4 text-white">
-          <Accordion open={open === 1}>
+          <Accordion open={open === 1} >
             <AccordionHeader onClick={() => handleOpen(1)} className="py-1.5">
               {(!language || language === "English") && "Filters"}
               {language === "German" && "Filter"}
