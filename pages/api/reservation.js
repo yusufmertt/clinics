@@ -30,8 +30,14 @@ async function handler(req, res) {
     html: message.replace(/\r\n/g, "<br>"),
   };
 
-  mail.send(data);
-
+  mail
+  .send(data)
+  .then(() => {
+    console.log("Email sent");
+  })
+  .catch((error) => {
+    console.error(error);
+  });
   const feedbackToMeData = {
     to: "phudinq@findclinicsturkey.com",
     from: "reservation@findclinicsturkey.com",
