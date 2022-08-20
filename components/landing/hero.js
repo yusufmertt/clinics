@@ -9,7 +9,7 @@ function Hero(props) {
     content = (
       <section className="relative bg-white">
         <Image
-          className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-40 sm:opacity-100"
+          className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-20 sm:opacity-100"
           src="/images/landing/hero2.jpg"
           alt="Hair Transplant"
           layout="fill"
@@ -27,7 +27,7 @@ function Hero(props) {
             </h1>
 
             <p className="max-w-lg mt-4 sm:leading-relaxed sm:text-xl">
-              Meet with best doctors in <strong>hair transplant, dental operations, eye surgeries,
+              Meet with best doctors in <strong><span className="text-brightPrimary">Hair transplant</span>, dental operations, eye surgeries,
               rhinoplasty, liposuction, breast augmentation</strong> and much more...
             </p>
 
