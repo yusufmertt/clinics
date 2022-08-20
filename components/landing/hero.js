@@ -9,7 +9,7 @@ function Hero(props) {
     content = (
       <section className="relative bg-white">
         <Image
-          className="absolute inset-0 object-[50%] sm:object-[25%] object-cover w-full h-full opacity-50 sm:opacity-100"
+          className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-50 sm:opacity-100"
           src="/images/landing/hair-transplant4.jpg"
           alt="Couple on a bed with a dog"
           layout="fill"
@@ -59,7 +59,7 @@ function Hero(props) {
     content = (
       <section className="relative bg-white">
         <Image
-          className="absolute inset-0 object-[50%] sm:object-[25%] object-cover w-full h-full opacity-50 sm:opacity-100"
+          className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-50 sm:opacity-100"
           src="/images/landing/hair-transplant4.jpg"
           alt="Couple on a bed with a dog"
           layout="fill"
@@ -108,7 +108,7 @@ function Hero(props) {
     content = (
       <section className="relative bg-white">
         <Image
-          className="absolute inset-0 object-[50%] sm:object-[25%] object-cover w-full h-full opacity-50 sm:opacity-100"
+          className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-50 sm:opacity-100"
           src="/images/landing/hair-transplant4.jpg"
           alt="Couple on a bed with a dog"
           layout="fill"
@@ -154,7 +154,7 @@ function Hero(props) {
     content = (
       <section className="relative bg-white">
         <Image
-          className="absolute inset-0 object-[50%] sm:object-[25%] object-cover w-full h-full opacity-50 sm:opacity-100"
+          className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-50 sm:opacity-100"
           src="/images/landing/hair-transplant4.jpg"
           alt="Couple on a bed with a dog"
           layout="fill"
@@ -200,7 +200,7 @@ function Hero(props) {
     content = (
       <section className="relative bg-white">
         <Image
-          className="absolute inset-0 object-[50%] sm:object-[25%] object-cover w-full h-full opacity-50 sm:opacity-100"
+          className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-50 sm:opacity-100"
           src="/images/landing/hair-transplant4.jpg"
           alt="Couple on a bed with a dog"
           layout="fill"
@@ -250,7 +250,7 @@ function Hero(props) {
     content = (
       <section className="relative bg-white">
         <Image
-          className="absolute inset-0 object-[50%] sm:object-[25%] object-cover w-full h-full opacity-50 sm:opacity-100"
+          className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-50 sm:opacity-100"
           src="/images/landing/hair-transplant4.jpg"
           alt="Couple on a bed with a dog"
           layout="fill"
@@ -297,7 +297,7 @@ function Hero(props) {
     content = (
       <section className="relative bg-white">
         <Image
-          className="absolute inset-0 object-[50%] sm:object-[25%] object-cover w-full h-full opacity-50 sm:opacity-100"
+          className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-50 sm:opacity-100"
           src="/images/landing/hair-transplant4.jpg"
           alt="Couple on a bed with a dog"
           layout="fill"

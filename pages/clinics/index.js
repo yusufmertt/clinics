@@ -20,7 +20,6 @@ const ClinicsPage = (props) => {
             name="description"
             content="Find world-class doctors and experts qualified in hair transplant, aethetics, dental and much more in Turkey."
           />
-          <link rel="icon" href="/favicon.ico" />
         </Head>
         <Clinics clinics={parsedClinics} />
       </Fragment>
