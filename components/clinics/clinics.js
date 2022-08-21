@@ -142,7 +142,7 @@ const Clinics = (props) => {
       <div>
         <Menu language={language}/>
       </div>
-      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 mt-3">
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 xxl:grid-cols-5 mt-3">
         {clinicsCtx.filteredClinics &&
           currentFilteredClinics &&
           filteredClinics &&

@@ -1,6 +1,7 @@
 import { useState, useContext } from "react";
 import Link from "next/link";
 import { LanguagePicker } from "./language-pick";
+import Image from "next/image";
 
 const Navbar = (props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,7 +17,7 @@ const Navbar = (props) => {
             title="Company"
             className="inline-flex items-center"
           >
-            <svg
+         {/*    <svg
               className="w-8 text-deep-purple-accent-400"
               viewBox="0 0 24 24"
               strokeLinejoin="round"
@@ -33,7 +34,8 @@ const Navbar = (props) => {
             </svg>
             <span className="ml-2 text-lg font-bold tracking-wide text-gray-800 uppercase">
               FindClinicsTurkey
-            </span>
+            </span> */}
+            <Image src="/images/icons/icon.png" width={225} height={50}/>
           </a>
         </Link>
         <ul className="items-center hidden space-x-8 lg:flex">
@@ -56,7 +58,7 @@ const Navbar = (props) => {
             </Link>
           </li>
 
-         {/*  <li>
+          {/*  <li>
             <Link href="/pricing">
               <a
                 href="#"
@@ -101,6 +103,24 @@ const Navbar = (props) => {
                 className="font-medium tracking-wide text-gray-700 hover:text-brightPrimary transition duration-200"
               >
                 {(!language || language === "English") && "Contact"}
+                {language === "German" && "Kontakt"}
+                {language === "Arabic" && "اتصل"}
+                {language === "Italian" && "Contatto"}
+                {language === "Spanish" && "Contacto"}
+                {language === "Hebrew" && "איש קשר"}
+                {language === "Russian" && "Контакт"}
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/about-us">
+              <a
+                href="#"
+                aria-label="About us"
+                title="About us"
+                className="font-medium tracking-wide text-gray-700 hover:text-brightPrimary transition duration-200"
+              >
+                {(!language || language === "English") && "About Us"}
                 {language === "German" && "Kontakt"}
                 {language === "Arabic" && "اتصل"}
                 {language === "Italian" && "Contatto"}
@@ -207,7 +227,7 @@ const Navbar = (props) => {
                       </Link>
                     </li>
 
-                {/*     <li>
+                    {/*     <li>
                       <Link href="/pricing">
                         <a
                           href="#"

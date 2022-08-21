@@ -24,7 +24,12 @@ export function SearchInput2(props) {
     // { name: "Fat Removal", id: "f3" },
     { name: "Dental aesthetics", id: "f4" },
     { name: "Esthetic surgeries", id: "f5" },
-    { name:"Obesity Surgery",id:"f6"}
+    { name: "Obesity Surgery", id: "f6" },
+    { name: " Rhinoplasty (nose job)", id: "f7" },
+    { name: "Breast operations", id: "f8" },
+    { name: "Eye operations", id: "f9" },
+    { name: "Liposuction", id: "f10" },
+
   ];
 
   const locations = [
@@ -39,10 +44,13 @@ export function SearchInput2(props) {
     { id: "f1", checked: false, feature: "Hair transplant" },
     // { id: "f2", checked: false, feature: "IVF" },
     // { id: "f3", checked: false, feature: "Fat Removal" },
-    { id: "f4", checked: false, feature: "Dental aesthetics" },
+    { id: "f4", checked: false, feature: "Dental operations" },
     { id: "f5", checked: false, feature: "Esthetic surgeries" },
     { id: "f6", checked: false, feature: "Obesity Surgery" },
-
+    { id: "f7", checked: false, feature: "Rhinoplasty" },
+    { id: "f8", checked: false, feature: "Breast operations" },
+    { id: "f9", checked: false, feature: "Eye operations" },
+    { id: "f10", checked: false, feature: "Liposuction" },
   ]);
 
   const [trueCheckboxes, setTrueCheckboxes] = useState([]);
@@ -57,9 +65,9 @@ export function SearchInput2(props) {
     setOpen(open === value ? 0 : value);
   };
 
-  useEffect(()=>{
-    setOpen(1)
-  },[])
+  useEffect(() => {
+    setOpen(1);
+  }, []);
 
   useEffect(() => {
     if (clinicsCtx.clinics) {
@@ -103,7 +111,6 @@ export function SearchInput2(props) {
           })
         );
       });
-
 
       setFilteredClinics(filteredArray);
 
@@ -247,7 +254,7 @@ export function SearchInput2(props) {
     return;
   }
 
-/*   const [sortOpen, setSortOpen] = useState(false);
+  /*   const [sortOpen, setSortOpen] = useState(false);
   function sortDropdown() {
     setSortOpen((prev) => !prev);
   }
@@ -315,8 +322,8 @@ export function SearchInput2(props) {
       </form>
       <div className="md:flex md:justify-between md:mt-2 md:items-baseline">
         <div className="bg-brightPrimary my-3 rounded-xl md:w-full flex px-4 text-white">
-          <Accordion open={open === 1} >
-            <AccordionHeader onClick={() => handleOpen(1)} className="py-1.5">
+          <Accordion open={open === 1}>
+            <AccordionHeader onClick={() => handleOpen(1)} className="py-2">
               {(!language || language === "English") && "Filters"}
               {language === "German" && "Filter"}
               {language === "Arabic" && "منقي"}
@@ -337,16 +344,16 @@ export function SearchInput2(props) {
                     />
                     <label
                       htmlFor={`${feature.id}`}
-                      className="ml-2 text-sm font-medium text-gray-100"
+                      className="ml-2 text-sm font-medium text-gray-100 my-0.5"
                     >
                       {feature.name}
                     </label>
                   </div>
                 ))}
               </div>
-              <div className="w-full md:w-1/3 px-3 mb-3 md:mb-0 mt-2">
+              <div className="w-full md:w-1/3 px-3 my-3 md:mb-0">
                 <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  className="block uppercase tracking-wide text-gray-100 text-xs font-bold mb-2"
                   htmlFor="grid-state"
                 >
                   City

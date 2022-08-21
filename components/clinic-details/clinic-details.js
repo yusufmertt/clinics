@@ -97,7 +97,7 @@ const ClinicDetails = (props) => {
           </div>
         </div>
         <div className="shadow-sm shadow-gray-300 bg-slate-100 mb-6 rounded-2xl p-6 mt-4 flex flex-col text-gray-800">
-          <div className="flex justify-between mb-2">
+          <div className="flex flex-col md:flex-row justify-between mb-2">
             <div>
               <Image
                 src="/images/icons/phone.svg"
@@ -188,7 +188,7 @@ const ClinicDetails = (props) => {
           </p>
           <Link href={`/clinics/${slug}/reservation`}>
             <a className="bg-white w-full uppercase text-center text-red-600 font-semibold hover:bg-gray-300 px-3 py-1.5 transition duration-200 rounded-lg">
-              Get Reservation!
+              Make Reservation!
             </a>
           </Link>
         </div>

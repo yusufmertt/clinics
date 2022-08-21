@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const Footer = (props) => {
@@ -273,7 +274,7 @@ const Footer = (props) => {
               title="Company"
               className="inline-flex items-center"
             >
-              <svg
+            {/*   <svg
                 className="w-8 text-deep-purple-accent-400"
                 viewBox="0 0 24 24"
                 strokeLinejoin="round"
@@ -290,7 +291,8 @@ const Footer = (props) => {
               </svg>
               <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
                 FindClinicsTurkey
-              </span>
+              </span> */}
+              <Image src="/images/icons/icon.png" width={225} height={50}/>
             </a>
           </Link>
           <div className="mt-6 lg:max-w-sm">
