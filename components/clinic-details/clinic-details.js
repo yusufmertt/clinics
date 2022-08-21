@@ -50,7 +50,7 @@ const ClinicDetails = (props) => {
 
   return (
     <div className="md:flex-row lg:px-28 m-5 flex-col flex mt-2 justify-between xl:px-36">
-       <Head>
+      <Head>
         <title>{name}</title>
         <meta name="description" content="Contact us to reservation." />
         <link rel="icon" href="/favicon.ico" />
@@ -117,14 +117,14 @@ const ClinicDetails = (props) => {
                 alt="website"
               />
 
-              <a
-                href={website}
-                target="_blank"
-                rel="noreferrer"
-                className="mx-2 text-blue-900 hover:text-blue-700"
-              >
-                {website}
-              </a>
+              <Link href={`/clinics/${slug}/redirect`}>
+                <a
+                  href="#"
+                  className="mx-2 text-blue-900 hover:text-blue-700"
+                >
+                  {website}
+                </a>
+              </Link>
             </div>
           </div>
           <div>
@@ -181,7 +181,7 @@ const ClinicDetails = (props) => {
               <span className="mx-2">{location}</span>
             </div>
           </div>
-        </div>{" "}
+        </div>
         <div className="flex flex-col bg-red-600 sm:mt-10 mt-5 rounded-lg p-5 shadow-2xl shadow-gray-500">
           <p className="mb-2 text-white rounded-lg text-sm uppercase p-3 font-bold">
             Get 10% discount by making reservation with our refferal code!

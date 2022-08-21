@@ -64,7 +64,7 @@ function Reservation(props) {
       <form onSubmit={submitHandler}>
         <div className="container px-5 py-24 mx-auto">
           <Link href={`/clinics/${slug}`}>
-            <div className="flex p-3 text-green-500 hover:cursor-pointer hover:text-green-700 transition duration-200">
+            <div className="flex p-3 text-brightPrimary hover:cursor-pointer hover:text-darkPrimary transition duration-200">
               <svg viewBox="0 0 50 50" fill="currentColor" className="h-7">
                 <path
                   d="M45.506,33.532c-1.741-7.42-7.161-17.758-23.554-19.942V7.047c0-1.364-0.826-2.593-2.087-3.113
@@ -87,7 +87,7 @@ function Reservation(props) {
           <div className="lg:w-1/2 md:w-2/3 mx-auto">
             {emailError && (
               <div
-                className="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800"
+                className="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg "
                 role="alert"
               >
                 <span className="font-medium">Error!</span> We need your email
@@ -96,7 +96,7 @@ function Reservation(props) {
             )}
             {success && (
               <div
-                className="p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800"
+                className="p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg "
                 role="alert"
               >
                 <span className="font-medium">Success!</span> We have received
@@ -117,7 +117,7 @@ function Reservation(props) {
                     type="text"
                     id="name"
                     name="name"
-                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-500 focus:bg-white focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-brightPrimary focus:bg-white focus:ring-2 focus:ring-brightPrimary text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
                 </div>
               </div>
@@ -135,7 +135,7 @@ function Reservation(props) {
                     id="email"
                     name="email"
                     className={
-                      "w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-500 focus:bg-white focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out "
+                      "w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-brightPrimary focus:bg-white focus:ring-2 focus:ring-brightPrimary text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out "
                     }
                   />
                 </div>
@@ -158,7 +158,7 @@ function Reservation(props) {
                     id="email"
                     name="email"
                     className={
-                      "w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-500 focus:bg-white focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out "
+                      "w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-brightPrimary focus:bg-white focus:ring-2 focus:ring-brightPrimary text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out "
                     }
                   />
                 </div>
@@ -194,14 +194,14 @@ function Reservation(props) {
                     ref={messageRef}
                     id="message"
                     name="message"
-                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-500 focus:bg-white focus:ring-2 focus:ring-green-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-brightPrimary focus:bg-white focus:ring-2 focus:ring-brightPrimary h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                   ></textarea>
                 </div>
               </div>
               <div className="p-2 w-full">
                 <button
                   type="submit"
-                  className="flex mx-auto text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg"
+                  className="flex mx-auto text-white bg-brightPrimary border-0 py-2 px-8 focus:outline-none hover:bg-darkPrimary rounded text-lg"
                 >
                   Send
                 </button>
