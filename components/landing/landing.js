@@ -6,6 +6,7 @@ import FeaturedClinics from "./featured-clinics";
 
 import Context from "../../store/context";
 import { useEffect, useContext, useState } from "react";
+import Contracts from "./contracts";
 
 function Landing(props) {
   const appCtx = useContext(Context);
@@ -25,6 +26,7 @@ function Landing(props) {
       <Hero language={language} />
       <FeaturedClinics featuredClinics={props.featuredClinics}/>
       <Stats />
+      <Contracts/>
       <Info />
       <Cta />
     </div>
