@@ -7,7 +7,7 @@ import FeaturedClinics from "./featured-clinics";
 import Context from "../../store/context";
 import { useEffect, useContext, useState } from "react";
 
-function Landing() {
+function Landing(props) {
   const appCtx = useContext(Context);
   const [language, setLanguage] = useState("English");
 
@@ -23,7 +23,7 @@ function Landing() {
   return (
     <div>
       <Hero language={language} />
-      <FeaturedClinics/>
+      <FeaturedClinics featuredClinics={props.featuredClinics}/>
       <Stats />
       <Info />
       <Cta />
