@@ -22,6 +22,7 @@
     "next": "12.2.4",
     "nextjs-google-analytics": "^2.0.0",
     "react": "18.2.0",
+    "react-alice-carousel": "^2.6.4",
     "react-dom": "18.2.0",
     "react-image-gallery": "^1.2.9",
     "react-phone-number-input": "^3.2.7"

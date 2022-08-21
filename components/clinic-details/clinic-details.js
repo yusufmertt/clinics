@@ -79,7 +79,7 @@ const ClinicDetails = (props) => {
                 return (
                   <p
                     key={feature}
-                    className="bg-blue-100 inline-block text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800"
+                    className="bg-blue-100 inline-block text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded"
                   >
                     {feature}
                   </p>
@@ -97,7 +97,7 @@ const ClinicDetails = (props) => {
           </div>
         </div>
         <div className="shadow-sm shadow-gray-300 bg-slate-100 mb-6 rounded-2xl p-6 mt-4 flex flex-col text-gray-800">
-          <div className="flex flex-col md:flex-row justify-between mb-2">
+          <div className="flex flex-col md:flex-row justify-between my-1 md:my-0 md:mb-2">
             <div>
               <Image
                 src="/images/icons/phone.svg"
@@ -169,7 +169,7 @@ const ClinicDetails = (props) => {
                 return (
                   <p
                     key={feature}
-                    className="bg-blue-100 inline-block text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800"
+                    className="bg-blue-100 inline-block text-blue-800 text-xs font-semibold mr-2 my-0.5 px-2.5 py-0.5 rounded"
                   >
                     {feature}
                   </p>

@@ -344,7 +344,7 @@ export function SearchInput2(props) {
                     />
                     <label
                       htmlFor={`${feature.id}`}
-                      className="ml-2 text-sm font-medium text-gray-100 my-0.5"
+                      className="ml-2 text-sm font-semibold text-gray-100 my-0.5"
                     >
                       {feature.name}
                     </label>

@@ -28,7 +28,7 @@ function Hero(props) {
 
             <p className="max-w-lg mt-4 sm:leading-relaxed sm:text-xl">
               Meet with best doctors in <strong><Link href="/clinics"><a htef="#" className="text-brightPrimary underline">hair transplant</a></Link>, dental operations, eye surgeries,
-              rhinoplasty, liposuction, breast augmentation</strong> and much more...
+              rhinoplasty, liposuction, breast augmentation, gastric sleeve</strong> and much more...
             </p>
 
             <div className="flex flex-wrap gap-4 mt-8 text-center">

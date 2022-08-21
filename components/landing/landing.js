@@ -1,10 +1,11 @@
 import Hero from "./hero";
 import Cta from "./cta";
 import Info from "./info";
+import Stats from "./stats";
+import FeaturedClinics from "./featured-clinics";
 
 import Context from "../../store/context";
 import { useEffect, useContext, useState } from "react";
-import Stats from "./stats";
 
 function Landing() {
   const appCtx = useContext(Context);
@@ -22,6 +23,7 @@ function Landing() {
   return (
     <div>
       <Hero language={language} />
+      <FeaturedClinics/>
       <Stats />
       <Info />
       <Cta />

@@ -1,12 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
 import Landing from "./../components/landing/landing";
 import Script from "next/script";
+import { Fragment } from 'react';
 
 function Home() {
   return (
-    <div className={styles.container}>
+    <Fragment>
       <Head>
         <title>FindClinicsTurkey-Best clinics in Turkey</title>
         <meta
@@ -19,7 +19,7 @@ function Home() {
       <main>
         <Landing />
       </main>
-    </div>
+    </Fragment>
   );
 }
 
