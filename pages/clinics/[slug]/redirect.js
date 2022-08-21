@@ -1,4 +1,4 @@
-export default function RedirectPage() {
+/* export default function RedirectPage() {
 }
 export async function getStaticProps(context) {
   const { params } = context; // context has params key (URL query)
@@ -23,3 +23,4 @@ export async function getStaticPaths() {
     fallback: false,
   };
 }
+ */
