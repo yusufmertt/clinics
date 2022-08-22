@@ -92,6 +92,7 @@ const Footer = (props) => {
             <a
               href="https://twitter.com/findclinicstr"
               target="_blank"
+              rel="noreferrer"
               className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
             >
               <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
@@ -102,6 +103,7 @@ const Footer = (props) => {
             <a
               href="https://www.instagram.com/findclinicsturkey/"
               target="_blank"
+              rel="noreferrer"
               className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
             >
               <svg viewBox="0 0 30 30" fill="currentColor" className="h-6">

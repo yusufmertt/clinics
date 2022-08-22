@@ -4,7 +4,7 @@ mail.setApiKey(process.env.SENDGRID_API_KEY);
 
 async function handler(req, res) {
   const body = req.body;
-/* 
+
   let name;
 
   if (body.name.trim() === "") {
@@ -18,19 +18,19 @@ async function handler(req, res) {
   const feedbackData = {
     to: body.email,
     from: "contact@findclinicsturkey.com",
-    subject: "Your request has been received!",
-    text: `Dear ${name}, \r\n Your request to us has been received and we will get back to you as soon as possible. Thank you for your patience.`,
+    subject: "Your consultation request has been received!",
+    text: `Dear ${name}, \r\n Your consultation request to us has been received and a doctor will get back to you as soon as possible. Thank you for your patience.`,
   };
 
   mail
-  .send(feedbackData)
-  .then(() => {
-    console.log("Email sent");
-  })
-  .catch((error) => {
-    console.error(error);
-  });
- */
+    .send(feedbackData)
+    .then(() => {
+      console.log("Email sent");
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+
   res.status(200).json({ message: "Email sent!" });
 }
 
