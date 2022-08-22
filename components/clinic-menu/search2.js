@@ -29,7 +29,6 @@ export function SearchInput2(props) {
     { name: "Breast operations", id: "f8" },
     { name: "Eye operations", id: "f9" },
     { name: "Liposuction", id: "f10" },
-
   ];
 
   const locations = [
@@ -500,6 +499,12 @@ export function SearchInput2(props) {
           </div>
         </div> */}
       </div>
+      {clinicsCtx.filteredClinics && (
+        <p className="text-right">{clinicsCtx.filteredClinics.length} Clinics Listed</p>
+      )}
+      {!clinicsCtx.filteredClinics && clinicsCtx.clinics && (
+        <p className="text-right">{clinicsCtx.clinics.length} Clinics Listed</p>
+      )}
     </div>
   );
 }

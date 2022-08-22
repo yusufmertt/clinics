@@ -148,19 +148,19 @@ function Reservation(props) {
         </div>
       </form> */}
       <form onSubmit={submitHandler}>
-      <Link href={`/clinics/${slug}`}>
-            <div className="flex p-3 text-brightPrimary hover:cursor-pointer hover:text-darkPrimary transition duration-200">
-              <svg viewBox="0 0 50 50" fill="currentColor" className="h-7">
-                <path
-                  d="M45.506,33.532c-1.741-7.42-7.161-17.758-23.554-19.942V7.047c0-1.364-0.826-2.593-2.087-3.113
+        <Link href={`/clinics/${slug}`}>
+          <div className="flex p-3 text-brightPrimary hover:cursor-pointer hover:text-darkPrimary transition duration-200">
+            <svg viewBox="0 0 50 50" fill="currentColor" className="h-7">
+              <path
+                d="M45.506,33.532c-1.741-7.42-7.161-17.758-23.554-19.942V7.047c0-1.364-0.826-2.593-2.087-3.113
 		c-1.261-0.521-2.712-0.229-3.675,0.737L1.305,19.63c-1.739,1.748-1.74,4.572-0.001,6.32L16.19,40.909
 		c0.961,0.966,2.415,1.258,3.676,0.737c1.261-0.521,2.087-1.75,2.087-3.113v-6.331c5.593,0.007,13.656,0.743,19.392,4.313
 		c0.953,0.594,2.168,0.555,3.08-0.101C45.335,35.762,45.763,34.624,45.506,33.532z"
-                />
-              </svg>
-              Go back
-            </div>
-          </Link>
+              />
+            </svg>
+            Go back
+          </div>
+        </Link>
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-12">
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
@@ -168,8 +168,9 @@ function Reservation(props) {
             </h1>
 
             <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-              We and our doctors can help you decide your treatment options,
-              planning your visit, pricing and much more!
+              Make your reservation from this page and get <span className="text-red-500">15% discount!</span> We and
+              our doctors can help you decide your treatment options, planning
+              your visit, pricing and much more!
               {/*  You can contact us through
               <a
                 target="_blank"
