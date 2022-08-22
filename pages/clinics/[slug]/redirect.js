@@ -21,7 +21,7 @@ function RedirectPage(props) {
       </Link>
       <h2 className="text-2xl uppercase text-red-600">Reminder!</h2>
       <p className="text-lg my-5">
-        In order to get 10% discount, you should tell/write the clinic our
+        In order to get advantage of 10% discount, you should tell/write the clinic the
         <span className="text-red-600">&nbsp;referral code</span>. Or simply
         make a reservetion from our page.
       </p>

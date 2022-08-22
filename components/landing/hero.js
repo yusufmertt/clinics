@@ -34,7 +34,7 @@ function Hero(props) {
             <div className="flex flex-wrap gap-4 mt-8 text-center">
               <Link href="/clinics">
                 <a
-                  className="block w-full px-12 py-3 text-sm font-medium text-white rounded shadow bg-brightPrimary sm:w-auto active:bg-brightPrimary hover:bg-darkPrimary transition duration-200 focus:outline-none focus:ring"
+                  className="block w-full px-12 py-3 text-md font-bold text-white rounded shadow bg-brightPrimary sm:w-auto active:bg-brightPrimary hover:bg-darkPrimary transition duration-200 focus:outline-none focus:ring"
                   href="#"
                 >
                   Find Clinics
@@ -42,7 +42,7 @@ function Hero(props) {
               </Link>
               <Link href="/contact">
                 <a
-                  className="block w-full px-12 py-3 text-sm font-medium bg-white rounded shadow text-brightPrimary sm:w-auto hover:text-darkPrimary active:text-brightPrimary focus:outline-none focus:ring"
+                  className="block w-full px-12 py-3 text-md font-medium bg-white rounded shadow text-brightPrimary sm:w-auto hover:text-darkPrimary active:text-brightPrimary focus:outline-none focus:ring"
                   href="#"
                 >
                   Learn More

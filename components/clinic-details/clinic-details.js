@@ -20,6 +20,8 @@ const ClinicDetails = (props) => {
     website,
     phone,
     slug,
+    languages,
+    extras,
   } = clinicObject;
   const images = [
     {
@@ -47,6 +49,8 @@ const ClinicDetails = (props) => {
       thumbnail: `/images/clinics/${slug}/6.png`,
     },
   ];
+
+
 
   return (
     <div className="md:flex-row lg:px-28 m-5 flex-col flex mt-2 justify-between xl:px-36">
@@ -95,6 +99,47 @@ const ClinicDetails = (props) => {
               showFullscreenButton={false}
             />
           </div>
+          <p className="font-semibold text-lg text-center tracking-wider mt-8">
+            LANGUAGES
+          </p>
+          <div className="flex mt-5">
+            {languages &&
+              languages.map((language) => {
+                return (
+                  <div key={language}>
+                    <Image
+                      src={`/images/flags/${language}.svg`}
+                      width={600}
+                      height={200}
+                      alt={language}
+                    />
+                    <p className="uppercase tracking-tighter text-center">
+                      {language}
+                    </p>
+                  </div>
+                );
+              })}
+          </div>
+          <p className="font-semibold text-lg text-center tracking-wider mt-8">
+            SERVICES
+          </p>
+          <div className="grid grid-cols-2 gap-5 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-4 xxl:grid-cols-5 mt-5">
+            {extras &&
+              extras.map((extra) => {
+                return (
+                  <div key={extra}>
+                    <Image
+                      src={`/images/extras/${extra}.svg`}
+                      width={500}
+                      height={150}
+                    />
+                    <p className="uppercase tracking-tighter text-center">
+                      {extra}
+                    </p>
+                  </div>
+                );
+              })}
+          </div>
         </div>
         <div className="shadow-sm shadow-gray-300 bg-slate-100 mb-6 rounded-2xl p-6 mt-4 flex flex-col text-gray-800">
           <div className="flex flex-col md:flex-row justify-between my-1 md:my-0 md:mb-2">
@@ -118,10 +163,7 @@ const ClinicDetails = (props) => {
               />
 
               <Link href={`/clinics/${slug}/redirect`}>
-                <a
-                  href="#"
-                  className="mx-2 text-blue-900 hover:text-blue-700"
-                >
+                <a href="#" className="mx-2 text-blue-900 hover:text-blue-700">
                   {website}
                 </a>
               </Link>
@@ -153,7 +195,7 @@ const ClinicDetails = (props) => {
       </div>
       <div className="md:w-1/4 py-4 md:mt-24 rounded-lg md:h-1/2">
         <div className="flex flex-col w-full rounded-lg bg-slate-100 shadow-lg shadow-gray-300 p-4">
-          {featured && (
+          {featured > 40 && (
             <div className="md:text-end mb-5">
               <Badge color="red" variant="dark">
                 Recommended!

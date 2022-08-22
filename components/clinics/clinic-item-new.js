@@ -1,5 +1,4 @@
 import Link from "next/link";
-import ImageGallery from "react-image-gallery";
 import { Card, Image, Text, Badge, Button, Group } from "@mantine/core";
 
 const ClinicItemNew = (props) => {
@@ -30,42 +29,7 @@ const ClinicItemNew = (props) => {
         </div>
       </div>
 
-      <Link href={`/clinics/${slug}`}>
-        <a href="#">
-          <div className="flex flex-col justify-between p-4 leading-normal">
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">
-              {name}
-            </h5>
-            <p className="mb-3 font-normal text-gray-700">{description}</p>
-          </div>
-          <div className="mx-5">
-            {features.find((feature) => feature.toLowerCase() === "hair transplant") && (
-              <span className="bg-red-400 mb-3 text-gray-800 text-xs font-medium inline-flex items-center px-3 py-1.5 rounded-lg mr-2">
-                Hair transplant
-              </span>
-            )}
-            {features.find((feature) => feature.toLowerCase() === "ivf") && (
-              <span className="bg-blue-400 mb-3 text-gray-800 text-xs font-medium inline-flex items-center px-3 py-1.5 rounded-lg mr-2">
-                IVF
-              </span>
-            )}
-            {features.find((feature) => feature.toLowerCase() === "fat removal") && (
-              <span className="bg-purple-400 mb-3 text-gray-800 text-xs font-medium inline-flex items-center px-3 py-1.5 rounded-lg mr-2">
-                Fat Removal
-              </span>
-            )}
-            {features.find(feature => feature.toLowerCase()==="cosmetic surgery") && (
-            <span className="bg-yellow-400 mb-3 text-gray-800 text-xs font-medium inline-flex items-center px-3 py-1.5 rounded-lg mr-2">
-              Cosmetic surgery
-            </span>)}
-            {features.find(feature => feature.toLowerCase()==="non-cosmetic surgery") && (
-            <span className="bg-pink-400 mb-3 text-gray-800 text-xs font-medium inline-flex items-center px-3 py-1.5 rounded-lg mr-2">
-              Non-Cosmetic surgery
-            </span>)}
-          </div>
-        </a>
-      </Link>
-    </div> */
+    */
     <Link href={`/clinics/${slug}`} className="hidden">
       <Card shadow="sm" p="lg" radius="md" withBorder>
         <Card.Section>
@@ -112,7 +76,13 @@ const ClinicItemNew = (props) => {
           />
           {city}
         </Group>
-        <Button variant="light" className="text-brightPrimary hover:bg-purple-100" fullWidth mt="md" radius="md">
+        <Button
+          variant="light"
+          className="text-brightPrimary hover:bg-purple-100"
+          fullWidth
+          mt="md"
+          radius="md"
+        >
           {(!language || language === "English") && (
             <Link href={`/clinics/${slug}`}>See Details</Link>
           )}

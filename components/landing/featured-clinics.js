@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import Link from "next/link";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 
@@ -64,17 +65,28 @@ export default function FeaturedClinics(props) {
 
   featuredClinics.map((clinic) => {
     items.push(
-      <div className="p-3" data-value="1">
-        <Image src={`/images/featured-clinics/${clinic.slug}.png`} width={650} height={300} />
-        <h3 className="font-bold uppercase text-gray-800 my-1">
-          {clinic.name}
-        </h3>
-        {clinic.features.map((feature) => {
-          return <p key={feature} className="bg-blue-100 inline-block text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">
-            {feature}
-          </p>;
-        })}
-      </div>
+      <Link href="/">
+        <div className="p-3" data-value="1">
+          <Image
+            src={`/images/featured-clinics/${clinic.slug}.png`}
+            width={650}
+            height={300}
+          />
+          <h3 className="font-bold uppercase text-gray-800 my-1">
+            {clinic.name}
+          </h3>
+          {clinic.features.map((feature) => {
+            return (
+              <p
+                key={feature}
+                className="bg-blue-100 inline-block text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded"
+              >
+                {feature}
+              </p>
+            );
+          })}
+        </div>
+      </Link>
     );
   });
 

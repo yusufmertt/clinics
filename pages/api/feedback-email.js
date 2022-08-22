@@ -4,7 +4,7 @@ mail.setApiKey(process.env.SENDGRID_API_KEY);
 
 async function handler(req, res) {
   const body = req.body;
-
+/* 
   let name;
 
   if (body.name.trim() === "") {
@@ -30,7 +30,7 @@ async function handler(req, res) {
   .catch((error) => {
     console.error(error);
   });
-
+ */
   res.status(200).json({ message: "Email sent!" });
 }
 
