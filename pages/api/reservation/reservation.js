@@ -19,11 +19,11 @@ async function handler(req, res) {
   let message;
   let subject;
 
-  message = `Müşteri Adı:${body.name}  \r\n Müşteri Email:${body.email}\r\n  Mesaj:${body.message} \r\n Müşteri Tel:${body.phone} \r\n  Bu müşteri size FindClinicsTurkey.com tarfından yönlendirilmiştir. Kod:KSN51K`;
+  message = `Müşteri Adı:${body.name}  \r\n Müşteri Email:${body.email}\r\n  Mesaj:${body.message} \r\n Müşteri Tel:${body.phone} \r\n Klinik:${body.clinic} \r\n Tedavi:${body.treatment} \r\n  Bu müşteri size FindClinicsTurkey.com tarafından yönlendirilmiştir. Kod:KSN51K`;
   subject = `Yeni rezervasyon isteği! Klinik:${body.clinic}`;
 
   const data = {
-    to: "ymert60@hotmail.com" ,//body.clinicEmail,
+    to: "ymert60@hotmail.com",
     from: "reservation@findclinicsturkey.com",
     subject: subject,
     text: message,
@@ -31,21 +31,20 @@ async function handler(req, res) {
   };
 
   mail
-  .send(data)
-  .then(() => {
-    console.log("Email sent");
-  })
-  .catch((error) => {
-    console.error(error);
-  });
+    .send(data)
+    .then(() => {
+      console.log("Email sent");
+    })
+    .catch((error) => {
+      console.error(error);
+    });
   const feedbackToMeData = {
     to: "phudinq@findclinicsturkey.com",
     from: "reservation@findclinicsturkey.com",
     subject: subject,
     text: message,
     html: message.replace(/\r\n/g, "<br>"),
-
-  }
+  };
 
   res.status(200).json({ message: "Email sent!" });
 }

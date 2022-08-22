@@ -19,7 +19,7 @@ async function handler(req, res) {
 
   const feedbackData = {
     to: body.email,
-    from: "contact@findclinicsturkey.com",
+    from: "info@findclinicsturkey.com",
     subject:"Your consultation request has been received!",
     text: `Dear ${name},\r\n Your consultation request to us has been received and a doctor will get back to you as soon as possible. Thank you for your patience.`,
   };

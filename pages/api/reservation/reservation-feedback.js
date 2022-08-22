@@ -17,8 +17,8 @@ async function handler(req, res) {
 
   const feedbackData = {
     to: body.email,
-    from: "reservation@findclinicsturkey.com",
-    subject: "Your request has been received!",
+    from: "info@findclinicsturkey.com",
+    subject: "Your reservation request has been received!",
     text: `Dear ${name}, \r\n Your reservation has been sent to the clinic and they will get in touch with you. If you want, you can directly email to reservation@findclinicsturkey.com and we will make your reservation. Thank you for your patience.`,
   };
 
