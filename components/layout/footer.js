@@ -6,34 +6,36 @@ const Footer = (props) => {
     <footer className="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
       <div className="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
         <div className="sm:col-span-2">
-          <Link href="/">
-            <a
-              href="#"
-              aria-label="Go home"
-              title="Company"
-              className="inline-flex items-center"
+        <Link href="/">
+          <a
+            href="#"
+            aria-label="Company"
+            title="Company"
+            className="inline-flex items-center text-brightPrimary"
+          >
+            <Image src="/assa.png" width={40} height={40} />
+            {/* <svg
+              className="w-8 text-deep-purple-accent-400"
+              viewBox="0 0 24 24"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeMiterlimit="10"
+              stroke="currentColor"
+              fill="none"
             >
-              {/*  <svg
-                className="w-8 text-deep-purple-accent-400"
-                viewBox="0 0 24 24"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeMiterlimit="10"
-                stroke="currentColor"
-                fill="none"
-              >
-                <rect x="3" y="1" width="7" height="12"></rect>
-                <rect x="3" y="17" width="7" height="6"></rect>
-                <rect x="14" y="1" width="7" height="6"></rect>
-                <rect x="14" y="11" width="7" height="12"></rect>
-              </svg>
-              <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                FindClinicsTurkey
-              </span> */}
-              <Image src="/logo.png" width={260} height={40} />
-            </a>
-          </Link>
+              <rect x="3" y="1" width="7" height="12" />
+              <rect x="3" y="17" width="7" height="6" />
+              <rect x="14" y="1" width="7" height="6" />
+              <rect x="14" y="11" width="7" height="12" />
+            </svg> */}
+            <span className="ml-2 text-lg font-bold tracking-wide uppercase ">
+              FindClinicsTurkey
+            </span>
+            {/* 
+            <Image src="/assa.png" width={280} height={40}/> */}
+          </a>
+        </Link>
           <div className="mt-6 lg:max-w-sm">
             <p className="text-sm text-gray-800">
               We help people all over the world to find clinics in Turkey.

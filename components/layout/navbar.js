@@ -15,9 +15,10 @@ const Navbar = (props) => {
             href="#"
             aria-label="Company"
             title="Company"
-            className="inline-flex items-center"
-          > {/*
-             <svg
+            className="inline-flex items-center text-brightPrimary"
+          >
+            <Image src="/assa.png" width={40} height={40} />
+            {/* <svg
               className="w-8 text-deep-purple-accent-400"
               viewBox="0 0 24 24"
               strokeLinejoin="round"
@@ -31,11 +32,12 @@ const Navbar = (props) => {
               <rect x="3" y="17" width="7" height="6" />
               <rect x="14" y="1" width="7" height="6" />
               <rect x="14" y="11" width="7" height="12" />
-            </svg>
-            <span className="ml-2 text-lg font-bold tracking-wide text-gray-800 uppercase">
+            </svg> */}
+            <span className="ml-2 text-lg font-bold tracking-wide uppercase ">
               FindClinicsTurkey
-            </span>  */} 
-            <Image src="/logo.png" width={260} height={40}/> 
+            </span>
+            {/* 
+            <Image src="/assa.png" width={280} height={40}/> */}
           </a>
         </Link>
         <ul className="items-center hidden space-x-8 lg:flex">
@@ -169,31 +171,36 @@ const Navbar = (props) => {
               <div className="p-5 bg-white border rounded shadow-sm">
                 <div className="flex items-center justify-between mb-4">
                   <div>
-                    <a
-                      href="#"
-                      aria-label="Company"
-                      title="Company"
-                      className="inline-flex items-center"
-                    >
-                      <svg
-                        className="w-8 text-deep-purple-accent-400"
-                        viewBox="0 0 24 24"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeMiterlimit="10"
-                        stroke="currentColor"
-                        fill="none"
+                    <Link href="/">
+                      <a
+                        href="#"
+                        aria-label="Company"
+                        title="Company"
+                        className="inline-flex items-center text-brightPrimary"
                       >
-                        <rect x="3" y="1" width="7" height="12" />
-                        <rect x="3" y="17" width="7" height="6" />
-                        <rect x="14" y="1" width="7" height="6" />
-                        <rect x="14" y="11" width="7" height="12" />
-                      </svg>
-                      <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                        FindClinicsTurkey
-                      </span>
-                    </a>
+                        <Image src="/assa.png" width={40} height={40} />
+                        {/* <svg
+              className="w-8 text-deep-purple-accent-400"
+              viewBox="0 0 24 24"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeMiterlimit="10"
+              stroke="currentColor"
+              fill="none"
+            >
+              <rect x="3" y="1" width="7" height="12" />
+              <rect x="3" y="17" width="7" height="6" />
+              <rect x="14" y="1" width="7" height="6" />
+              <rect x="14" y="11" width="7" height="12" />
+            </svg> */}
+                        <span className="ml-2 text-lg font-bold tracking-wide uppercase ">
+                          FindClinicsTurkey
+                        </span>
+                        {/* 
+            <Image src="/assa.png" width={280} height={40}/> */}
+                      </a>
+                    </Link>
                   </div>
                   <div>
                     <button
