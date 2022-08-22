@@ -22,13 +22,16 @@ export function SearchInput2(props) {
     { name: "Hair transplant", id: "f1" },
     // { name: "IVF", id: "f2" },
     // { name: "Fat Removal", id: "f3" },
-    { name: "Dental aesthetics", id: "f4" },
+    { name: "Dental operations", id: "f4" },
     { name: "Esthetic surgeries", id: "f5" },
     { name: "Obesity Surgery", id: "f6" },
     { name: " Rhinoplasty (nose job)", id: "f7" },
     { name: "Breast operations", id: "f8" },
     { name: "Eye operations", id: "f9" },
     { name: "Liposuction", id: "f10" },
+    { name: "BBL", id: "f11" },
+    { name: "Plastic Surgeries", id: "f12" },
+    { name: "Non-surgical Operations", id: "f13" },
   ];
 
   const locations = [
@@ -40,16 +43,19 @@ export function SearchInput2(props) {
   ];
 
   const [checkbox, setCheckbox] = useState([
-    { id: "f1", checked: false, feature: "Hair transplant" },
+    { id: "f1", checked: false, feature: "Hair Transplant" },
     // { id: "f2", checked: false, feature: "IVF" },
     // { id: "f3", checked: false, feature: "Fat Removal" },
-    { id: "f4", checked: false, feature: "Dental operations" },
-    { id: "f5", checked: false, feature: "Esthetic surgeries" },
-    { id: "f6", checked: false, feature: "Obesity Surgery" },
+    { id: "f4", checked: false, feature: "Dental Operations" },
+    { id: "f5", checked: false, feature: "Esthetic Surgeries" },
+    { id: "f6", checked: false, feature: "Obesity Surgeries" },
     { id: "f7", checked: false, feature: "Rhinoplasty" },
-    { id: "f8", checked: false, feature: "Breast operations" },
-    { id: "f9", checked: false, feature: "Eye operations" },
+    { id: "f8", checked: false, feature: "Breast Operations" },
+    { id: "f9", checked: false, feature: "Eye Operations" },
     { id: "f10", checked: false, feature: "Liposuction" },
+    { id: "f11", checked: false, feature: "BBL" },
+    { id: "f12", checked: false, feature: "Plastic Surgeries" },
+    { id: "f13", checked: false, feature: "Non-surgical Operations" },
   ]);
 
   const [trueCheckboxes, setTrueCheckboxes] = useState([]);
@@ -332,9 +338,9 @@ export function SearchInput2(props) {
               {language === "Italian" && "Filtro"}
             </AccordionHeader>
             <AccordionBody className="mt-2">
-              <div className="md:flex">
+              <div className="md:grid md:grid-cols-4">
                 {features.map((feature) => (
-                  <div className="flex items-center mr-4" key={feature.id}>
+                  <div className="" key={feature.id}>
                     <input
                       id={`${feature.id}`}
                       type="checkbox"
@@ -343,7 +349,7 @@ export function SearchInput2(props) {
                     />
                     <label
                       htmlFor={`${feature.id}`}
-                      className="ml-2 text-sm font-semibold text-gray-100 my-0.5"
+                      className="ml-2 text-md font-semibold text-gray-100 my-0.5 uppercase"
                     >
                       {feature.name}
                     </label>
@@ -500,10 +506,12 @@ export function SearchInput2(props) {
         </div> */}
       </div>
       {clinicsCtx.filteredClinics && (
-        <p className="text-right">{clinicsCtx.filteredClinics.length} Clinics Listed</p>
+        <p className="text-right">
+          {clinicsCtx.filteredClinics.length} Total Clinics Listed
+        </p>
       )}
       {!clinicsCtx.filteredClinics && clinicsCtx.clinics && (
-        <p className="text-right">{clinicsCtx.clinics.length} Clinics Listed</p>
+        <p className="text-right">{clinicsCtx.clinics.length} Total Clinics Listed</p>
       )}
     </div>
   );
