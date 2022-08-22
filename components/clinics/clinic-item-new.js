@@ -48,7 +48,7 @@ const ClinicItemNew = (props) => {
         <Group position="apart" mt="md" mb="xs">
           <Text weight={500}>{name}</Text>
           {featured && (
-            <Badge color="pink" variant="light">
+            <Badge color="green" variant="dark">
               Recommended!!
             </Badge>
           )}

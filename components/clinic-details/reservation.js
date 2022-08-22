@@ -38,13 +38,13 @@ function Reservation(props) {
       setEmailError(true);
       //setClasses("border-red-500")
     } else { */
-    fetch("/api/reservation", {
+    fetch("/api/reservation/reservation", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
     }).then((response) => {
       if (response.ok) {
-        fetch("/api/reservation-feedback", {
+        fetch("/api/reservation/reservation-feedback", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(formData),

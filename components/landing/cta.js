@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRef, useState } from "react";
 
-function Cta() {
+function Cta(props) {
   const nameRef = useRef();
   const emailRef = useRef();
   const phoneRef = useRef();
@@ -20,6 +20,9 @@ function Cta() {
     const phone = phoneRef.current.value;
     const treatment = treatmentRef.current.value;
     const note = noteRef.current.value;
+
+    const clinic = props.clinic;
+
     const formData = {
       type: "consultation",
       name,
@@ -28,20 +31,21 @@ function Cta() {
       phone,
       treatment,
       note,
+      clinic,
     };
 
     if (email.trim() === "" && phone.trim() === "") {
       setEmailError(true);
-      setSuccess(false)
+      setSuccess(false);
       //setClasses("border-red-500")
-    }else {
-      fetch("/api/email", {
+    } else {
+      fetch("/api/contact/email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       }).then((response) => {
         if (response.ok) {
-          fetch("/api/feedback-email", {
+          fetch("/api/contact/feedback-email", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData),

@@ -1,4 +1,4 @@
-import { connectToDatabase } from "../../lib/db";
+import { connectToDatabase } from "../../../lib/db";
 
 const mail = require("@sendgrid/mail");
 
@@ -9,7 +9,7 @@ async function handler(req, res) {
 
   const body = req.body;
 
-  const { name, email, phone, treatment, note } = body;
+  const { name, email, phone, treatment, note, clinic } = body;
 
   if(email.trim()==="" && phone.trim()===""){
     return
@@ -25,7 +25,7 @@ async function handler(req, res) {
   let message;
   let subject;
 
-  message = `Name:${name}  \r\n Email:${email}\r\n Treatment:${treatment} \r\n Message:${note} \r\n Phone:${phone}`;
+  message = `Name:${name}  \r\n Email:${email}\r\n Treatment:${treatment} \r\n Message:${note} \r\n Phone:${phone}\r\n Clinic:${clinic}`;
   subject = "New consultation request!";
 
   /*  else {

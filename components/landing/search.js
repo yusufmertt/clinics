@@ -12,6 +12,9 @@ export default function Search() {
            <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
               Choose from hunderds of clinics and hospitals.
             </p>
+            <p className="text-sm text-slate-600">
+              15% discount with reference code!
+            </p>
           </div>
           <div className="flex lg:w-2/3 w-full md:flex-row flex-col mx-auto px-8 md:space-x-4 md:space-y-0 space-y-4 md:px-0 items-end">
             <div className="relative flex-grow w-full">
