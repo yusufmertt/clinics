@@ -153,7 +153,8 @@ function Cta(props) {
 
             <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
               We and our doctors can help you decide your clinic, treatment
-              options, making reservations, planning your visit and much more!
+              options, making reservations, planning your visit, pricing and
+              much more!
               {/*  You can contact us through
               <a
                 target="_blank"

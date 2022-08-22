@@ -29,7 +29,7 @@ function Reservation(props) {
       email,
       message,
       phone,
-      clinicEmail,
+      //clinicEmail,
       timeStamp,
       clinic,
     };
