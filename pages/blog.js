@@ -38,6 +38,7 @@ function BlogPage() {
     setCurrentPage(pageNumber);
   }
 
+  
   return (
     <div>
       {/*      {currentPosts.map((data) => (
@@ -59,6 +60,7 @@ function BlogPage() {
         })}
       </ul> */}
       Coming soon!
+      
     </div>
   );
 }

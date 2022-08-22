@@ -59,7 +59,8 @@ function Info() {
                   LASER EYE SURGERY
                 </h2>
                 <p className="leading-relaxed text-base">
-                  20% of world&apos;s hair transplants are done in Turkey.
+                  Our doctors will provide before-after procedure medicines,
+                  routines with you.
                 </p>
               </div>
             </div>
@@ -81,8 +82,7 @@ function Info() {
                   Hair Transplantation
                 </h2>
                 <p className="leading-relaxed text-base">
-                  Our doctors will provide before-after procedure medicines,
-                  routines with you.
+                  20% of world&apos;s hair transplants are done in Turkey.
                 </p>
               </div>
             </div>

@@ -1,5 +1,8 @@
 import Link from "next/link";
 import { useRef, useState } from "react";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
+import { event } from "./../../lib/gtag";
 
 function Cta(props) {
   const nameRef = useRef();
@@ -13,11 +16,17 @@ function Cta(props) {
 
   const timeStamp = new Date();
 
+  const [phone, setPhone] = useState();
+
+  function phoneChangeHandler(event) {
+    setPhone(event);
+  }
+
   async function submitHandler(event) {
     event.preventDefault();
     const name = nameRef.current.value;
     const email = emailRef.current.value;
-    const phone = phoneRef.current.value;
+    //const phone = phoneRef.current.value;
     const treatment = treatmentRef.current.value;
     const note = noteRef.current.value;
 
@@ -56,6 +65,7 @@ function Cta(props) {
       });
     }
   }
+
   return (
     <section className="text-gray-600 body-font">
       {/*  <form onSubmit={submitHandler}>
@@ -265,15 +275,12 @@ function Cta(props) {
                 </div>
               </div>
               <div className="p-2 w-full md:w-1/2 ">
-                <label
+                {/* <label
                   htmlFor="phone"
                   className="leading-7 text-sm text-gray-600"
                 >
                   Phone Number
-                  {/*  &nbsp;
-                  <span className="text-xs font-thin">
-                    (With country/area code)
-                  </span> */}
+               
                 </label>
                 <div className="relative">
                   <input
@@ -285,21 +292,35 @@ function Cta(props) {
                       "w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-brightPrimary focus:bg-white focus:ring-2 focus:ring-purple-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out "
                     }
                   />
+                </div> */}
+                <div className="relative">
+                  <label
+                    htmlFor="phone"
+                    className="leading-7 text-sm text-gray-600"
+                  >
+                    Phone Number
+                  </label>
+                  <PhoneInput
+                    country={"de"}
+                    onChange={phoneChangeHandler}
+                    inputClass="!w-full !bg-gray-100"
+                    className="mt-0.5"
+                  />
                 </div>
               </div>
               <div className="p-2 w-full md:w-full">
                 <div className="relative">
                   <label
-                    htmlFor="email"
+                    htmlFor="note"
                     className="leading-7 text-sm text-gray-600"
                   >
                     Your note
                   </label>
                   <textarea
                     ref={noteRef}
-                    type="email"
-                    id="email"
-                    name="email"
+                    type="text"
+                    id="note"
+                    name="note"
                     className={
                       "w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-brightPrimary focus:bg-white focus:ring-2 focus:ring-purple-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out "
                     }

@@ -19,7 +19,7 @@ async function handler(req, res) {
   let message;
   let subject;
 
-  message = `Müşteri Adı:${body.name}  \r\n Müşteri Email:${body.email}\r\n  Mesaj:${body.message} \r\n Müşteri Tel:${body.phone} \r\n Klinik:${body.clinic} \r\n Tedavi:${body.treatment} \r\n  Bu müşteri size FindClinicsTurkey.com tarafından yönlendirilmiştir. Kod:KSN51K`;
+  message = `Müşteri Adı:${body.name}  \r\n Müşteri Email:${body.email}\r\n  Mesaj:${body.note} \r\n Müşteri Tel:${body.phone} \r\n Klinik:${body.clinic} \r\n Tedavi:${body.treatment} \r\n  Bu müşteri size FindClinicsTurkey.com tarafından yönlendirilmiştir. Kod:KSN51K`;
   subject = `Yeni rezervasyon isteği! Klinik:${body.clinic}`;
 
   const data = {

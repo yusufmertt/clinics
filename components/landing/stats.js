@@ -1,6 +1,10 @@
 import Image from "next/image";
 
+import { useContext } from "react";
+import ClinicsContext from "../../store/clinics-context";
+
 function Stats() {
+  const clinicsCtx = useContext(ClinicsContext);
   return (
     <section className="text-gray-600 body-font">
       <div className="container px-5 py-24 mx-auto flex flex-wrap">

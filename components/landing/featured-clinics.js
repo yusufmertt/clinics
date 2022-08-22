@@ -97,9 +97,9 @@ export default function FeaturedClinics(props) {
           FEATURED HOSPITALS
         </h2>
         <div className="h-1 w-20 my-1 bg-brightPrimary rounded"></div>
-        <p className="text-sm text-gray-500">
+       {/*  <p className="text-sm text-gray-500">
           Get 20% discount at featured hospitals!
-        </p>
+        </p> */}
       </div>
       <AliceCarousel
         mouseTracking

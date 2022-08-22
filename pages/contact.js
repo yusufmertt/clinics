@@ -1,5 +1,7 @@
 import { useRef, useState } from "react";
 import Head from "next/head";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 function ContactPage() {
   const nameRef = useRef();
@@ -15,14 +17,20 @@ function ContactPage() {
 
   const [classes, setClasses] = useState("");
 
+  const [phone, setPhone] = useState();
+
+  function phoneChangeHandler(event) {
+    setPhone(event)
+  }
+
   async function submitHandler(event) {
     event.preventDefault();
     const name = nameRef.current.value;
     const email = emailRef.current.value;
     const topic = topicRef.current.value;
-    const message = messageRef.current.value;
-    const phone = phoneRef.current.value;
-    const formData = { name, email, topic, message, timeStamp, phone };
+    const note = messageRef.current.value;
+    //const phone = phoneRef.current.value;
+    const formData = {type:"contact", name, email, topic, note, timeStamp, phone };
 
     if (email.trim() === "" && phone.trim() === "") {
       setEmailError(true);
@@ -86,7 +94,7 @@ function ContactPage() {
               </div>
             )}
             <div className="flex flex-wrap -m-2">
-              <div className="p-2 w-1/2">
+              <div className="p-2 w-full sm:w-1/2">
                 <div className="relative">
                   <label
                     htmlFor="name"
@@ -103,7 +111,7 @@ function ContactPage() {
                   />
                 </div>
               </div>
-              <div className="p-2 w-1/2">
+              <div className="p-2 w-full sm:w-1/2">
                 <div className="relative">
                   <label
                     htmlFor="email"
@@ -125,13 +133,12 @@ function ContactPage() {
               </div>
 
               <div className="w-full md:w-full px-1 mb-3 md:mb-0 mt-2">
-                <label
+                {/*   <label
                   className="block tracking-wide text-gray-700 text-xs mb-2"
                   htmlFor="grid-state"
                 >
-                  Phone Number{" "}
+                  Phone Number
                   <span className="text-xs font-thin">
-                    (With country/area code)
                   </span>
                 </label>
                 <div className="relative">
@@ -144,6 +151,20 @@ function ContactPage() {
                       "w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-brightPrimary focus:bg-white focus:ring-2 focus:ring-purple-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out " +
                       classes
                     }
+                  />
+                </div> */}{" "}
+                <div className="relative">
+                  <label
+                    htmlFor="phone"
+                    className="leading-7 text-sm text-gray-600"
+                  >
+                    Phone Number
+                  </label>
+                  <PhoneInput
+                    country={"de"}
+                    onChange={phoneChangeHandler}
+                    inputClass="!w-full !bg-gray-100"
+                    className="mt-0.5"
                   />
                 </div>
               </div>

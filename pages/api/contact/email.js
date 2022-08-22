@@ -9,10 +9,10 @@ async function handler(req, res) {
 
   const body = req.body;
 
-  const { name, email, phone, treatment, note, clinic } = body;
+  const { name, email, phone, treatment, note, clinic, topic, type } = body;
 
-  if(email.trim()==="" && phone.trim()===""){
-    return
+  if (email.trim() === "" && phone.trim() === "") {
+    return;
   }
 
   const client = await connectToDatabase();
@@ -25,8 +25,13 @@ async function handler(req, res) {
   let message;
   let subject;
 
-  message = `Name:${name}  \r\n Email:${email}\r\n Treatment:${treatment} \r\n Message:${note} \r\n Phone:${phone}\r\n Clinic:${clinic}`;
-  subject = "New consultation request!";
+  if (type === "consultation") {
+    message = `Name:${name}  \r\n Email:${email}\r\n Treatment:${treatment} \r\n Message:${note} \r\n Phone:${phone}\r\n Clinic:${clinic}`;
+    subject = "New consultation request!";
+  }else if(type==="contact"){
+    message = `Name:${name}  \r\n Email:${email}\r\n Topic:${topic} \r\n Message:${note} \r\n Phone:${phone}\r\n `;
+    subject = "New contact!";
+  }
 
   /*  else {
     message = `Name:${name} \r\n Email:${email} \r\n Phone:${phone}`;
