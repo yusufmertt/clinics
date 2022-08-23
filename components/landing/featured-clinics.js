@@ -61,11 +61,12 @@ const responsive = {
 export default function FeaturedClinics(props) {
   let items = [];
 
-  const featuredClinics = JSON.parse(props.featuredClinics);
+  //const featuredClinics = JSON.parse(props.featuredClinics);
+  const featuredClinics = props.featuredClinics
 
   featuredClinics.map((clinic) => {
     items.push(
-      <Link href="/">
+      <Link href={`/clinics/${clinic.slug}`}>
         <div className="p-3" data-value="1">
           <Image
             src={`/images/featured-clinics/${clinic.slug}.png`}
