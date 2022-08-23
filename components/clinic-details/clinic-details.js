@@ -84,7 +84,7 @@ const ClinicDetails = (props) => {
         </Head>
         <div className="md:w-2/3 order-last md:order-first">
           <Link href="/clinics">
-            <div className="flex p-3 text-brightPrimary hover:cursor-pointer hover:text-darkPrimary transition duration-200">
+            <div className="flex p-3 text-brightPrimary hover:cursor-pointer hover:text-darkPrimary transition duration-200 w-1/2 md:w-1/4">
               <svg viewBox="0 0 50 50" fill="currentColor" className="h-7">
                 <path
                   d="M45.506,33.532c-1.741-7.42-7.161-17.758-23.554-19.942V7.047c0-1.364-0.826-2.593-2.087-3.113
