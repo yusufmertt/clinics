@@ -5,9 +5,10 @@ import Link from "next/link";
 import Head from "next/head";
 import Cta from "../landing/cta";
 import { Fragment } from "react";
+import {marked} from "marked"
 
 const ClinicDetails = (props) => {
-  const [clinicObject] = props.clinic;
+/*   const [clinicObject] = props.clinic;
 
   const {
     name,
@@ -24,7 +25,28 @@ const ClinicDetails = (props) => {
     slug,
     languages,
     extras,
-  } = clinicObject;
+  } = clinicObject
+   */
+
+  const {
+    name,
+    description,
+    longDescription,
+    featuring,
+    features,
+    location,
+    featured,
+    mapsURL,
+    address,
+    website,
+    phone,
+    slug,
+    languages,
+    extras,
+  } = props.clinic.frontmatter
+
+  const {content} = props.clinic
+
   const images = [
     {
       original: `/images/clinics/${slug}/1.png`,
@@ -91,7 +113,8 @@ const ClinicDetails = (props) => {
                   );
                 })}
               </div>
-              <p>{longDescription}</p>
+              {/* <p>{longDescription}</p> */}
+              <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
             </div>
             <div>
               <ImageGallery

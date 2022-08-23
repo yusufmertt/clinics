@@ -12,7 +12,7 @@ const ClinicItemNew = (props) => {
     images,
     featured,
     city,
-  } = props.clinicData;
+  } = props.clinicData
 
   const { language } = props;
 
@@ -69,7 +69,7 @@ const ClinicItemNew = (props) => {
         </Text> */}
         <Group className="mt-2">
           <Image
-            src="/images/icons//location.svg"
+            src="/images/icons/location.svg"
             height={12}
             width={12}
             alt="city"

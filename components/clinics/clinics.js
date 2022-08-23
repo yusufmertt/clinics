@@ -150,7 +150,7 @@ const Clinics = (props) => {
             <Fragment>
               {/* Results(Filtered) */}
               {currentFilteredClinics.map((clinic) => (
-                <ClinicItemNew key={clinic._id} clinicData={clinic} language={language}/>
+                <ClinicItemNew key={clinic.slug} clinicData={clinic} language={language}/>
               ))}
             </Fragment>
           )}
@@ -159,7 +159,7 @@ const Clinics = (props) => {
             <Fragment>
               {/* Initial Flicker (loading) */}
               {clinics.map((clinic) => (
-                <ClinicItemNew key={clinic._id} clinicData={clinic} language={language}/>
+                <ClinicItemNew key={clinic.slug} clinicData={clinic} language={language}/>
               ))}
             </Fragment>
           )}
@@ -167,7 +167,7 @@ const Clinics = (props) => {
           <Fragment>
             {/* Results(Not Filtered) */}
             {currentAllClinics.map((clinic) => (
-              <ClinicItemNew key={clinic._id} clinicData={clinic} language={language}/>
+              <ClinicItemNew key={clinic.slug} clinicData={clinic} language={language}/>
             ))}
           </Fragment>
         )}

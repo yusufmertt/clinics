@@ -18,6 +18,8 @@
     "@material-tailwind/react": "^1.2.3",
     "@sendgrid/mail": "^7.7.0",
     "@tabler/icons": "^1.82.0",
+    "gray-matter": "^4.0.3",
+    "marked": "^4.0.19",
     "mongodb": "^4.8.1",
     "next": "12.2.4",
     "nextjs-google-analytics": "^2.0.0",

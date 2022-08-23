@@ -25,7 +25,7 @@ export function SearchInput2(props) {
     { name: "Dental operations", id: "f4" },
     { name: "Esthetic surgeries", id: "f5" },
     { name: "Obesity Surgery", id: "f6" },
-    { name: " Rhinoplasty (nose job)", id: "f7" },
+    { name: "Rhinoplasty (nose job)", id: "f7" },
     { name: "Breast operations", id: "f8" },
     { name: "Eye operations", id: "f9" },
     { name: "Liposuction", id: "f10" },
