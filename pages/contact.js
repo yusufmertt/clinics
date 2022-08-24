@@ -20,7 +20,7 @@ function ContactPage() {
   const [phone, setPhone] = useState();
 
   function phoneChangeHandler(event) {
-    setPhone(event)
+    setPhone(event);
   }
 
   async function submitHandler(event) {
@@ -30,7 +30,15 @@ function ContactPage() {
     const topic = topicRef.current.value;
     const note = messageRef.current.value;
     //const phone = phoneRef.current.value;
-    const formData = {type:"contact", name, email, topic, note, timeStamp, phone };
+    const formData = {
+      type: "contact",
+      name,
+      email,
+      topic,
+      note,
+      timeStamp,
+      phone,
+    };
 
     if (email.trim() === "" && phone.trim() === "") {
       setEmailError(true);
@@ -228,13 +236,16 @@ function ContactPage() {
                 </button>
               </div>
               <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
-                <a className="text-brightPrimary">example@email.com</a>
-                <p className="leading-normal my-5">
+                <a className="text-brightPrimary">
+                  findclinicsturkey@gmail.com
+                </a>
+                {/* <p className="leading-normal my-5">
                   49 Smith St.
                   <br />
                   Saint Cloud, MN 56301
-                </p>
-                <span className="inline-flex">
+                </p> */}
+                <br/>
+                <span className="inline-flex my-5">
                   <a className="text-gray-500">
                     <svg
                       fill="currentColor"

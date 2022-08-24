@@ -1,14 +1,16 @@
-import Reservation from "../../../components/clinic-details/reservation"
-import { getClinics, getOneClinic } from "../../../lib/clinics-util"
-
+import Reservation from "../../../components/clinic-details/reservation";
+//import { getClinics, getOneClinic } from "../../../lib/clinics-util";
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
 
 function ReservationPage(props) {
-    return <Reservation clinic={props.clinic}/>
+  return <Reservation clinic={props} />;
 }
 
 export default ReservationPage;
 
-export async function getStaticProps(context) {
+/* export async function getStaticProps(context) {
     const { params } = context; // context has params key (URL query)
     const { slug } = params;
   
@@ -30,4 +32,35 @@ export async function getStaticProps(context) {
       paths: slugs.map((slug) => ({ params: { slug: slug } })),
       fallback: false,
     };
-  }
+  } */
+export async function getStaticPaths() {
+  const files = fs.readdirSync(path.join("clinics"));
+
+  const paths = files.map((filename) => ({
+    params: {
+      slug: filename.replace(".md", ""),
+    },
+  }));
+
+  return {
+    paths,
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({ params: { slug } }) {
+  const markdownWithMeta = fs.readFileSync(
+    path.join("clinics", slug + ".md"),
+    "utf-8"
+  );
+
+  const { data: frontmatter, content } = matter(markdownWithMeta);
+
+  return {
+    props: {
+      frontmatter,
+      slug,
+      content,
+    },
+  };
+}

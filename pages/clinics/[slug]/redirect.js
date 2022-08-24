@@ -1,12 +1,16 @@
 import Link from "next/link";
-import { getClinics, getOneClinic } from "../../../lib/clinics-util";
+//import { getClinics, getOneClinic } from "../../../lib/clinics-util";
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
 
 function RedirectPage(props) {
-  const clinic = JSON.parse(props.clinic);
+//  const clinic = JSON.parse(props.clinic);
 
+const clinic = props
   return (
     <div className="p-8 sm:p-16 text-center">
-      <Link href={`/clinics/${clinic[0].slug}`}>
+      <Link href={`/clinics/${clinic.slug}`}>
         <div className="flex p-3 text-brightPrimary hover:cursor-pointer hover:text-darkPrimary transition duration-200">
           <svg viewBox="0 0 50 50" fill="currentColor" className="h-7">
             <path
@@ -28,7 +32,7 @@ function RedirectPage(props) {
       <p className="text-brightPrimary mb-5">Code: FCT215</p>
       <div className="flex flex-col sm:flex-row justify-evenly">
         <div>
-          <Link href={`/clinics/${clinic[0].slug}/reservation`}>
+          <Link href={`/clinics/${clinic.slug}/reservation`}>
             <a className="text-white w-full uppercase text-center bg-brightPrimary font-semibold hover:bg-darkPrimary px-3 py-1.5 transition duration-200 rounded-lg">
               Make reservation from here
             </a>
@@ -37,7 +41,7 @@ function RedirectPage(props) {
         <div className="mt-3 sm:mt-0">
           <div className="mb-5">
             <a
-              href={clinic[0].website}
+              href={clinic.frontmatter.website}
               target="_blank"
               rel="noreferrer"
               className="text-white w-full uppercase text-center bg-red-600 font-semibold hover:bg-red-700 px-3 py-1.5 transition duration-200 rounded-lg "
@@ -53,7 +57,7 @@ function RedirectPage(props) {
 
 export default RedirectPage;
 
-export async function getStaticProps(context) {
+/* export async function getStaticProps(context) {
   const { params } = context; // context has params key (URL query)
   const { slug } = params;
 
@@ -75,4 +79,35 @@ export async function getStaticPaths() {
     paths: slugs.map((slug) => ({ params: { slug: slug } })),
     fallback: false,
   };
+} */
+export async function getStaticPaths() {
+  const files = fs.readdirSync(path.join('clinics'))
+
+  const paths = files.map((filename) => ({
+    params: {
+      slug: filename.replace('.md', ''),
+    },
+  }))
+
+  return {
+    paths,
+    fallback: false,
+  }
+}
+
+export async function getStaticProps({ params: { slug } }) {
+  const markdownWithMeta = fs.readFileSync(
+    path.join('clinics', slug + '.md'),
+    'utf-8'
+  )
+
+  const { data: frontmatter, content } = matter(markdownWithMeta)
+
+  return {
+    props: {
+      frontmatter,
+      slug,
+      content,
+    },
+  }
 }

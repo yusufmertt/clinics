@@ -68,10 +68,10 @@ const Footer = (props) => {
               title="Our email"
               className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
             >
-              info@lorem.mail
+              findclinicsturkey@gmail.com
             </a>
           </div>
-          <div className="flex">
+   {/*        <div className="flex">
             <p className="mr-1 text-gray-800">Address:</p>
             <a
               href="https://www.google.com/maps"
@@ -81,9 +81,9 @@ const Footer = (props) => {
               title="Our address"
               className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
             >
-              312 Lovely Street, NY
+              Istanbul/Turkey
             </a>
-          </div>
+          </div> */}
         </div>
         <div>
           <span className="text-base font-bold tracking-wide text-gray-900">

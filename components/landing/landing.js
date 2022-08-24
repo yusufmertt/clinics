@@ -28,7 +28,7 @@ function Landing(props) {
       <Search/>
       <FeaturedClinics featuredClinics={props.featuredClinics}/>
       <Stats />
-      <Contracts/>
+     {/*  <Contracts/> */}
       <Info />
       <Cta />
     </div>

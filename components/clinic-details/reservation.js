@@ -4,10 +4,12 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 
 function Reservation(props) {
-  const parsedClinic = JSON.parse(props.clinic);
+  //const parsedClinic = JSON.parse(props.clinic);
   //const clinicEmail = parsedClinic[0].email;
-  const slug = parsedClinic[0].slug;
-  const clinic = parsedClinic[0].name;
+  const parsedClinic = props.clinic
+
+  const slug = parsedClinic.slug;
+  const clinic = parsedClinic.frontmatter.name;
 
   const nameRef = useRef();
   const emailRef = useRef();
