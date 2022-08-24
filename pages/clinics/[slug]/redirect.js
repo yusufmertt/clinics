@@ -62,7 +62,7 @@ export async function getStaticProps(context) {
 
   return {
     props: { clinic: serializableClinic },
-    revalidate: 400,
+    //revalidate: 400,
   };
 }
 
