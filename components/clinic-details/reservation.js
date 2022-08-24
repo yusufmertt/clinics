@@ -6,7 +6,7 @@ import "react-phone-input-2/lib/style.css";
 function Reservation(props) {
   //const parsedClinic = JSON.parse(props.clinic);
   //const clinicEmail = parsedClinic[0].email;
-  const parsedClinic = props.clinic
+  const parsedClinic = props.clinic;
 
   const slug = parsedClinic.slug;
   const clinic = parsedClinic.frontmatter.name;
@@ -27,7 +27,6 @@ function Reservation(props) {
   function phoneChangeHandler(event) {
     setPhone(event);
   }
-
 
   async function submitHandler(event) {
     event.preventDefault();
@@ -175,11 +174,11 @@ function Reservation(props) {
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-12">
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
-              Make a reservation plan!
+              Get quote from the clinic!
             </h1>
 
             <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-              Make your reservation from this page and get{" "}
+              Get quote from this page and get{" "}
               <span className="text-red-500">15% discount!</span> We and our
               doctors can help you decide your treatment options, planning your
               visit, pricing and much more!

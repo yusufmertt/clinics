@@ -8,6 +8,8 @@ import Context from "../../store/context";
 import { useEffect, useContext, useState } from "react";
 import Contracts from "./contracts";
 import Search from "./search";
+import Images from "./images";
+import PopularProcedures from "./popular-procedures";
 
 function Landing(props) {
   const appCtx = useContext(Context);
@@ -25,10 +27,12 @@ function Landing(props) {
   return (
     <div>
       <Hero language={language} />
-      <Search/>
-      <FeaturedClinics featuredClinics={props.featuredClinics}/>
-      <Stats />
-     {/*  <Contracts/> */}
+      <Search />
+      <PopularProcedures popularProcedures={props.popularProcedures} />
+      <FeaturedClinics featuredClinics={props.featuredClinics} />
+      <Images />
+      {/*   <Stats /> */}
+      {/*  <Contracts/> */}
       <Info />
       <Cta />
     </div>

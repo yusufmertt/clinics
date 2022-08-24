@@ -261,7 +261,7 @@ const ClinicDetails = (props) => {
             </p>
             <Link href={`/clinics/${slug}/reservation`}>
               <a className="bg-white w-full uppercase text-center text-red-600 font-semibold hover:bg-gray-300 px-3 py-1.5 transition duration-200 rounded-lg">
-                Make Reservation!
+                Get quote!
               </a>
             </Link>
           </div>

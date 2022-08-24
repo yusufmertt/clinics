@@ -92,10 +92,10 @@ export default function FeaturedClinics(props) {
   });
 
   return (
-    <section className="mt-16 px-10">
+    <section className="mt-16 px-4 sm:px-8">
       <div className="ml-3  mb-4 ">
         <h2 className="font-extrabold text-xl text-black tracking-wider">
-          FEATURED HOSPITALS
+          POPULAR HOSPITALS
         </h2>
         <div className="h-1 w-20 my-1 bg-brightPrimary rounded"></div>
        {/*  <p className="text-sm text-gray-500">

@@ -49,7 +49,7 @@ const Navbar = (props) => {
                 title="Our product"
                 className="font-medium tracking-wide text-white bg-brightPrimary px-4 py-2 rounded-xl transition-colors duration-200 hover:bg-darkPrimary"
               >
-                {(!language || language === "English") && "Clinics"}
+                {(!language || language === "English") && "All Clinics"}
                 {language === "German" && "Kliniken"}
                 {language === "Arabic" && "عيادات"}
                 {language === "Italian" && "Cliniche"}
@@ -78,7 +78,7 @@ const Navbar = (props) => {
               </a>
             </Link>
           </li> */}
-          <li>
+        {/*   <li>
             <Link href="/blog">
               <a
                 href="#"
@@ -87,6 +87,24 @@ const Navbar = (props) => {
                 className="font-medium tracking-wide text-gray-700 hover:text-brightPrimary transition duration-200"
               >
                 {(!language || language === "English") && "Blog"}
+                {language === "German" && "Bloggen"}
+                {language === "Arabic" && "مقالات"}
+                {language === "Italian" && "Blog"}
+                {language === "Spanish" && "Blog"}
+                {language === "Hebrew" && "בלוג"}
+                {language === "Russian" && "блог"}
+              </a>
+            </Link>
+          </li> */}
+          <li>
+            <Link href="/procedures">
+              <a
+                href="#"
+                aria-label="About us"
+                title="About us"
+                className="font-medium tracking-wide text-gray-700 hover:text-brightPrimary transition duration-200"
+              >
+                {(!language || language === "English") && "Procedures"}
                 {language === "German" && "Bloggen"}
                 {language === "Arabic" && "مقالات"}
                 {language === "Italian" && "Blog"}

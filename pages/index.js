@@ -8,10 +8,15 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-
 function Home(props) {
-  const featuredClinics = props.featuredClinics
-  const sortedClinics = featuredClinics.sort((a, b) => (a.featured > b.featured) ? -1 : +1)
+  const featuredClinics = props.featuredClinics;
+  const sortedClinics = featuredClinics.sort((a, b) =>
+    a.featured > b.featured ? -1 : +1
+  );
+  const popularProcedures = props.popularProcedures;
+  const sortedpopularProcedures = popularProcedures.sort((a, b) =>
+    a.featured > b.featured ? -1 : +1
+  );
 
   return (
     <Fragment>
@@ -24,7 +29,10 @@ function Home(props) {
       </Head>
 
       <main>
-        <Landing featuredClinics={sortedClinics} />
+        <Landing
+          featuredClinics={sortedClinics}
+          popularProcedures={sortedpopularProcedures}
+        />
       </main>
     </Fragment>
   );
@@ -40,12 +48,10 @@ function Home(props) {
     },
   };
 }
- */ 
+ */
 export async function getStaticProps() {
-
   const files = fs.readdirSync(path.join("featured-clinics"));
   const mdClinics = files.map((filename) => {
-
     //get frontmatter
     const markdownWithMeta = fs.readFileSync(
       path.join("featured-clinics", filename),
@@ -57,8 +63,29 @@ export async function getStaticProps() {
     return frontmatter;
   });
 
+  const popularProceduresFiles = fs.readdirSync(
+    path.join("popular-procedures")
+  );
+  const popularProcedures = popularProceduresFiles.map((filename) => {
+    //get slug
+    //const slug = filename.replace(".md", "");
+
+    //get frontmatter
+    const markdownWithMeta = fs.readFileSync(
+      path.join("popular-procedures", filename),
+      "utf-8"
+    );
+
+    const { data: frontmatter } = matter(markdownWithMeta);
+
+    return frontmatter;
+  });
+
   return {
-    props: { /* clinics: clinicsConverted, */ featuredClinics: mdClinics },
+    props: {
+      /* clinics: clinicsConverted, */ featuredClinics: mdClinics,
+      popularProcedures: popularProcedures,
+    },
     revalidate: 86400, //dbye eklenen datalar 1 gün sonra yansıyacak
   };
 }
