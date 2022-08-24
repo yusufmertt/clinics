@@ -8,7 +8,7 @@ city: "Istanbul"
 location: "Ataşehir/Istanbul"
 address: "Barbaros Mah. Ihlamur Bulvarı Ağaoğlu My Newwork, No:3, Kat: 3, D:25, 34746 Ataşehir/İstanbul"
 phone: "+905054007733"
-featured: 30
+featured: 0
 website: "https://www.lipodem.com/"
 mapsURL: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.516783917041!2d29.10157705182516!3d40.992060779200905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab60cb1e07ac7%3A0x4bc0886419832541!2sLipodem.com%20%7C%20Dr.%20Yener%20Demirta%C5%9F%20%7C%20Lipedema%20Surgeon%20in%20Turkey%20%7C%20Vaser%20Liposuction%20for%20Lipedema%20%7C%20Lip%C3%B6dem%20Cerrah%C4%B1%20%C4%B0stanbul!5e0!3m2!1sen!2str!4v1661303472734!5m2!1sen!2str"
 ---

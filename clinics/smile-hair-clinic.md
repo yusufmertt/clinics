@@ -8,7 +8,7 @@ city: "Istanbul"
 location: "Ümraniye/Istanbul"
 address: "Tatlısu, Arif Ay Sokaǧi No:3 B, 34774 Ümraniye/İstanbul"
 phone: "+905422365850"
-featured: 60
+featured: 70
 website: "https://www.smilehairclinic.com/en/"
 mapsURL: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6022.2181501027135!2d29.125316318047204!3d41.0009857554469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac8b2a33a8b65%3A0xbc589f8816b1c1fa!2sSa%C3%A7%20Ekimi%20%7C%20Smile%20Hair%20Clinic%20%7C%20Hair%20Transplant%20Clinic!5e0!3m2!1sen!2str!4v1660936184292!5m2!1sen!2str"
 

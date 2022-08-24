@@ -19,7 +19,7 @@ city: "Istanbul"
 location: "Kartal/Istanbul"
 address: "Petroliş, Üsküdar Cd. No:45, 34862 Kartal/İstanbul"
 phone: "+90 542 631 94 23"
-featured: 95
+featured: 110
 website: "https://avicennaint.com/"
 mapsURL: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6032.357657189987!2d29.173649112046423!3d40.88989198102541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac39ba757b99d%3A0x538986ab39307e85!2sAvicenna%20Umut%20Hospital!5e0!3m2!1sen!2str!4v1661199443500!5m2!1sen!2str"
 ---

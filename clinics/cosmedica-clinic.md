@@ -8,7 +8,7 @@ city: "Istanbul"
 location: "Beşiktaş/Istanbul"
 address: "Etiler, Nisbetiye Mah, Başlık Sk. No: 3, 34337 Beşiktaş/İstanbul"
 phone: "+905445560555"
-featured: 60
+featured: 70
 website: "https://cosmedica.com/"
 mapsURL: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3007.7574265090684!2d29.0178359161256!3d41.07429472330739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cabb53ab67da29%3A0xf0490f93a2a164c7!2sCosmedica%20Hair%20Transplantation%20Clinic!5e0!3m2!1sen!2str!4v1661206992415!5m2!1sen!2str"
 ---

@@ -8,7 +8,7 @@ city: "Istanbul"
 location: "Şişli/Istanbul"
 address: "Şişli/Istanbul"
 phone: "+905447884388"
-featured: 60
+featured: 0
 website: "https://www.drziyayavuz.com/"
 mapsURL: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d24086.422486518535!2d29.034080000000003!3d41.007689!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdaf79bb625bcaf89!2sDr.%20Ziya%20Yavuz%20Clinic%20%7C%20Hair%20Transplant%20Turkey%20%2C%20Istanbul!5e0!3m2!1str!2str!4v1660950445717!5m2!1str!2str"
 ---

@@ -9,7 +9,7 @@ city: "Istanbul"
 location: "Kadıköy/Istanbul"
 address: "Sahrayı Cedit, Halk Sk. No:52 K:2 D:2, 34734 Kadıköy/İstanbul"
 phone: "+905425210522"
-featured: 60
+featured: 0
 website: "https://ibrahimercan.com/en/"
 mapsURL: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.956233945399!2d29.09051301625172!3d40.98243917930338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac7caca0ffa05%3A0x21e55f67f4b681d1!2sProf.%20Dr.%20%C4%B0brahim%20Ercan%20-%20KBB%20Estetik%20Merkezi%20-%20Rhinoplasty%20-%20Burun%20Esteti%C4%9Fi%20-%20Rinoplasti%20Revizyon!5e0!3m2!1sen!2str!4v1661296514431!5m2!1sen!2str"
 ---

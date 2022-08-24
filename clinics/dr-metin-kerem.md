@@ -17,7 +17,7 @@ city: "Istanbul"
 location: "Beşiktaş/Istanbul"
 address: "Etiler, Nisbetiye Mah, Başlık Sk. No: 3, 34337 Beşiktaş/İstanbul"
 phone: "+902122578000"
-featured: 60
+featured: 0
 website: "https://www.metinkerem.com/"
 mapsURL: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3007.5122977985397!2d29.034991816253417!3d41.0796520792936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab61ad956719b%3A0xadad56baf4ed8207!2sOp.%20Dr.%20Metin%20Kerem%20%7C%20Rhinoplasty%20Turkey%20%7C%20Rhinoplasty%20%C4%B0stanbul!5e0!3m2!1sen!2str!4v1661296325705!5m2!1sen!2str"
 ---

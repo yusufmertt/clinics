@@ -8,7 +8,7 @@ city: "Istanbul"
 location: "Bakırköy/Istanbul"
 address: "Ataköy 7-8-9-10, Selenium Retro, D-100 Güney Yanyolu No:18/A, 34158 Bakırköy/İstanbul"
 phone: "+905340586191"
-featured: 60
+featured: 100
 website: "https://www.haircenterofturkey.com/"
 mapsURL: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.525046046766!2d28.831396217443846!3d40.9918799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa3672bfa6c33%3A0x19a41f33bc64944!2sHair%20Center%20Of%20Turkey!5e0!3m2!1sen!2str!4v1660946541663!5m2!1sen!2str"
 

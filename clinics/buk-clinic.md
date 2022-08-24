@@ -14,7 +14,7 @@ city: "Istanbul"
 location: "Şişli/Istanbul"
 address: "Dikilitaş mahallesi, Ayazmaderesi Cd No:6/1 D:5, 34349 Beşiktaş, 34349 Şişli/İstanbul"
 phone: "+905354667464"
-featured: 70
+featured: 0
 website: "https://www.bukclinic.com/"
 mapsURL: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.502186581065!2d28.998159736146327!3d41.05801425809489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac70bec3b7d69%3A0xce48a65c9f3b432b!2sBuk%20Hair%20Transplant%20Turkey%20%7C%20Laser%20Hair%20Removal%20%7C%20Hydrafacial%20%7C%20Spot%20Slimming%20Istanbul!5e0!3m2!1sen!2str!4v1660935514876!5m2!1sen!2str"
 ---
