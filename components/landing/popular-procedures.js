@@ -41,7 +41,7 @@ export default function PopularProcedures(props) {
             href="#"
             className="inline-flex items-center mt-2 py-2 px-3 text-sm font-medium text-center text-white bg-brightPrimary rounded-lg hover:bg-darkPrimary focus:ring-4 focus:outline-none focus:ring-purple-300"
           >
-            View Details
+            View Clinics
             <svg
               aria-hidden="true"
               className="ml-2 -mr-1 w-4 h-4"
