@@ -156,6 +156,7 @@ const ClinicDetails = (props) => {
                         src={`/images/extras/${extra}.svg`}
                         width={500}
                         height={150}
+                        alt="features"
                       />
                       <p className="uppercase tracking-tighter text-center">
                         {extra}
@@ -250,6 +251,7 @@ const ClinicDetails = (props) => {
                   src="/images/icons/location.svg"
                   height={12}
                   width={12}
+                  alt="location"
                 />
                 <span className="mx-2">{location}</span>
               </div>

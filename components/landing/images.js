@@ -11,47 +11,47 @@ export default function Images() {
         <div className="flex flex-wrap -m-1 md:-m-2">
           <div className="flex flex-wrap w-1/2">
             <div className="w-1/2 p-1 md:p-2">
-              <img
+              <Image
                 alt="gallery"
                 className="block object-cover object-center w-full h-full rounded-lg"
-                src="/images/landing/images-section/avicenna-atasehir.png"
+                src="/images/landing/images-section/avicenna-atasehir.webp" width="100%" height="100%" layout="responsive" objectFit="cover"
               />
             </div>
             <div className="w-1/2 p-1 md:p-2">
-              <img
+              <Image
                 alt="gallery"
                 className="block object-cover object-center w-full h-full rounded-lg"
-                src="/images/landing/images-section/atasehir.png"
+                src="/images/landing/images-section/atasehir.webp" width="100%" height="100%" layout="responsive" objectFit="cover"
               />
             </div>
             <div className="w-full p-1 md:p-2">
-              <img
+              <Image
                 alt="gallery"
                 className="block object-cover object-center w-full h-full rounded-lg"
-                src="/images/landing/images-section/istanbul2.jpg"
+                src="/images/landing/images-section/istanbul2.webp" width="100%" height="100%" layout="responsive" objectFit="cover"
               />
             </div>
           </div>
           <div className="flex flex-wrap w-1/2">
             <div className="w-full p-1 md:p-2">
-              <img
+              <Image
                 alt="gallery"
                 className="block object-cover object-center w-full h-full rounded-lg"
-                src="/images/landing/images-section/istanbul.jfif"
+                src="/images/landing/images-section/istanbul.webp" width="100%" height="100%" layout="responsive" objectFit="cover"
               />
             </div>
             <div className="w-1/2 p-1 md:p-2">
-              <img
+              <Image
                 alt="gallery"
                 className="block object-cover object-center w-full h-full rounded-lg"
-                src="/images/landing/images-section/plastic-surgeries.jpg"
+                src="/images/landing/images-section/plastic-surgeries.webp" width="100%" height="100%" layout="responsive" objectFit="cover"
               />
             </div>
             <div className="w-1/2 p-1 md:p-2">
-              <img
+              <Image
                 alt="gallery"
                 className="block object-cover object-center w-full h-full rounded-lg"
-                src="/images/landing/images-section/quality.png"
+                src="/images/landing/images-section/quality.webp" width="100%" height="100%" layout="responsive" objectFit="cover"
               />
             </div>
           </div>
