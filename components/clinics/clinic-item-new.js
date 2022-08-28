@@ -37,7 +37,7 @@ const ClinicItemNew = (props) => {
             src={`/images/clinics/${slug}/1.jpg`}
             height={160}
             alt="clinic thumbnail"
-          />
+            />
           {/* <ImageGallery
             items={images}
             showThumbnails={false}

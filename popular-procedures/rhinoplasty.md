@@ -5,7 +5,7 @@ slug: "rhinoplasty"
 featured: 70
 image: "/images/procedures/rhinoplasty.jpg"
 description: ""
-averagePrice: "1800€ - 3500€"
+averagePrice: "1500€ - 3500€"
 
 ---
 

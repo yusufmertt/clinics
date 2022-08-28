@@ -6,12 +6,19 @@ export default function Procedures(props) {
 
   return (
     <section className=" mt-3 px-6 sm:px-16">
-      <h1 className="text-2xl uppercase font-bold tracking-wider mb-3 text-center">All Procedures</h1>
-      <h4 className="text-gray-700 text-md text-center mb-6">Pick the procedure you want and find best clinics!</h4>
+      <h1 className="text-2xl uppercase font-bold tracking-wider mb-3 text-center">
+        All Procedures
+      </h1>
+      <h4 className="text-gray-700 text-md text-center mb-6">
+        Pick the procedure you want and find best clinics!
+      </h4>
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 xxl:grid-cols-5">
         {procedures.map((procedure) => {
           return (
-            <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md " key={procedure.slug}>
+            <div
+              className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md "
+              key={procedure.slug}
+            >
               <a href="#">
                 <Image
                   className="rounded-t-lg"
@@ -30,6 +37,10 @@ export default function Procedures(props) {
                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
                   {procedure.description}
                 </p>
+                <p className="text-md">Average Price</p>
+                <p className="text-lg tracking-wider font-medium">
+                  {procedure.averagePrice}
+                </p>
                 <Link href={`/procedures/${procedure.slug}`}>
                   <a
                     href="#"
@@ -40,7 +51,7 @@ export default function Procedures(props) {
                       aria-hidden="true"
                       className="ml-2 -mr-1 w-4 h-4"
                       fill="currentColor"
-                      viewBox="0 0 20 20"               
+                      viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
