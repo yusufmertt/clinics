@@ -49,28 +49,28 @@ const ClinicDetails = (props) => {
 
   const images = [
     {
-      original: `/images/clinics/${slug}/1.png`,
-      thumbnail: `/images/clinics/${slug}/1.png`,
+      original: `/images/clinics/${slug}/1.jpg`,
+      thumbnail: `/images/clinics/${slug}/1.jpg`,
     },
     {
-      original: `/images/clinics/${slug}/2.png`,
-      thumbnail: `/images/clinics/${slug}/2.png`,
+      original: `/images/clinics/${slug}/2.jpg`,
+      thumbnail: `/images/clinics/${slug}/2.jpg`,
     },
     {
-      original: `/images/clinics/${slug}/3.png`,
-      thumbnail: `/images/clinics/${slug}/3.png`,
+      original: `/images/clinics/${slug}/3.jpg`,
+      thumbnail: `/images/clinics/${slug}/3.jpg`,
     },
     {
-      original: `/images/clinics/${slug}/4.png`,
-      thumbnail: `/images/clinics/${slug}/4.png`,
+      original: `/images/clinics/${slug}/4.jpg`,
+      thumbnail: `/images/clinics/${slug}/4.jpg`,
     },
     {
-      original: `/images/clinics/${slug}/5.png`,
-      thumbnail: `/images/clinics/${slug}/5.png`,
+      original: `/images/clinics/${slug}/5.jpg`,
+      thumbnail: `/images/clinics/${slug}/5.jpg`,
     },
     {
-      original: `/images/clinics/${slug}/6.png`,
-      thumbnail: `/images/clinics/${slug}/6.png`,
+      original: `/images/clinics/${slug}/6.jpg`,
+      thumbnail: `/images/clinics/${slug}/6.jpg`,
     },
   ];
 

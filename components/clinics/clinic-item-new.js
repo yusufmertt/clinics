@@ -34,7 +34,7 @@ const ClinicItemNew = (props) => {
       <Card shadow="sm" p="lg" radius="md" withBorder>
         <Card.Section>
           <Image
-            src={`/images/clinics/${slug}/1.png`}
+            src={`/images/clinics/${slug}/1.jpg`}
             height={160}
             alt="clinic thumbnail"
           />
