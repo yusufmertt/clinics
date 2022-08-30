@@ -28,7 +28,7 @@ export default function Images() {
               <Image
                 alt="gallery"
                 className="block object-cover object-center w-full h-full rounded-lg"
-                src="/images/landing/images-section/istanbul2.webp" width="100%" height="100%" layout="responsive" objectFit="cover"
+                src="/images/landing/images-section/istanbul.jpg" width="100%" height="100%" layout="responsive" objectFit="cover"
               />
             </div>
           </div>

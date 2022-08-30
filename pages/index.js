@@ -9,12 +9,15 @@ import path from "path";
 import matter from "gray-matter";
 
 function Home(props) {
-  const featuredClinics = props.featuredClinics;
+  const { featuredClinics, popularProcedures, allProcedures } = props;
+
   const sortedClinics = featuredClinics.sort((a, b) =>
     a.featured > b.featured ? -1 : +1
   );
-  const popularProcedures = props.popularProcedures;
-  const sortedpopularProcedures = popularProcedures.sort((a, b) =>
+  const sortedPopularProcedures = popularProcedures.sort((a, b) =>
+    a.featured > b.featured ? -1 : +1
+  );
+  const sortedAllProcedures = allProcedures.sort((a, b) =>
     a.featured > b.featured ? -1 : +1
   );
 
@@ -31,7 +34,8 @@ function Home(props) {
       <main>
         <Landing
           featuredClinics={sortedClinics}
-          popularProcedures={sortedpopularProcedures}
+          popularProcedures={sortedPopularProcedures}
+          allProcedures={sortedAllProcedures}
         />
       </main>
     </Fragment>
@@ -62,7 +66,7 @@ export async function getStaticProps() {
 
     return frontmatter;
   });
-
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   const popularProceduresFiles = fs.readdirSync(
     path.join("popular-procedures")
   );
@@ -80,11 +84,30 @@ export async function getStaticProps() {
 
     return frontmatter;
   });
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  const allProceduresfiles = fs.readdirSync(path.join("procedures"));
+  const allProcedures = allProceduresfiles.map((filename) => {
+    //get slug
+    //const slug = filename.replace(".md", "");
+
+    //get frontmatter
+    const markdownWithMeta = fs.readFileSync(
+      path.join("procedures", filename),
+      "utf-8"
+    );
+
+    const { data: frontmatter } = matter(markdownWithMeta);
+
+    return frontmatter;
+  });
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   return {
     props: {
       /* clinics: clinicsConverted, */ featuredClinics: mdClinics,
       popularProcedures: popularProcedures,
+      allProcedures: allProcedures,
     },
     revalidate: 86400, //dbye eklenen datalar 1 gün sonra yansıyacak
   };

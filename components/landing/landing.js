@@ -28,7 +28,7 @@ function Landing(props) {
     <div>
       <Hero language={language} />
       <div className="sm:px-16">
-        <Search />
+        <Search allProcedures={props.allProcedures}/>
         <PopularProcedures popularProcedures={props.popularProcedures} />
       </div>
       <div className="sm:px-16">
