@@ -125,7 +125,7 @@ const Footer = (props) => {
             </Link> */}
           </div>
           <p className="mt-4 text-sm text-gray-500">
-            You can contact us through social media!
+            Contact us through social media!
           </p>
         </div>
       </div>
@@ -140,7 +140,7 @@ const Footer = (props) => {
                 href="#"
                 className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
               >
-                F.A.Q
+                FAQ
               </a>
             </Link>
           </li>

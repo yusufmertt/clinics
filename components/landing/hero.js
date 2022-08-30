@@ -11,7 +11,7 @@ function Hero(props) {
         <Image
           className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-20 sm:opacity-100"
           src="/images/landing/hero2.jpg"
-          alt="Hair Transplant"
+          alt="Hero"
           layout="fill"
         />
 
@@ -27,8 +27,17 @@ function Hero(props) {
             </h1>
 
             <p className="max-w-lg mt-4 sm:leading-relaxed sm:text-xl">
-              Meet with best doctors in <strong><Link href="/clinics"><a htef="#" className="text-brightPrimary underline">hair transplant</a></Link>, dental operations, eye surgeries,
-              rhinoplasty, liposuction, breast augmentation, gastric sleeve</strong> and much more...
+              Meet with best doctors in{" "}
+              <strong>
+                <Link href="/clinics">
+                  <a htef="#" className="text-brightPrimary underline">
+                    hair transplant
+                  </a>
+                </Link>
+                , dental operations, eye surgeries, rhinoplasty, liposuction,
+                breast augmentation, gastric sleeve
+              </strong>{" "}
+              and much more...
             </p>
 
             <div className="flex flex-wrap gap-4 mt-8 text-center">
@@ -59,9 +68,9 @@ function Hero(props) {
     content = (
       <section className="relative bg-white">
         <Image
-          className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-50 sm:opacity-100"
-          src="/images/landing/hair-transplant4.jpg"
-          alt="Haartransplantationen"
+          className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-20 sm:opacity-100"
+          src="/images/landing/hero2.jpg"
+          alt="Hero"
           layout="fill"
         />
 
@@ -108,9 +117,9 @@ function Hero(props) {
     content = (
       <section className="relative bg-white">
         <Image
-          className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-50 sm:opacity-100"
-          src="/images/landing/hair-transplant4.jpg"
-          alt="Hair transplant"
+          className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-20 sm:opacity-100"
+          src="/images/landing/hero2.jpg"
+          alt="Hero"
           layout="fill"
         />
 
@@ -154,9 +163,9 @@ function Hero(props) {
     content = (
       <section className="relative bg-white">
         <Image
-          className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-50 sm:opacity-100"
-          src="/images/landing/hair-transplant4.jpg"
-          alt="Hair transplant"
+          className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-20 sm:opacity-100"
+          src="/images/landing/hero2.jpg"
+          alt="Hero"
           layout="fill"
         />
 
@@ -200,9 +209,9 @@ function Hero(props) {
     content = (
       <section className="relative bg-white">
         <Image
-          className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-50 sm:opacity-100"
-          src="/images/landing/hair-transplant4.jpg"
-          alt="пересадке волос"
+          className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-20 sm:opacity-100"
+          src="/images/landing/hero2.jpg"
+          alt="Hero"
           layout="fill"
         />
 
@@ -250,9 +259,9 @@ function Hero(props) {
     content = (
       <section className="relative bg-white">
         <Image
-          className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-50 sm:opacity-100"
-          src="/images/landing/hair-transplant4.jpg"
-          alt="trasplante de cabello"
+          className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-20 sm:opacity-100"
+          src="/images/landing/hero2.jpg"
+          alt="Hero"
           layout="fill"
         />
         <div className="hidden sm:block sm:inset-0 sm:absolute sm:bg-gradient-to-r sm:from-white sm:to-transparent"></div>
@@ -297,9 +306,9 @@ function Hero(props) {
     content = (
       <section className="relative bg-white">
         <Image
-          className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-50 sm:opacity-100"
-          src="/images/landing/hair-transplant4.jpg"
-          alt="trapianto di capelli"
+          className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-20 sm:opacity-100"
+          src="/images/landing/hero2.jpg"
+          alt="Hero"
           layout="fill"
         />
 

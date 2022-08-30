@@ -19,12 +19,14 @@ export default function PopularProcedures(props) {
 
   popularProcedures.map((procedure) => {
     items.push(
-      <div className="p-3" data-value="1">
-        <Image src={procedure.image} width={650} height={350} />
-        <h3 className="font-bold text-lg uppercase text-gray-800 my-1">
-          {procedure.title}
-        </h3>
-        {/* {procedure.features.map((feature) => {
+      <Link href={`/procedures/${procedure.slug}`}>
+        <a href="#">
+          <div className="p-3" data-value="1">
+            <Image src={procedure.image} width={650} height={350} />
+            <h3 className="font-bold text-lg uppercase text-gray-800 my-1">
+              {procedure.title}
+            </h3>
+            {/* {procedure.features.map((feature) => {
             return (
               <p
                 key={feature}
@@ -34,30 +36,29 @@ export default function PopularProcedures(props) {
               </p>
             );
           })} */}
-        <p className="text-md">Average Price</p>
-        <p className="text-lg tracking-wider font-medium">{procedure.averagePrice}</p>
-        <Link href={`/procedures/${procedure.slug}`}>
-          <a
-            href="#"
-            className="inline-flex items-center mt-2 py-2 px-3 text-sm font-medium text-center text-white bg-brightPrimary rounded-lg hover:bg-darkPrimary focus:ring-4 focus:outline-none focus:ring-purple-300"
-          >
-            View Clinics
-            <svg
-              aria-hidden="true"
-              className="ml-2 -mr-1 w-4 h-4"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fillRule="evenodd"
-                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              ></path>
-            </svg>
-          </a>
-        </Link>
-      </div>
+            <p className="text-md">Average Price</p>
+            <p className="text-lg tracking-wider font-medium">
+              {procedure.averagePrice}
+            </p>
+            <a className="inline-flex items-center mt-2 py-2 px-3 text-sm font-medium text-center text-white bg-brightPrimary rounded-lg hover:bg-darkPrimary focus:ring-4 focus:outline-none focus:ring-purple-300">
+              View Clinics
+              <svg
+                aria-hidden="true"
+                className="ml-2 -mr-1 w-4 h-4"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </a>
+      </Link>
     );
   });
 
@@ -76,7 +77,7 @@ export default function PopularProcedures(props) {
         mouseTracking
         items={items}
         responsive={responsive}
-        controlsStrategy="alternate"
+        controlsStrategy="responsive "
       />
     </section>
   );

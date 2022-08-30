@@ -12,7 +12,7 @@ const ClinicItemNew = (props) => {
     images,
     featured,
     city,
-  } = props.clinicData
+  } = props.clinicData;
 
   const { language, showBadges } = props;
 
@@ -31,13 +31,21 @@ const ClinicItemNew = (props) => {
 
     */
     <Link href={`/clinics/${slug}`} className="hidden">
-      <Card shadow="sm" p="lg" radius="md" withBorder>
+      <Card
+        shadow="sm"
+        p="lg"
+        radius="md"
+        withBorder
+        className="hover:shadow-2xl hover:scale-105 shadow-black duration-300 transition-all flex flex-col justify-between !pt-0"
+      >       
+       <div>
+
         <Card.Section>
           <Image
             src={`/images/clinics/${slug}/1.jpg`}
             height={160}
             alt="clinic thumbnail"
-            />
+          />
           {/* <ImageGallery
             items={images}
             showThumbnails={false}
@@ -45,72 +53,81 @@ const ClinicItemNew = (props) => {
             showFullscreenButton={false}
           /> */}
         </Card.Section>
-        <Group position="apart" mt="md" mb="xs">
-          <Text weight={500}>{name}</Text>
-          
-          {featured && (
-            <Badge color="green" variant="dark">
-              Recommended!!
-            </Badge>
-          )}
-        </Group>
-        {/* 
+          <Group position="apart" mt="md" mb="xs">
+            <Text weight={500}>{name}</Text>
+
+            {featured && (
+              <Badge color="green" variant="dark">
+                Recommended!!
+              </Badge>
+            )}
+          </Group>
+
+          {/* 
         <Badge color="blue" variant="light">
           {featuring}
         </Badge> */}
-        {showBadges && features.map((feature) => {
-          return (
-            <Badge color="blue" variant="light" key={feature}>
-              {feature}
-            </Badge>
-          );
-        })}
-        {/* <Text size="sm" color="dimmed">
+          <div className="mt-6">
+            {showBadges &&
+              features.map((feature) => {
+                return (
+                  <Badge color="blue" variant="light" key={feature}>
+                    {feature}
+                  </Badge>
+                );
+              })}
+          </div>
+          {/* <Text size="sm" color="dimmed">
             {description}
         </Text> */}
-        <Group className="mt-2">
-          <Image
-            src="/images/icons/location.svg"
-            height={12}
-            width={12}
-            alt="city"
-          />
-          {city}
-        </Group>
-        <Button
-          variant="light"
-          className="text-brightPrimary hover:bg-purple-100"
-          fullWidth
-          mt="md"
-          radius="md"
-        >
-          {(!language || language === "English") && (
-            <Link href={`/clinics/${slug}`}>See Details</Link>
-          )}
-          {language === "German" && (
-            <Link href={`/clinics/${slug}`}>Siehe Einzelheiten</Link>
-          )}
+        </div>
+        <div>
+          <Group className="mt-2">
+            <Image
+              src="/images/icons/location.svg"
+              height={12}
+              width={12}
+              alt="city"
+            />
+            {city}
+          </Group>
+          <div className="">
+            <Button
+              variant="light"
+              className="text-brightPrimary hover:bg-purple-100 "
+              fullWidth
+              mt="md"
+              radius="md"
+            >
+              {(!language || language === "English") && (
+                <Link href={`/clinics/${slug}`}>See Details</Link>
+              )}
+              {language === "German" && (
+                <Link href={`/clinics/${slug}`}>Siehe Einzelheiten</Link>
+              )}
 
-          {language === "Arabic" && (
-            <Link href={`/clinics/${slug}`}>انظر التفاصيل</Link>
-          )}
+              {language === "Arabic" && (
+                <Link href={`/clinics/${slug}`}>انظر التفاصيل</Link>
+              )}
 
-          {language === "Hebrew" && (
-            <Link href={`/clinics/${slug}`}>ראה פרטים</Link>
-          )}
+              {language === "Hebrew" && (
+                <Link href={`/clinics/${slug}`}>ראה פרטים</Link>
+              )}
 
-          {language === "Russian" && (
-            <Link href={`/clinics/${slug}`}>Смотрите подробности</Link>
-          )}
+              {language === "Russian" && (
+                <Link href={`/clinics/${slug}`}>Смотрите подробности</Link>
+              )}
 
-          {language === "Spanish" && (
-            <Link href={`/clinics/${slug}`}>Ver detalles</Link>
-          )}
+              {language === "Spanish" && (
+                <Link href={`/clinics/${slug}`}>Ver detalles</Link>
+              )}
 
-          {language === "Italian" && (
-            <Link href={`/clinics/${slug}`}>Guarda i detagli</Link>
-          )}
-        </Button>
+              {language === "Italian" && (
+                <Link href={`/clinics/${slug}`}>Guarda i detagli</Link>
+              )}
+            </Button>
+          </div>
+        </div>
       </Card>
     </Link>
 
