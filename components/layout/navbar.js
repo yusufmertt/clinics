@@ -198,6 +198,7 @@ const Navbar = (props) => {
                     <li>
                       <Link href="/clinics">
                         <a
+                          onClick={() => setIsMenuOpen(false)}
                           href="#"
                           aria-label="Our product"
                           title="Our product"
@@ -218,6 +219,7 @@ const Navbar = (props) => {
                     <li>
                       <Link href="/procedures">
                         <a
+                          onClick={() => setIsMenuOpen(false)}
                           href="#"
                           aria-label="About us"
                           title="About us"
@@ -237,6 +239,7 @@ const Navbar = (props) => {
                     <li>
                       <Link href="/contact">
                         <a
+                          onClick={() => setIsMenuOpen(false)}
                           href="#"
                           aria-label="About us"
                           title="About us"
@@ -255,6 +258,7 @@ const Navbar = (props) => {
                     <li>
                       <Link href="/about-us">
                         <a
+                          onClick={() => setIsMenuOpen(false)}
                           href="#"
                           aria-label="About us"
                           title="About us"
