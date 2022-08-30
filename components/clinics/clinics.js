@@ -140,7 +140,7 @@ const Clinics = (props) => {
   return (
     <div className="lg:px-28 m-5 xl:px-48 xxl:px-48">
       <div>
-        <Menu language={language}/>
+        <Menu language={language} />
       </div>
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 xxl:grid-cols-5 mt-3">
         {clinicsCtx.filteredClinics &&
@@ -150,7 +150,12 @@ const Clinics = (props) => {
             <Fragment>
               {/* Results(Filtered) */}
               {currentFilteredClinics.map((clinic) => (
-                <ClinicItemNew key={clinic.slug} clinicData={clinic} language={language}/>
+                <ClinicItemNew
+                  showBadges
+                  key={clinic.slug}
+                  clinicData={clinic}
+                  language={language}
+                />
               ))}
             </Fragment>
           )}
@@ -159,7 +164,12 @@ const Clinics = (props) => {
             <Fragment>
               {/* Initial Flicker (loading) */}
               {clinics.map((clinic) => (
-                <ClinicItemNew key={clinic.slug} clinicData={clinic} language={language}/>
+                <ClinicItemNew
+                  showBadges
+                  key={clinic.slug}
+                  clinicData={clinic}
+                  language={language}
+                />
               ))}
             </Fragment>
           )}
@@ -167,7 +177,12 @@ const Clinics = (props) => {
           <Fragment>
             {/* Results(Not Filtered) */}
             {currentAllClinics.map((clinic) => (
-              <ClinicItemNew key={clinic.slug} clinicData={clinic} language={language}/>
+              <ClinicItemNew
+                showBadges
+                key={clinic.slug}
+                clinicData={clinic}
+                language={language}
+              />
             ))}
           </Fragment>
         )}

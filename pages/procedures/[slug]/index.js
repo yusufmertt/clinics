@@ -13,6 +13,9 @@ const ProcedureDetailsPage = (props) => {
   const appCtx = useContext(Context);
   const [language, setLanguage] = useState("English");
 
+  const sortedClinics = filteredClinicsArray.sort((a, b) => (a.featured > b.featured) ? -1 : +1)
+
+
   useEffect(() => {
     if (localStorage.getItem("language")) {
       const localLanguage = localStorage.getItem("language");
@@ -41,9 +44,10 @@ const ProcedureDetailsPage = (props) => {
         <p>{props.content}</p>
         </div> */}
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 xxl:grid-cols-5 mt-3">
-          {filteredClinicsArray.map((clinic) => {
+          {sortedClinics.map((clinic) => {
             return (
               <ClinicItemNew
+                showBadges={false}
                 key={clinic.slug}
                 clinicData={clinic}
                 language={language}

@@ -27,13 +27,18 @@ function Landing(props) {
   return (
     <div>
       <Hero language={language} />
-      <Search />
-      <PopularProcedures popularProcedures={props.popularProcedures} />
-      <FeaturedClinics featuredClinics={props.featuredClinics} />
-      <Images />
-      {/*   <Stats /> */}
-      {/*  <Contracts/> */}
-      <Info />
+      <div className="sm:px-16">
+        <Search />
+        <PopularProcedures popularProcedures={props.popularProcedures} />
+      </div>
+      <div className="sm:px-16">
+        <FeaturedClinics featuredClinics={props.featuredClinics} />
+        <Images />
+        {/*   <Stats /> */}
+        <Info />
+      </div>
+      <Contracts />
+
       <Cta />
     </div>
   );

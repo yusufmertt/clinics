@@ -60,42 +60,6 @@ const Navbar = (props) => {
             </Link>
           </li>
 
-          {/*  <li>
-            <Link href="/pricing">
-              <a
-                href="#"
-                aria-label="Product pricing"
-                title="Product pricing"
-                className="font-medium tracking-wide text-gray-700 hover:text-brightPrimary transition duration-200"
-              >
-                {(!language || language === "English") && "Pricing"}
-                {language === "German" && "Preisgestaltung"}
-                {language === "Arabic" && "التسعير"}
-                {language === "Italian" && "Prezzo"}
-                {language === "Spanish" && "Precios"}
-                {language === "Hebrew" && "תמחור"}
-                {language === "Russian" && "Цены"}
-              </a>
-            </Link>
-          </li> */}
-        {/*   <li>
-            <Link href="/blog">
-              <a
-                href="#"
-                aria-label="About us"
-                title="About us"
-                className="font-medium tracking-wide text-gray-700 hover:text-brightPrimary transition duration-200"
-              >
-                {(!language || language === "English") && "Blog"}
-                {language === "German" && "Bloggen"}
-                {language === "Arabic" && "مقالات"}
-                {language === "Italian" && "Blog"}
-                {language === "Spanish" && "Blog"}
-                {language === "Hebrew" && "בלוג"}
-                {language === "Russian" && "блог"}
-              </a>
-            </Link>
-          </li> */}
           <li>
             <Link href="/procedures">
               <a
@@ -152,14 +116,6 @@ const Navbar = (props) => {
           </li>
           <li>
             <LanguagePicker />
-            {/*             <a
-              href="#"
-              className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-green-400 hover:bg-green-700 focus:shadow-outline focus:outline-none"
-              aria-label="Sign up"
-              title="Sign up"
-            >
-              Get Help
-            </a> */}
           </li>
         </ul>
         <div className="lg:hidden">
@@ -242,49 +198,45 @@ const Navbar = (props) => {
                     <li>
                       <Link href="/clinics">
                         <a
-                          onClick={() => setIsMenuOpen(false)}
                           href="#"
-                          aria-label="Product pricing"
-                          title="Product pricing"
-                          className="font-medium tracking-wide text-brightPrimary hover:text-darkPrimary transition duration-200"
+                          aria-label="Our product"
+                          title="Our product"
+                          className="font-medium tracking-wide text-gray-700 hover:text-brightPrimary transition duration-200"
                         >
-                          {(!language || language === "English") && "Clinics"}
+                          {(!language || language === "English") &&
+                            "All Clinics"}
                           {language === "German" && "Kliniken"}
+                          {language === "Arabic" && "عيادات"}
+                          {language === "Italian" && "Cliniche"}
+                          {language === "Spanish" && "Clínicas"}
+                          {language === "Hebrew" && "מרפאות"}
+                          {language === "Russian" && "Клиники"}
                         </a>
                       </Link>
                     </li>
 
-                    {/*     <li>
-                      <Link href="/pricing">
-                        <a
-                          href="#"
-                          aria-label="Product pricing"
-                          title="Product pricing"
-                          className="font-medium tracking-wide text-gray-700 hover:text-brightPrimary transition duration-200"
-                        >
-                          {(!language || language === "English") && "Pricing"}
-                          {language === "German" && "Preisgestaltung"}
-                        </a>
-                      </Link>
-                    </li> */}
                     <li>
-                      <Link href="/blog">
+                      <Link href="/procedures">
                         <a
-                          onClick={() => setIsMenuOpen(false)}
                           href="#"
                           aria-label="About us"
                           title="About us"
                           className="font-medium tracking-wide text-gray-700 hover:text-brightPrimary transition duration-200"
                         >
-                          {(!language || language === "English") && "Blog"}
+                          {(!language || language === "English") &&
+                            "Procedures"}
                           {language === "German" && "Bloggen"}
+                          {language === "Arabic" && "مقالات"}
+                          {language === "Italian" && "Blog"}
+                          {language === "Spanish" && "Blog"}
+                          {language === "Hebrew" && "בלוג"}
+                          {language === "Russian" && "блог"}
                         </a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/contact">
                         <a
-                          onClick={() => setIsMenuOpen(false)}
                           href="#"
                           aria-label="About us"
                           title="About us"
@@ -292,19 +244,34 @@ const Navbar = (props) => {
                         >
                           {(!language || language === "English") && "Contact"}
                           {language === "German" && "Kontakt"}
+                          {language === "Arabic" && "اتصل"}
+                          {language === "Italian" && "Contatto"}
+                          {language === "Spanish" && "Contacto"}
+                          {language === "Hebrew" && "איש קשר"}
+                          {language === "Russian" && "Контакт"}
+                        </a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/about-us">
+                        <a
+                          href="#"
+                          aria-label="About us"
+                          title="About us"
+                          className="font-medium tracking-wide text-gray-700 hover:text-brightPrimary transition duration-200"
+                        >
+                          {(!language || language === "English") && "About Us"}
+                          {language === "German" && "Kontakt"}
+                          {language === "Arabic" && "اتصل"}
+                          {language === "Italian" && "Contatto"}
+                          {language === "Spanish" && "Contacto"}
+                          {language === "Hebrew" && "איש קשר"}
+                          {language === "Russian" && "Контакт"}
                         </a>
                       </Link>
                     </li>
                     <li>
                       <LanguagePicker />
-                      {/*             <a
-              href="#"
-              className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-green-400 hover:bg-green-700 focus:shadow-outline focus:outline-none"
-              aria-label="Sign up"
-              title="Sign up"
-            >
-              Get Help
-            </a> */}
                     </li>
                   </ul>
                 </nav>

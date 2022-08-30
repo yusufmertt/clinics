@@ -14,7 +14,7 @@ const ClinicItemNew = (props) => {
     city,
   } = props.clinicData
 
-  const { language } = props;
+  const { language, showBadges } = props;
 
   return (
     /*  <div className="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row hover:bg-gray-100 my-6 mx-4 md:my-8">
@@ -47,6 +47,7 @@ const ClinicItemNew = (props) => {
         </Card.Section>
         <Group position="apart" mt="md" mb="xs">
           <Text weight={500}>{name}</Text>
+          
           {featured && (
             <Badge color="green" variant="dark">
               Recommended!!
@@ -57,7 +58,7 @@ const ClinicItemNew = (props) => {
         <Badge color="blue" variant="light">
           {featuring}
         </Badge> */}
-        {features.map((feature) => {
+        {showBadges && features.map((feature) => {
           return (
             <Badge color="blue" variant="light" key={feature}>
               {feature}
