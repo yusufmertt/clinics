@@ -318,6 +318,7 @@ function Reservation(props) {
                     Phone Number
                   </label>
                   <PhoneInput
+                    enableSearch
                     country={"de"}
                     onChange={phoneChangeHandler}
                     inputClass="!w-full !bg-gray-100"

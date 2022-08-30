@@ -302,6 +302,7 @@ function Cta(props) {
                   </label>
                   <PhoneInput
                     country={"de"}
+                    enableSearch
                     onChange={phoneChangeHandler}
                     inputClass="!w-full !bg-gray-100"
                     className="mt-0.5"

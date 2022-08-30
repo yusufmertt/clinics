@@ -169,6 +169,7 @@ function ContactPage() {
                     Phone Number
                   </label>
                   <PhoneInput
+                    enableSearch
                     country={"de"}
                     onChange={phoneChangeHandler}
                     inputClass="!w-full !bg-gray-100"
@@ -244,7 +245,7 @@ function ContactPage() {
                   <br />
                   Saint Cloud, MN 56301
                 </p> */}
-                <br/>
+                <br />
                 <span className="inline-flex my-5">
                   <a className="text-gray-500">
                     <svg
