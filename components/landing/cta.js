@@ -255,13 +255,14 @@ function Cta(props) {
                     <option>Eye Surgeries</option>
                     <option>Other Plastic Surgeries</option>
                     <option>Other (specify in notes)</option> */}
-                    {allProcedures.map((procedure) => {
-                      return (
-                        <option key={procedure.slug} value={procedure.slug}>
-                          {procedure.title}
-                        </option>
-                      );
-                    })}
+                    {allProcedures &&
+                      allProcedures.map((procedure) => {
+                        return (
+                          <option key={procedure.slug} value={procedure.slug}>
+                            {procedure.title}
+                          </option>
+                        );
+                      })}
                     <option>Other</option>
                   </select>
                   <div className="pointer-events-none absolute inset-y-0 mt-6 right-0 flex items-center px-2 text-gray-700">
