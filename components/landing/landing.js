@@ -15,6 +15,8 @@ function Landing(props) {
   const appCtx = useContext(Context);
   const [language, setLanguage] = useState("English");
 
+  const [popularProcedures, setPopularProcedures] = useState(undefined);
+
   useEffect(() => {
     if (localStorage.getItem("language")) {
       const localLanguage = localStorage.getItem("language");
@@ -24,12 +26,17 @@ function Landing(props) {
     }
   }, [appCtx]);
 
+
+  useEffect(() => { // hydration error solve
+    setPopularProcedures(props.popularProcedures);
+  }, []);
+
   return (
     <div>
       <Hero language={language} />
       <div className="sm:px-16">
-        <Search allProcedures={props.allProcedures}/>
-        <PopularProcedures popularProcedures={props.popularProcedures} />
+        <Search allProcedures={props.allProcedures} />
+        {popularProcedures && <PopularProcedures popularProcedures={popularProcedures} />}
       </div>
       <div className="sm:px-16">
         <FeaturedClinics featuredClinics={props.featuredClinics} />

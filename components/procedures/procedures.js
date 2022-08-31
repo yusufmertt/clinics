@@ -17,7 +17,7 @@ export default function Procedures(props) {
           return (
          
                 <div
-                  className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md "
+                  className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:shadow-lg hover:scale-105 hover:shadow-gray-400 duration-300 transition-all"
                   key={procedure.slug}
                 >   <Link href={`/procedures/${procedure.slug}`}>
               <a href="#">

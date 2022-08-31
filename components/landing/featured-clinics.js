@@ -106,7 +106,7 @@ export default function FeaturedClinics(props) {
         mouseTracking
         items={items}
         responsive={responsive}
-        controlsStrategy="alternate"
+        controlsStrategy="responsive"
       />
     </section>
   );

@@ -36,7 +36,7 @@ const ClinicItemNew = (props) => {
         p="lg"
         radius="md"
         withBorder
-        className="hover:shadow-2xl hover:scale-105 shadow-black duration-300 transition-all flex flex-col justify-between !pt-0"
+        className="hover:shadow-xl hover:scale-105 hover:shadow-gray-400 duration-300 transition-all flex flex-col justify-between !pt-0"
       >       
        <div>
 

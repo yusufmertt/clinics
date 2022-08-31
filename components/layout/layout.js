@@ -15,8 +15,12 @@ const Layout = (props) => {
       const localLanguage = localStorage.getItem("language");
       const parsedLocalLanguage = JSON.parse(localLanguage);
       setLanguage(parsedLocalLanguage.label);
+
+      
     }
   }, [appCtx]);
+
+  let chatMessage = `Hello there! 🤝 \nHow can we help? `;
 
   return (
     <div className="flex flex-col h-screen justify-between all-container">
@@ -29,7 +33,7 @@ const Layout = (props) => {
         notification={true}
         avatar="/assa.png"
         //notificationSound
-        chatMessage={`Hello there! 🤝 \nHow can we help?`}
+        chatMessage={chatMessage} //this will change according to language
       />
       <main className=" app flex-grow ">{props.children}</main>
       {/* lg:px-28 m-5 xl:px-48 */}

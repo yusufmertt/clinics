@@ -76,7 +76,7 @@ const ClinicDetails = (props) => {
 
   return (
     <Fragment>
-      <div className="md:flex-row lg:px-28 m-5 flex-col flex mt-2 justify-between xl:px-36">
+      <div className="md:flex-row lg:px-36 m-5 flex-col flex mt-2 justify-between xl:px-80">
         <Head>
           <title>{name}</title>
           <meta name="description" content="Contact us to reservation." />
