@@ -62,12 +62,15 @@ export default function FeaturedClinics(props) {
   let items = [];
 
   //const featuredClinics = JSON.parse(props.featuredClinics);
-  const featuredClinics = props.featuredClinics
+  const featuredClinics = props.featuredClinics;
 
   featuredClinics.map((clinic) => {
     items.push(
       <Link href={`/clinics/${clinic.slug}`}>
-        <div className="p-3" data-value="1">
+        <div
+          className="p-3 mx-2 cursor-pointer hover:scale-105 duration-300 transition-all"
+          data-value="1"
+        >
           <Image
             src={`/images/featured-clinics/${clinic.slug}.png`}
             width={650}
@@ -95,10 +98,10 @@ export default function FeaturedClinics(props) {
     <section className="mt-16 px-4 sm:px-8">
       <div className="ml-3  mb-4 ">
         <h2 className="font-extrabold text-xl text-black tracking-wider">
-          POPULAR HOSPITALS
+          POPULAR CLINICS
         </h2>
         <div className="h-1 w-20 my-1 bg-brightPrimary rounded"></div>
-       {/*  <p className="text-sm text-gray-500">
+        {/*  <p className="text-sm text-gray-500">
           Get 20% discount at featured hospitals!
         </p> */}
       </div>

@@ -21,7 +21,7 @@ export default function PopularProcedures(props) {
     items.push(
       <Link href={`/procedures/${procedure.slug}`}>
         <a href="#">
-          <div className="p-3" data-value="1">
+          <div className="p-3 mx-2 cursor-pointer hover:scale-105 duration-300 transition-all" data-value="1">
             <Image src={procedure.image} width={650} height={350} />
             <h3 className="font-bold text-lg uppercase text-gray-800 my-1">
               {procedure.title}

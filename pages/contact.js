@@ -209,8 +209,8 @@ function ContactPage() {
                         <option key={location.city}>{location.city}</option>
                       );
                     })} */}
+                    <option>Feedback</option>                    
                     <option>Reservation</option>
-                    <option>Feedback</option>
                     <option>Other</option>
                   </select>
                   <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">

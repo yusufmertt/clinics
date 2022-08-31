@@ -9,7 +9,17 @@ async function handler(req, res) {
 
   const body = req.body;
 
-  const { name, email, phone, treatment, note, clinic, topic, type } = body;
+  const {
+    name,
+    email,
+    phone,
+    treatment,
+    note,
+    clinic,
+    topic,
+    type,
+    preferredClinic,
+  } = body;
 
   if (email.trim() === "" && phone.trim() === "") {
     return;
@@ -26,9 +36,9 @@ async function handler(req, res) {
   let subject;
 
   if (type === "consultation") {
-    message = `Name:${name}  \r\n Email:${email}\r\n Treatment:${treatment} \r\n Message:${note} \r\n Phone:${phone}\r\n Clinic:${clinic}`;
+    message = `Name:${name}  \r\n Email:${email}\r\n Treatment:${treatment} \r\n Message:${note} \r\n Phone:${phone}\r\n Preferred Clinic:${preferredClinic}`;
     subject = "New consultation request!";
-  }else if(type==="contact"){
+  } else if (type === "contact") {
     message = `Name:${name}  \r\n Email:${email}\r\n Topic:${topic} \r\n Message:${note} \r\n Phone:${phone}\r\n `;
     subject = "New contact!";
   }

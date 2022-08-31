@@ -5,11 +5,14 @@ import "react-phone-input-2/lib/style.css";
 import { event } from "./../../lib/gtag";
 
 function Cta(props) {
+  const { allProcedures } = props;
+
   const nameRef = useRef();
   const emailRef = useRef();
   const phoneRef = useRef();
   const treatmentRef = useRef();
   const noteRef = useRef();
+  const preferredClinicRef = useRef();
 
   const [emailError, setEmailError] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -30,6 +33,7 @@ function Cta(props) {
     //const phone = phoneRef.current.value;
     const treatment = treatmentRef.current.value;
     const note = noteRef.current.value;
+    const preferredClinic = preferredClinicRef.current.value;
 
     const clinic = props.clinic;
 
@@ -42,6 +46,7 @@ function Cta(props) {
       treatment,
       note,
       clinic,
+      preferredClinic,
     };
 
     if (email.trim() === "" && phone.trim() === "") {
@@ -49,7 +54,7 @@ function Cta(props) {
       setSuccess(false);
       //setClasses("border-red-500")
     } else {
-      setIsLoading(true)
+      setIsLoading(true);
       fetch("/api/contact/email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -63,7 +68,7 @@ function Cta(props) {
           });
           setEmailError(false);
           setSuccess(true);
-          setIsLoading(false)
+          setIsLoading(false);
         }
       });
     }
@@ -165,7 +170,7 @@ function Cta(props) {
             </h1>
 
             <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-              We and our doctors can help you decide your clinic, treatment
+              We and our doctors will help you decide your clinic, treatment
               options, making reservations, planning your visit, pricing and
               much more!
               {/*  You can contact us through
@@ -211,7 +216,8 @@ function Cta(props) {
                 className="p-4 mb-4 text-sm text-yellow-500 bg-yellow-100 rounded-lg dark:bg-yellow-200 dark:text-yellow-800"
                 role="alert"
               >
-                <span className="font-medium">Loading...</span> Submitting your request, please wait...
+                <span className="font-medium">Loading...</span> Submitting your
+                request, please wait...
               </div>
             )}
             <div className="flex flex-wrap -m-2">
@@ -234,26 +240,29 @@ function Cta(props) {
               </div>{" "}
               <div className="p-2 w-full md:w-1/2">
                 <div className="relative">
-                  <label>Treatment</label>
+                  <label>Procedure</label>
                   <select
                     ref={treatmentRef}
                     className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     id="grid-state"
-                    //onChange={cityChangeHandler}
+                    //onChange={changeHandler}
                   >
-                    {/* {locations.map((location) => {
-                      return (
-                        <option key={location.city}>{location.city}</option>
-                      );
-                    })} */}
-                    <option>Hair Transplant</option>
+                    {/* <option>Hair Transplant</option>
                     <option>Nose Job (Rhinoplasty)</option>
                     <option>Dental Operations</option>
                     <option>Breast Surgeries</option>
                     <option>Obesity Operations</option>
                     <option>Eye Surgeries</option>
                     <option>Other Plastic Surgeries</option>
-                    <option>Other (specify in notes)</option>
+                    <option>Other (specify in notes)</option> */}
+                    {allProcedures.map((procedure) => {
+                      return (
+                        <option key={procedure.slug} value={procedure.slug}>
+                          {procedure.title}
+                        </option>
+                      );
+                    })}
+                    <option>Other</option>
                   </select>
                   <div className="pointer-events-none absolute inset-y-0 mt-6 right-0 flex items-center px-2 text-gray-700">
                     <svg
@@ -323,6 +332,25 @@ function Cta(props) {
               <div className="p-2 w-full md:w-full">
                 <div className="relative">
                   <label
+                    htmlFor="email"
+                    className="leading-7 text-sm text-gray-600"
+                  >
+                    Preferred Clinic (optional)
+                  </label>
+                  <input
+                    ref={preferredClinicRef}
+                    type="text"
+                    id="preferred-clinic"
+                    name="preferred-clinic"
+                    className={
+                      "w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-brightPrimary focus:bg-white focus:ring-2 focus:ring-purple-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out "
+                    }
+                  />
+                </div>
+              </div>
+              <div className="p-2 w-full md:w-full">
+                <div className="relative">
+                  <label
                     htmlFor="note"
                     className="leading-7 text-sm text-gray-600"
                   >
@@ -333,6 +361,7 @@ function Cta(props) {
                     type="text"
                     id="note"
                     name="note"
+                    placeholder=""
                     className={
                       "w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-brightPrimary focus:bg-white focus:ring-2 focus:ring-purple-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out "
                     }

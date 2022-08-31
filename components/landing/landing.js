@@ -45,7 +45,7 @@ function Landing(props) {
         <Info />
       </div>
       <Contracts />
-      <Cta />
+      <Cta allProcedures={props.allProcedures}/>
     </div>
   );
 }

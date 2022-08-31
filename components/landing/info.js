@@ -13,9 +13,8 @@ function Info() {
             <div className="h-1 w-20 bg-brightPrimary rounded"></div>
           </div>
           <p className="lg:w-1/2 w-full leading-relaxed text-gray-500">
-            You can get your operation done by the most qualified experts and
-            enjoy Turkey&apos;s culture, views, foods in Istanbul, Antalya,
-            Izmir...
+            Get your operation done by the most qualified experts and enjoy
+            Turkey&apos;s culture, views, foods in Istanbul, Antalya, Izmir...
           </p>
         </div>
         <div className="flex flex-wrap m-4">
