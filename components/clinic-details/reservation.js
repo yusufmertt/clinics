@@ -226,10 +226,10 @@ function Reservation(props) {
             )}
             {isLoading && (
               <div
-                class="p-4 mb-4 text-sm text-yellow-500 bg-yellow-100 rounded-lg dark:bg-yellow-200 dark:text-yellow-800"
+                className="p-4 mb-4 text-sm text-yellow-500 bg-yellow-100 rounded-lg dark:bg-yellow-200 dark:text-yellow-800"
                 role="alert"
               >
-                <span class="font-medium">Loading...</span> Submitting your
+                <span className="font-medium">Loading...</span> Submitting your
                 request, please wait...
               </div>
             )}

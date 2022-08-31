@@ -34,11 +34,11 @@ function Landing(props) {
   return (
     <div>
       <Hero language={language} />
-      <div className="sm:px-16">
+      <div className="sm:px-16 xl:px-48 xxl:px-60">
         <Search allProcedures={props.allProcedures} />
         {popularProcedures && <PopularProcedures popularProcedures={popularProcedures} />}
       </div>
-      <div className="sm:px-16">
+      <div className="sm:px-16 xl:px-48 xxl:px-60">
         <FeaturedClinics featuredClinics={props.featuredClinics} />
         <Images />
         {/*   <Stats /> */}
