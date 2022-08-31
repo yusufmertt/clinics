@@ -5,10 +5,12 @@ import Link from "next/link";
 import Head from "next/head";
 import Cta from "../landing/cta";
 import { Fragment } from "react";
-import {marked} from "marked"
+import { marked } from "marked";
+import { useRouter } from "next/router";
 
 const ClinicDetails = (props) => {
-/*   const [clinicObject] = props.clinic;
+  const router = useRouter();
+  /*   const [clinicObject] = props.clinic;
 
   const {
     name,
@@ -43,9 +45,9 @@ const ClinicDetails = (props) => {
     slug,
     languages,
     extras,
-  } = props.clinic.frontmatter
+  } = props.clinic.frontmatter;
 
-  const {content} = props.clinic
+  const { content } = props.clinic;
 
   const images = [
     {
@@ -74,6 +76,10 @@ const ClinicDetails = (props) => {
     },
   ];
 
+  function goBackHandler() {
+    router.back();
+  }
+
   return (
     <Fragment>
       <div className="md:flex-row lg:px-36 m-5 flex-col flex mt-2 justify-between xl:px-80">
@@ -83,7 +89,7 @@ const ClinicDetails = (props) => {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <div className="md:w-2/3 order-last md:order-first">
-          <Link href="/clinics">
+          <a onClick={goBackHandler}>
             <div className="flex p-3 text-brightPrimary hover:cursor-pointer hover:text-darkPrimary transition duration-200 w-1/2 md:w-1/4">
               <svg viewBox="0 0 50 50" fill="currentColor" className="h-7">
                 <path
@@ -95,7 +101,7 @@ const ClinicDetails = (props) => {
               </svg>
               Go back
             </div>
-          </Link>
+          </a>
           <div className="shadow-sm shadow-gray-300 p-6">
             <div className="mb-5">
               <h1 className="text-3xl uppercase text-center mb-4 font-bold tracking-wide text-gray-700">
@@ -270,7 +276,7 @@ const ClinicDetails = (props) => {
         </div>
       </div>
       <div>
-        <Cta clinic={name}/>
+        <Cta clinic={name} />
       </div>
     </Fragment>
   );

@@ -45,7 +45,6 @@ function Landing(props) {
         <Info />
       </div>
       <Contracts />
-
       <Cta />
     </div>
   );
