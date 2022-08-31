@@ -16,6 +16,7 @@ function Landing(props) {
   const [language, setLanguage] = useState("English");
 
   const [popularProcedures, setPopularProcedures] = useState(undefined);
+  const [featuredClinics, setfeaturedClinics] = useState(undefined);
 
   useEffect(() => {
     if (localStorage.getItem("language")) {
@@ -26,9 +27,10 @@ function Landing(props) {
     }
   }, [appCtx]);
 
-
-  useEffect(() => { // hydration error solve
+  useEffect(() => {
+    // hydration error solve
     setPopularProcedures(props.popularProcedures);
+    setfeaturedClinics(props.featuredClinics);
   }, []);
 
   return (
@@ -36,16 +38,20 @@ function Landing(props) {
       <Hero language={language} />
       <div className="sm:px-16 xl:px-48 xxl:px-60">
         <Search allProcedures={props.allProcedures} />
-        {popularProcedures && <PopularProcedures popularProcedures={popularProcedures} />}
+        {popularProcedures && (
+          <PopularProcedures popularProcedures={popularProcedures} />
+        )}
       </div>
       <div className="sm:px-16 xl:px-48 xxl:px-60">
-        <FeaturedClinics featuredClinics={props.featuredClinics} />
+        {featuredClinics && (
+          <FeaturedClinics featuredClinics={featuredClinics} />
+        )}
         <Images />
         {/*   <Stats /> */}
         <Info />
       </div>
       <Contracts />
-      <Cta allProcedures={props.allProcedures}/>
+      <Cta allProcedures={props.allProcedures} />
     </div>
   );
 }
