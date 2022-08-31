@@ -15,7 +15,8 @@ import Head from "next/head";
 function MyApp({ Component, pageProps }) {
   return (
     <ContextProvider>
-      <ClinicsContextProvider>
+      <ClinicsContextProvider>          
+
         <Layout>
           <Head>
             <meta
@@ -24,6 +25,9 @@ function MyApp({ Component, pageProps }) {
             />
             <link rel="icon" href="/images/icons/icon.png" />
           </Head>
+
+
+
           {/* 
           <GoogleAnalytics /> */}
 
