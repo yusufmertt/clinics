@@ -18,7 +18,7 @@ function Info() {
           </p>
         </div>
         <div className="flex flex-wrap m-4">
-          <Link href="/clinics">
+          <Link href="/procedures/rhinoplasty">
             <div className="xl:w-1/4 md:w-1/2 p-4">
               <div className="bg-gray-100 p-6 rounded-lg shadow-md shadow-gray-200">
                 <Image
@@ -64,7 +64,7 @@ function Info() {
               </div>
             </div>
           </Link>
-          <Link href="/clinics">
+          <Link href="/procedures/hair-transplant">
             <div className="xl:w-1/4 md:w-1/2 p-4">
               <div className="bg-gray-100 p-6 rounded-lg shadow-md shadow-gray-200">
                 <Image
@@ -86,7 +86,7 @@ function Info() {
               </div>
             </div>
           </Link>
-          <Link href="/clinics">
+          <Link href="/procedures/dental-operations">
             <div className="xl:w-1/4 md:w-1/2 p-4">
               <div className="bg-gray-100 p-6 rounded-lg shadow-md shadow-gray-200">
                 <Image

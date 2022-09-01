@@ -27,7 +27,7 @@ function Home(props) {
         <title>FindClinicsTurkey-Best clinics in Turkey</title>
         <meta
           name="description"
-          content="Find world-class doctors and experts qualified in hair transplant, aethetics, dental and much more in Turkey."
+          content="Find world-class doctors and experts qualified in hair transplant, aesthetics, dental and much more in Turkey."
         />
       </Head>
 

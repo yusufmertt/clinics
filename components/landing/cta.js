@@ -5,7 +5,7 @@ import "react-phone-input-2/lib/style.css";
 import { event } from "./../../lib/gtag";
 
 function Cta(props) {
-  const { allProcedures } = props;
+  const { allProcedures, showPreferredClinics = false } = props;
 
   const nameRef = useRef();
   const emailRef = useRef();
@@ -330,25 +330,27 @@ function Cta(props) {
                   />
                 </div>
               </div>
-              <div className="p-2 w-full md:w-full">
-                <div className="relative">
-                  <label
-                    htmlFor="email"
-                    className="leading-7 text-sm text-gray-600"
-                  >
-                    Preferred Clinic (optional)
-                  </label>
-                  <input
-                    ref={preferredClinicRef}
-                    type="text"
-                    id="preferred-clinic"
-                    name="preferred-clinic"
-                    className={
-                      "w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-brightPrimary focus:bg-white focus:ring-2 focus:ring-purple-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out "
-                    }
-                  />
+              {showPreferredClinics && (
+                <div className="p-2 w-full md:w-full">
+                  <div className="relative">
+                    <label
+                      htmlFor="email"
+                      className="leading-7 text-sm text-gray-600"
+                    >
+                      Preferred Clinic (optional)
+                    </label>
+                    <input
+                      ref={preferredClinicRef}
+                      type="text"
+                      id="preferred-clinic"
+                      name="preferred-clinic"
+                      className={
+                        "w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-brightPrimary focus:bg-white focus:ring-2 focus:ring-purple-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out "
+                      }
+                    />
+                  </div>
                 </div>
-              </div>
+              )}
               <div className="p-2 w-full md:w-full">
                 <div className="relative">
                   <label

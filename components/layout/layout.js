@@ -20,7 +20,7 @@ const Layout = (props) => {
     }
   }, [appCtx]);
 
-  let chatMessage = `Hello there! 🤝 \nHow can we help? `;
+  let chatMessage = `Hello there! 🤝 \nHow can I help you? `;
 
   return (
     <div className="flex flex-col h-screen justify-between all-container">

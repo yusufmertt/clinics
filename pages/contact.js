@@ -209,7 +209,7 @@ function ContactPage() {
                         <option key={location.city}>{location.city}</option>
                       );
                     })} */}
-                    <option>Feedback</option>                    
+                    <option>Feedback</option>
                     <option>Reservation</option>
                     <option>Other</option>
                   </select>
@@ -250,8 +250,13 @@ function ContactPage() {
                 </button>
               </div>
               <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
-                <a className="text-brightPrimary">
-                  findclinicsturkey@gmail.com
+                <a
+                  href="mailto:info@findclinicsturkey.com"
+                  aria-label="Our email"
+                  title="Our email"
+                  className="text-brightPrimary hover:text-purple-700"
+                >
+                  info@findclinicsturkey.com
                 </a>
                 {/* <p className="leading-normal my-5">
                   49 Smith St.
@@ -260,7 +265,7 @@ function ContactPage() {
                 </p> */}
                 <br />
                 <span className="inline-flex my-5">
-                  <a className="text-gray-500">
+                  {/*  <a className="text-gray-500">
                     <svg
                       fill="currentColor"
                       strokeLinecap="round"
@@ -283,8 +288,13 @@ function ContactPage() {
                     >
                       <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
                     </svg>
-                  </a>
-                  <a className="ml-4 text-gray-500">
+                  </a> */}
+                  <a
+                    href="https://www.instagram.com/findclinicsturkey/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="ml-4 text-purple-400 hover:text-purple-500 duration-200 transition"
+                  >
                     <svg
                       fill="none"
                       stroke="currentColor"
@@ -305,7 +315,12 @@ function ContactPage() {
                       <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
                     </svg>
                   </a>
-                  <a className="ml-4 text-gray-500">
+                  <a
+                    href="https://wa.me/15551234567"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="ml-4 text-green-400 hover:text-green-500 duration-200 transition"
+                  >
                     <svg
                       fill="currentColor"
                       strokeLinecap="round"
