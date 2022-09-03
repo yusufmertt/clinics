@@ -10,7 +10,10 @@ const ClinicDetailsPage = (props) => {
 /*   const clinic = props.clinic
   const parsedClinic = JSON.parse(clinic)
  */
-  return <ClinicDetails clinic={props}/>
+  const sortedAllProcedures = props.allProcedures.sort((a, b) =>
+    a.featured > b.featured ? -1 : +1
+  );
+  return <ClinicDetails clinic={props} allProcedures={sortedAllProcedures}/>
 };
 
 /* export async function getStaticProps(context) {
@@ -60,11 +63,29 @@ export async function getStaticProps({ params: { slug } }) {
 
   const { data: frontmatter, content } = matter(markdownWithMeta)
 
+
+  const allProceduresfiles = fs.readdirSync(path.join("procedures"));
+  const allProcedures = allProceduresfiles.map((filename) => {
+    //get slug
+    //const slug = filename.replace(".md", "");
+
+    //get frontmatter
+    const markdownWithMeta = fs.readFileSync(
+      path.join("procedures", filename),
+      "utf-8"
+    );
+
+    const { data: frontmatter } = matter(markdownWithMeta);
+
+    return frontmatter;
+  });
+
   return {
     props: {
       frontmatter,
       slug,
       content,
+      allProcedures
     },
   }
 }

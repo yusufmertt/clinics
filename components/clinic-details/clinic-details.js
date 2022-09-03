@@ -276,7 +276,7 @@ const ClinicDetails = (props) => {
         </div>
       </div>
       <div>
-        <Cta clinic={name} />
+        <Cta clinic={name} allProcedures={props.allProcedures} />
       </div>
     </Fragment>
   );

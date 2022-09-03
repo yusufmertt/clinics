@@ -3,6 +3,7 @@ import Link from "next/link";
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import GoBack from './../../../components/ui/go-back';
 
 function RedirectPage(props) {
 //  const clinic = JSON.parse(props.clinic);
@@ -10,7 +11,8 @@ function RedirectPage(props) {
 const clinic = props
   return (
     <div className="p-8 sm:p-16 text-center">
-      <Link href={`/clinics/${clinic.slug}`}>
+      <GoBack/>
+      {/* <Link href={`/clinics/${clinic.slug}`}>
         <div className="flex p-3 text-brightPrimary hover:cursor-pointer hover:text-darkPrimary transition duration-200">
           <svg viewBox="0 0 50 50" fill="currentColor" className="h-7">
             <path
@@ -22,7 +24,7 @@ const clinic = props
           </svg>
           Go back
         </div>
-      </Link>
+      </Link> */}
       <h2 className="text-2xl uppercase text-red-600">Reminder!</h2>
       <p className="text-lg my-5">
         In order to get advantage of 15% discount, you should tell/write the clinic the
