@@ -29,7 +29,7 @@ function Hero(props) {
             <p className="max-w-lg mt-4 sm:leading-relaxed sm:text-xl">
               Meet with best doctors in{" "}
               <strong>
-                <Link href="/clinics">
+                <Link href="/procedures/hair-transplant">
                   <a htef="#" className="text-brightPrimary underline">
                     hair transplant
                   </a>

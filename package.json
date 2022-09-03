@@ -27,6 +27,7 @@
     "react-alice-carousel": "^2.6.4",
     "react-dom": "18.2.0",
     "react-floating-whatsapp": "^4.0.5",
+    "react-google-recaptcha-v3": "^1.10.0",
     "react-image-gallery": "^1.2.9",
     "react-phone-input-2": "^2.15.1"
   },

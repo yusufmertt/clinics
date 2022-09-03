@@ -1,7 +1,7 @@
 //import { getClinics } from "../../lib/clinics-util";
 import Clinics from "./../../components/clinics/clinics";
 import Head from "next/head";
-import { Fragment } from "react";
+import { Fragment, useState, useEffect } from "react";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -17,11 +17,16 @@ const ProceduresPage = (props) => {
   //const sortedClinics = mdClinics.sort((a, b) => (a.featured > b.featured) ? -1 : +1)
   const sortedProcedures = procedures.sort((a, b) => (a.featured > b.featured) ? -1 : +1)
 
+  const [proceduresState,setProceduresState] = useState(undefined)
 
-  if (!procedures) {
+  useEffect(()=>{
+    setProceduresState(sortedProcedures)
+  },[])
+
+  if (!proceduresState) {
     return <p>Loading...</p>;
   }
-  if (procedures) {
+  if (proceduresState) {
     return (
       <Fragment>
         <Head>
@@ -31,7 +36,7 @@ const ProceduresPage = (props) => {
             content="Find world-class doctors and experts qualified in hair transplant, aethetics, dental and much more in Turkey."
           />
         </Head>
-        <Procedures procedures={sortedProcedures}/>
+        <Procedures procedures={proceduresState}/>
       </Fragment>
     );
   }

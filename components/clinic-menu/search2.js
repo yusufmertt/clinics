@@ -85,9 +85,12 @@ export function SearchInput2(props) {
     setTrueCheckboxes(checkbox.filter((checkbox) => checkbox.checked === true));
   }, [checkbox]);
 
+
+
+  const [isLoading, setIsLoading] = useState(false);
+
   function filterHandler(event) {
     event.preventDefault();
-
     const searchQuery = textRef.current.value;
 
     if (
@@ -270,6 +273,7 @@ export function SearchInput2(props) {
 
   return (
     <div>
+      {isLoading && <p>asd</p>}
       <form
         className="flex items-center"
         onSubmit={filterHandler}
@@ -511,7 +515,9 @@ export function SearchInput2(props) {
         </p>
       )}
       {!clinicsCtx.filteredClinics && clinicsCtx.clinics && (
-        <p className="text-right">{clinicsCtx.clinics.length} Total Clinics Listed</p>
+        <p className="text-right">
+          {clinicsCtx.clinics.length} Total Clinics Listed
+        </p>
       )}
     </div>
   );

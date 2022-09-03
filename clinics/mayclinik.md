@@ -18,7 +18,7 @@ city: "Istanbul"
 location: "Beşiktaş/Istanbul"
 address: "Levent, Üst Zeren Sk. No:7/1, 34330 Beşiktaş/İstanbul"
 phone: "08502411831"
-featured: 95
+featured: 70
 website: "https://www.mayclinik.com/"
 mapsURL: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3007.5288575608747!2d29.019470951826673!3d41.07929017919223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab7cb4dbea02d%3A0x1e4be7ceb4d0102a!2sMAYCLINIK!5e0!3m2!1sen!2str!4v1661303097617!5m2!1sen!2str"
 ---

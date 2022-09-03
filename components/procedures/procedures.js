@@ -15,12 +15,13 @@ export default function Procedures(props) {
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 xxl:grid-cols-5">
         {procedures.map((procedure) => {
           return (
-         
-                <div
-                  className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:shadow-lg hover:scale-105 hover:shadow-gray-400 duration-300 transition-all"
-                  key={procedure.slug}
-                >   <Link href={`/procedures/${procedure.slug}`}>
-              <a href="#">
+            <div
+              className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:shadow-lg hover:scale-105 hover:shadow-gray-400 duration-300 transition-all"
+              key={procedure.slug}
+            >
+              {" "}
+              <Link href={`/procedures/${procedure.slug}`}>
+                <a href="#">
                   <Image
                     className="rounded-t-lg"
                     src={procedure.image}
@@ -38,7 +39,9 @@ export default function Procedures(props) {
                     <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
                       {procedure.description}
                     </p>
-                    <p className="text-md">Average Price</p>
+                    {procedure.averagePrice && (
+                      <p className="text-md">Average Price</p>
+                    )}
                     <p className="text-lg tracking-wider font-medium">
                       {procedure.averagePrice}
                     </p>
@@ -58,11 +61,10 @@ export default function Procedures(props) {
                         ></path>
                       </svg>
                     </a>
-                  </div>              
-                  </a>
-            </Link>
-                </div>
-
+                  </div>
+                </a>
+              </Link>
+            </div>
           );
         })}
       </div>

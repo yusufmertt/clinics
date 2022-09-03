@@ -27,20 +27,20 @@ const ProcedureDetailsPage = (props) => {
     }
   }, [appCtx]);
 
-  <Head>
-    <title>{frontmatter.title}</title>
-    <meta
-      name="description"
-      content="Find world-class doctors and experts qualified in hair transplant, aethetics, dental and much more in Turkey."
-    />
-  </Head>;
-
+ 
   if (!filteredClinicsArray) {
     return <p>Loading</p>;
   } else {
     return (
-      <Fragment>          
-        <GoBack allPage/>
+      <Fragment>
+        <Head>
+          <title>{frontmatter.name}</title>
+          <meta
+            name="description"
+            content={`Find best doctors qualified in ${frontmatter.name}.`}
+          />
+        </Head>
+        <GoBack allPage />
         <div className="lg:px-28 m-5 xl:px-48 xxl:px-48">
           <h1 className="text-xl mb-4 font-bold">{frontmatter.title}</h1>
           {/*  <div className="flex flex-col sm:flex-row mb-8">

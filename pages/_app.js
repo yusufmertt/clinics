@@ -3,6 +3,7 @@ import Layout from "../components/layout/layout";
 import { ClinicsContextProvider } from "./../store/clinics-context";
 import { ContextProvider } from "../store/context";
 import { GoogleAnalytics } from "nextjs-google-analytics";
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -15,8 +16,7 @@ import Head from "next/head";
 function MyApp({ Component, pageProps }) {
   return (
     <ContextProvider>
-      <ClinicsContextProvider>          
-
+      <ClinicsContextProvider>
         <Layout>
           <Head>
             <meta
@@ -25,8 +25,6 @@ function MyApp({ Component, pageProps }) {
             />
             <link rel="icon" href="/images/icons/icon.png" />
           </Head>
-
-
 
           {/* 
           <GoogleAnalytics /> */}

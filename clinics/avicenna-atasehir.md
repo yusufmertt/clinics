@@ -9,7 +9,7 @@ city: "Istanbul"
 location: "Ataşehir/Istanbul"
 address: "Ataşehir, Küçükbakkalköy mah. Kayışdağı Cad. No:47 Ataşehir/İstanbul 34750"
 phone: "+90 542 631 94 23"
-featured: 200
+featured: 100
 website: "https://avicennaint.com/"
 mapsURL: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3012.0972573209942!2d29.106637816123953!3d40.979351129151894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac638df9fa011%3A0x68720d01a7943773!2sAvicenna%20International%20Hospital!5e0!3m2!1sen!2str!4v1661198232314!5m2!1sen!2str"
 

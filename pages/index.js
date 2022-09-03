@@ -9,7 +9,7 @@ import path from "path";
 import matter from "gray-matter";
 
 function Home(props) {
-  const { featuredClinics, popularProcedures, allProcedures } = props;
+  const { featuredClinics, popularProcedures, allProcedures, popularHT } = props;
 
   const sortedClinics = featuredClinics.sort((a, b) =>
     a.featured > b.featured ? -1 : +1
@@ -20,7 +20,9 @@ function Home(props) {
   const sortedAllProcedures = allProcedures.sort((a, b) =>
     a.featured > b.featured ? -1 : +1
   );
-
+  const popularHtSorted = popularHT.sort((a, b) =>
+    a.featured > b.featured ? -1 : +1
+  );
   return (
     <Fragment>
       <Head>
@@ -36,6 +38,7 @@ function Home(props) {
           featuredClinics={sortedClinics}
           popularProcedures={sortedPopularProcedures}
           allProcedures={sortedAllProcedures}
+          popularHT={popularHtSorted}
         />
       </main>
     </Fragment>
@@ -102,12 +105,29 @@ export async function getStaticProps() {
     return frontmatter;
   });
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  const popularHtFiles = fs.readdirSync(path.join("popular-ht"));
+  const popularHT = popularHtFiles.map((filename) => {
+    //get slug
+    //const slug = filename.replace(".md", "");
+
+    //get frontmatter
+    const markdownWithMeta = fs.readFileSync(
+      path.join("popular-ht", filename),
+      "utf-8"
+    );
+
+    const { data: frontmatter } = matter(markdownWithMeta);
+
+    return frontmatter;
+  });
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   return {
     props: {
       /* clinics: clinicsConverted, */ featuredClinics: mdClinics,
       popularProcedures: popularProcedures,
       allProcedures: allProcedures,
+      popularHT: popularHT,
     },
     revalidate: 86400, //dbye eklenen datalar 1 gün sonra yansıyacak
   };

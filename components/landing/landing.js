@@ -10,6 +10,7 @@ import Contracts from "./contracts";
 import Search from "./search";
 import Images from "./images";
 import PopularProcedures from "./popular-procedures";
+import PopularHT from "./popular-ht";
 
 function Landing(props) {
   const appCtx = useContext(Context);
@@ -17,6 +18,7 @@ function Landing(props) {
 
   const [popularProcedures, setPopularProcedures] = useState(undefined);
   const [featuredClinics, setfeaturedClinics] = useState(undefined);
+  const [popularHtClinics, setPopularHtClinics] = useState(undefined)
 
   useEffect(() => {
     if (localStorage.getItem("language")) {
@@ -31,6 +33,7 @@ function Landing(props) {
     // hydration error solve
     setPopularProcedures(props.popularProcedures);
     setfeaturedClinics(props.featuredClinics);
+    setPopularHtClinics(props.popularHT)
   }, []);
 
   return (
@@ -48,10 +51,13 @@ function Landing(props) {
         )}
         <Images />
         {/*   <Stats /> */}
-        <Info />
+        {/* <Info /> */}
+        {popularHtClinics && (
+          <PopularHT popularHT={popularHtClinics} />
+        )}
       </div>
       <Contracts />
-      <Cta allProcedures={props.allProcedures} showPreferredClinics/>
+      <Cta allProcedures={props.allProcedures} showPreferredClinics />
     </div>
   );
 }

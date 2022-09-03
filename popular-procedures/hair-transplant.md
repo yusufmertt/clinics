@@ -7,6 +7,6 @@ image: "/images/procedures/hair-transplant.jpg"
 description: ""
 popular: true
 popularFeatured: 100
-averagePrice: "800€ - 1500€"
+averagePrice: "800€ - 2000€"
 
 ---
