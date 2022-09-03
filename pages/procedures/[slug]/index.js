@@ -1,5 +1,5 @@
 //import { getClinics, getOneClinic } from "../../../lib/clinics-util"
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState, useEffect, Fragment } from "react";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -7,14 +7,16 @@ import ClinicItemNew from "../../../components/clinics/clinic-item-new";
 import Context from "../../../store/context";
 import Head from "next/head";
 import Image from "next/image";
+import GoBack from "../../../components/ui/go-back";
 
 const ProcedureDetailsPage = (props) => {
   const { clinics, frontmatter, filteredClinicsArray } = props;
   const appCtx = useContext(Context);
   const [language, setLanguage] = useState("English");
 
-  const sortedClinics = filteredClinicsArray.sort((a, b) => (a.featured > b.featured) ? -1 : +1)
-
+  const sortedClinics = filteredClinicsArray.sort((a, b) =>
+    a.featured > b.featured ? -1 : +1
+  );
 
   useEffect(() => {
     if (localStorage.getItem("language")) {
@@ -37,25 +39,28 @@ const ProcedureDetailsPage = (props) => {
     return <p>Loading</p>;
   } else {
     return (
-      <div className="lg:px-28 m-5 xl:px-48 xxl:px-48">
-        <h1 className="text-xl mb-4 font-bold">{frontmatter.title}</h1>
-       {/*  <div className="flex flex-col sm:flex-row mb-8">
+      <Fragment>          
+        <GoBack allPage/>
+        <div className="lg:px-28 m-5 xl:px-48 xxl:px-48">
+          <h1 className="text-xl mb-4 font-bold">{frontmatter.title}</h1>
+          {/*  <div className="flex flex-col sm:flex-row mb-8">
         <Image src={frontmatter.coverImage} width={600} height={200}/>
         <p>{props.content}</p>
         </div> */}
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 xxl:grid-cols-5 mt-3">
-          {sortedClinics.map((clinic) => {
-            return (
-              <ClinicItemNew
-                showBadges={false}
-                key={clinic.slug}
-                clinicData={clinic}
-                language={language}
-              />
-            );
-          })}
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 xxl:grid-cols-5 mt-3">
+            {sortedClinics.map((clinic) => {
+              return (
+                <ClinicItemNew
+                  showBadges={false}
+                  key={clinic.slug}
+                  clinicData={clinic}
+                  language={language}
+                />
+              );
+            })}
+          </div>
         </div>
-      </div>
+      </Fragment>
     );
   }
   //<ClinicDetails clinic={props}/>
