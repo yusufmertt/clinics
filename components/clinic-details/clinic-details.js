@@ -77,8 +77,10 @@ const ClinicDetails = (props) => {
     },
   ];
 
+  let allFeatures = []
 
-  
+  features.map((feature) => {allFeatures.push(feature)});
+
   return (
     <Fragment>
       <div className="md:flex-row lg:px-36 m-5 flex-col flex mt-2 justify-between xl:px-80">
@@ -263,12 +265,12 @@ const ClinicDetails = (props) => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col bg-red-600 sm:mt-10 mt-5 rounded-lg p-5 shadow-2xl shadow-gray-300">
+          <div className="flex flex-col bg-brightPrimary sm:mt-10 mt-5 rounded-lg p-5 shadow-2xl shadow-gray-300">
             <p className="mb-2 text-white rounded-lg text-sm uppercase p-3 font-bold">
               Get 15% discount by making reservation with our refferal code!
             </p>
             <Link href={`/clinics/${slug}/reservation`}>
-              <a className="bg-white w-full uppercase text-center text-red-600 font-semibold hover:bg-gray-300 px-3 py-1.5 transition duration-200 rounded-lg">
+              <a className="bg-white w-full uppercase text-center text-brightPrimary font-semibold hover:bg-gray-300 px-3 py-1.5 transition duration-200 rounded-lg">
                 Get quote!
               </a>
             </Link>
@@ -276,7 +278,7 @@ const ClinicDetails = (props) => {
         </div>
       </div>
       <div>
-        <Cta clinic={name} allProcedures={props.allProcedures} />
+        <Cta clinic={name} /* allProcedures={props.allProcedures} */ allFeatures={allFeatures}/>
       </div>
     </Fragment>
   );

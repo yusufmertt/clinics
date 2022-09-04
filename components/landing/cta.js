@@ -5,7 +5,7 @@ import "react-phone-input-2/lib/style.css";
 import { event } from "./../../lib/gtag";
 
 function Cta(props) {
-  const { allProcedures, showPreferredClinics = false } = props;
+  const { allFeatures, allProcedures, showPreferredClinics = false } = props;
 
   const nameRef = useRef();
   const emailRef = useRef();
@@ -260,6 +260,14 @@ function Cta(props) {
                         return (
                           <option key={procedure.slug} value={procedure.slug}>
                             {procedure.title}
+                          </option>
+                        );
+                      })}
+                    {allFeatures &&
+                      allFeatures.map((feature) => {
+                        return (
+                          <option key={feature} value={feature}>
+                            {feature}
                           </option>
                         );
                       })}

@@ -83,7 +83,7 @@ export default function FeaturedClinics(props) {
             return (
               <p
                 key={feature}
-                className="bg-yellow-100 inline-block text-yellow-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded"
+                className=" inline-block bg-brightPrimary text-teal-50 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded"
               >
                 {feature}
               </p>
