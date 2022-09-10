@@ -12,9 +12,10 @@ const Footer = (props) => {
             aria-label="Company"
             title="Company"
             className="inline-flex items-center text-brightPrimary"
-          >
-            <Image src="/assa.png" width={40} height={40} />
-            {/* <svg
+          >            <Image src="/logo2c.png" width={300} height={35}/>
+
+{/*             <Image src="/assa.png" width={40} height={40} />
+ */}            {/* <svg
               className="w-8 text-deep-purple-accent-400"
               viewBox="0 0 24 24"
               strokeLinejoin="round"
@@ -29,9 +30,9 @@ const Footer = (props) => {
               <rect x="14" y="1" width="7" height="6" />
               <rect x="14" y="11" width="7" height="12" />
             </svg> */}
-            <span className="ml-2 text-lg font-bold tracking-wide uppercase ">
+            {/* <span className="ml-2 text-lg font-bold tracking-wide uppercase ">
               FindClinicsTurkey
-            </span>
+            </span> */}
             {/* 
             <Image src="/assa.png" width={280} height={40}/> */}
           </a>

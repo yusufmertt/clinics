@@ -19,8 +19,8 @@ module.exports = {
         /*        brightPrimary: "#06DCD5",
         darkPrimary: "#07948f",
         brightSecondary: "#00DAF0"  */
-        brightPrimary: "#A020F0",
-        darkPrimary: "#4E2A84",
+        brightPrimary: "#50e7be",
+        darkPrimary: "#38c29c",
         /* 06CDEF koyu mavisi, 00DAF0 mavisi, 14DDAC yeşili */
       },
     },
