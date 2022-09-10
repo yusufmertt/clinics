@@ -94,7 +94,7 @@ const ClinicItemNew = (props) => {
           <div className="">
             <Button
               variant="light"
-              className="text-brightPrimary hover:bg-purple-50"
+              className="text-brightPrimary hover:bg-emerald-50"
               fullWidth
               mt="md"
               radius="md"

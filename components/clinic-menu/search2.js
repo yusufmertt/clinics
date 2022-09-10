@@ -353,7 +353,7 @@ export function SearchInput2(props) {
                     />
                     <label
                       htmlFor={`${feature.id}`}
-                      className="ml-2 text-md font-semibold text-gray-100 my-0.5 uppercase"
+                      className="ml-2 text-md font-semibold text-white my-0.5 uppercase"
                     >
                       {feature.name}
                     </label>
@@ -362,7 +362,7 @@ export function SearchInput2(props) {
               </div>
               <div className="w-full md:w-1/3 px-3 my-3 md:mb-0">
                 <label
-                  className="block uppercase tracking-wide text-gray-100 text-xs font-bold mb-2"
+                  className="block uppercase tracking-wide text-white text-xs font-bold mb-2"
                   htmlFor="grid-state"
                 >
                   City
@@ -393,7 +393,7 @@ export function SearchInput2(props) {
               <div className="flex justify-between">
                 <button
                   onClick={clearHandler}
-                  className="px-3 py-2 mt-1 text-sm rounded-lg text-gray-300 hover:text-slate-200"
+                  className="px-3 py-2 mt-1 text-sm rounded-lg text-gray-200 hover:text-slate-300"
                 >
                   {(!language || language === "English") && "Clear Filters"}
                   {language === "German" && "Klare Filter"}

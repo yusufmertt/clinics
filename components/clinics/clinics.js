@@ -137,6 +137,8 @@ const Clinics = (props) => {
     setCurrentPage(1);
   }, [clinicsCtx]);
 
+
+
   return (
     <div className="lg:px-28 m-5 xl:px-48 xxl:px-48">
       <div>
@@ -203,7 +205,8 @@ const Clinics = (props) => {
           page={currentPage}
           onChange={setCurrentPage}
           total={pageCount}
-          color="grape"
+          color="teal"
+          radius="md"
         />
       </div>
     </div>
