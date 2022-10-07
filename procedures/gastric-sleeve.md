@@ -1,5 +1,6 @@
 ---
 title: "Gastric Sleeve"
+title_arabic: "تكميم المعدة"
 name: "Gastric Sleeve"
 slug: "gastric-sleeve"
 featured: 50

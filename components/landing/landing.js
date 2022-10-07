@@ -40,24 +40,24 @@ function Landing(props) {
     <div>
       <Hero language={language} />
       <div className="sm:px-16 xl:px-48 xxl:px-60">
-        <Search allProcedures={props.allProcedures} />
+        <Search allProcedures={props.allProcedures} language={language}/>
         {popularProcedures && (
-          <PopularProcedures popularProcedures={popularProcedures} />
+          <PopularProcedures popularProcedures={popularProcedures} language={language}/>
         )}
       </div>
       <div className="sm:px-16 xl:px-48 xxl:px-60">
         {featuredClinics && (
-          <FeaturedClinics featuredClinics={featuredClinics} />
+          <FeaturedClinics featuredClinics={featuredClinics} language={language}/>
         )}
         <Images />
         {/*   <Stats /> */}
         {/* <Info /> */}
         {popularHtClinics && (
-          <PopularHT popularHT={popularHtClinics} />
+          <PopularHT popularHT={popularHtClinics} language={language}/>
         )}
       </div>
       <Contracts />
-      <Cta allProcedures={props.allProcedures} showPreferredClinics />
+      <Cta allProcedures={props.allProcedures} showPreferredClinics language={language}/>
     </div>
   );
 }

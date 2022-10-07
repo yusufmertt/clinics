@@ -1,5 +1,6 @@
 ---
 title: "Rhinoplasty (Nose Job)"
+title_arabic: "تجميل الأنف (جراحة الأنف)"
 name: "Rhinoplasty"
 slug: "rhinoplasty"
 featured: 70

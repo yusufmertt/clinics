@@ -102,7 +102,7 @@ const Footer = (props) => {
               </svg>
             </a> */}
               <a
-                  href="https://wa.me/15551234567"
+                  href="https://wa.me/905431678206"
                     target="_blank"              
                     rel="noreferrer"
 

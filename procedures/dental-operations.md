@@ -1,5 +1,6 @@
 ---
 title: "Dental Operations"
+title_arabic: "عمليات طب الأسنان"
 name: "Dental Operations"
 slug: "dental-operations"
 featured: 50

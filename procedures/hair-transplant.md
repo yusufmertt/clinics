@@ -1,5 +1,6 @@
 ---
 title: "Hair Transplant"
+title_arabic: "زراعة الشعر"
 name: "Hair Transplant"
 slug: "hair-transplant"
 featured: 100

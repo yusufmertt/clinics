@@ -128,12 +128,13 @@ function Hero(props) {
         <div className="relative max-w-screen-xl px-4 py-32 mx-auto lg:h-screen lg:items-center lg:flex">
           <div className="max-w-xl text-center sm:text-left">
             <h1 className="text-3xl font-extrabold sm:text-5xl">
-              أمهر أطباء تركيا في زراعة الشعر
+              أكثر الأطباء المؤهلين في تركيا في العمليات التجميلية وزراعة الشعر
             </h1>
 
             <p className="max-w-lg mt-4 sm:leading-relaxed sm:text-xl">
-              تعرف على أفضل الأطباء في زراعة الشعر وعمليات الأسنان والعمليات
-              التجميلية وغير ذلك الكثير ...
+              قابل أفضل الأطباء في زراعة الشعر ، عمليات الأسنان ، جراحات العيون
+              ، تجميل الأنف ، شفط الدهون ، تكبير الثدي ، تكميم المعدة وأكثر من
+              ذلك بكثير ...
             </p>
 
             <div className="flex flex-wrap gap-4 mt-8 text-center">

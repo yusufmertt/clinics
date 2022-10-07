@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import Link from "next/link";
 import { LanguagePicker } from "./language-pick";
 import Image from "next/image";
+import SvgComponent from "./logosvg";
 
 const Navbar = (props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,8 +19,9 @@ const Navbar = (props) => {
             className="inline-flex items-center text-brightPrimary"
           >
             {/* <Image src="/assa.png" width={40} height={40} /> */}
-            <Image src="/logo2c.png" width={300} height={35} />
-
+            <Image src="/logo0710.png" width={270} height={45} />
+{/*             <SvgComponent />
+ */}
             {/* <svg
               className="w-8 text-deep-purple-accent-400"
               viewBox="0 0 24 24"
@@ -155,7 +157,6 @@ const Navbar = (props) => {
                         title="Company"
                         className="inline-flex items-center text-brightPrimary"
                       >
-                    
                         <Image src="/logo2c.png" width={300} height={35} />
                         {/*                         <Image src="/assa.png" width={40} height={40} />
                          */}

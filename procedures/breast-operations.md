@@ -1,5 +1,6 @@
 ---
 title: "Breast Operations"
+title_arabic: "عمليات الثدي"
 name: "Breast Operations"
 slug: "breast-operations"
 featured: 10

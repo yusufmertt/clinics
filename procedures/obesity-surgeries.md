@@ -1,5 +1,6 @@
 ---
 title: "All Obesity Surgeries"
+title_arabic: "جراحات السمنة"
 name: "Obesity Surgeries"
 slug: "obesity-surgeries"
 featured: 50

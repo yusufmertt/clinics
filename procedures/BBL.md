@@ -1,5 +1,6 @@
 ---
-title: "BBL (Brazilian Butt Lift)"
+title: "BBL (Brazillian Butt Lift)"
+title_arabic: "BBL (شد المؤخرة البرازيلية)"
 name: "BBL"
 slug: "bbl"
 featured: 10
