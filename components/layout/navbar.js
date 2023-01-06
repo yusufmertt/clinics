@@ -9,17 +9,17 @@ const Navbar = (props) => {
   const { language } = props;
 
   return (
-    <nav className="px-4 py-5 sm:max-w-xl md:max-w-full md:px-24 lg:px-8">
+    <nav className="px-4 py-5 sm:max-w-xl md:max-w-full md:px-24 lg:px-8 bg-bgWhite">
       <div className="relative flex items-center justify-between">
-        <Link href="/">
+        <Link href="/" className="mt-6">
           <a
             href="#"
             aria-label="Company"
             title="Company"
-            className="inline-flex items-center text-brightPrimary"
+            className="inline-flex items-center text-brightPrimary mt-2"
           >
             {/* <Image src="/assa.png" width={40} height={40} /> */}
-            <Image src="/logo0710.png" width={270} height={45} />
+            <Image src="/logo/full.png" width={280} height={31} />
 {/*             <SvgComponent />
  */}
             {/* <svg

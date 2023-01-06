@@ -11,6 +11,7 @@ import Search from "./search";
 import Images from "./images";
 import PopularProcedures from "./popular-procedures";
 import PopularHT from "./popular-ht";
+import Services from "./services";
 
 function Landing(props) {
   const appCtx = useContext(Context);
@@ -18,7 +19,7 @@ function Landing(props) {
 
   const [popularProcedures, setPopularProcedures] = useState(undefined);
   const [featuredClinics, setfeaturedClinics] = useState(undefined);
-  const [popularHtClinics, setPopularHtClinics] = useState(undefined)
+  const [popularHtClinics, setPopularHtClinics] = useState(undefined);
 
   useEffect(() => {
     if (localStorage.getItem("language")) {
@@ -33,32 +34,47 @@ function Landing(props) {
     // hydration error solve
     setPopularProcedures(props.popularProcedures);
     setfeaturedClinics(props.featuredClinics);
-    setPopularHtClinics(props.popularHT)
+    setPopularHtClinics(props.popularHT);
   }, []);
 
   return (
-    <div>
+    <>
       <Hero language={language} />
-      <div className="sm:px-16 xl:px-48 xxl:px-60">
-        <Search allProcedures={props.allProcedures} language={language}/>
+      <section className="sm:px-16 xl:px-36 xxl:px-48">
+        <Search allProcedures={props.allProcedures} language={language} />
+      </section>
+      <Services />
+
+      <section className="sm:px-16 xl:px-36 xxl:px-48">
         {popularProcedures && (
-          <PopularProcedures popularProcedures={popularProcedures} language={language}/>
+          <PopularProcedures
+            popularProcedures={popularProcedures}
+            language={language}
+          />
         )}
-      </div>
-      <div className="sm:px-16 xl:px-48 xxl:px-60">
+      </section>
+
+      <section className="sm:px-16 xl:px-36 xxl:px-48">
         {featuredClinics && (
-          <FeaturedClinics featuredClinics={featuredClinics} language={language}/>
+          <FeaturedClinics
+            featuredClinics={featuredClinics}
+            language={language}
+          />
         )}
-        <Images />
+        {/* <Images /> */}
         {/*   <Stats /> */}
         {/* <Info /> */}
         {popularHtClinics && (
-          <PopularHT popularHT={popularHtClinics} language={language}/>
+          <PopularHT popularHT={popularHtClinics} language={language} />
         )}
-      </div>
+      </section>
       <Contracts />
-      <Cta allProcedures={props.allProcedures} showPreferredClinics language={language}/>
-    </div>
+      <Cta
+        allProcedures={props.allProcedures}
+        showPreferredClinics
+        language={language}
+      />
+    </>
   );
 }
 

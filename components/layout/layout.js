@@ -24,15 +24,15 @@ const Layout = (props) => {
     <div className="flex flex-col h-screen justify-between all-container">
       <Navbar language={language} />
 
-      <main className=" app flex-grow ">{props.children}</main>
+      <main className=" app flex-grow bg-bgWhite">{props.children}</main>
       {/* lg:px-28 m-5 xl:px-48 */}
       <FloatingWhatsApp
         className="z-50 h-0"
         phoneNumber="905431678206"
-        accountName="Yusuf Mert Çakmak"
+        accountName="FindClinicsTurkey"
         statusMessage="Usually replies within minutes"
         notification={true}
-        avatar="/assa.png"
+        avatar="/logo/mini-bg.jpg"
         //notificationSound
         chatMessage={chatMessage} //this will change according to language
       />

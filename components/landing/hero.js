@@ -10,9 +10,10 @@ function Hero(props) {
       <section className="relative bg-white">
         <Image
           className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-20 sm:opacity-100"
-          src="/images/landing/hero2.jpg"
+          src="/images/landing/hero2-upscale.jpg"
           alt="Hero"
           layout="fill"
+          priority
         />
 
         <div className="hidden sm:block sm:inset-0 sm:absolute sm:bg-gradient-to-r sm:from-white sm:to-transparent"></div>

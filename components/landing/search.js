@@ -16,9 +16,9 @@ export default function Search(props) {
 
   if (!language || language === "English") {
     content = (
-      <section className="text-gray-600 body-font">
+      <div className="text-gray-600 body-font">
         <form onSubmit={searchHandler}>
-          <div className="container px-5 py-24 mx-auto">
+          <div className="container px-5 py-16 md:py-24 mx-auto">
             <div className="flex flex-col text-center w-full mb-12">
               <h1 className="md:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
                 Find the perfect clinic for you
@@ -79,12 +79,12 @@ export default function Search(props) {
             </div>
           </div>
         </form>
-      </section>
+      </div>
     );
   }
   if (language === "Arabic") {
     content = (
-      <section className="text-gray-600 body-font">
+      <div className="text-gray-600 body-font">
         <form onSubmit={searchHandler}>
           <div className="container px-5 py-24 mx-auto">
             <div className="flex flex-col text-center w-full mb-12">
@@ -147,7 +147,7 @@ export default function Search(props) {
             </div>
           </div>
         </form>
-      </section>
+      </div>
     );
   }
 

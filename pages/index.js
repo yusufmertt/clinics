@@ -9,7 +9,8 @@ import path from "path";
 import matter from "gray-matter";
 
 function Home(props) {
-  const { featuredClinics, popularProcedures, allProcedures, popularHT } = props;
+  const { featuredClinics, popularProcedures, allProcedures, popularHT } =
+    props;
 
   const sortedClinics = featuredClinics.sort((a, b) =>
     a.featured > b.featured ? -1 : +1
@@ -29,7 +30,7 @@ function Home(props) {
         <title>FindClinicsTurkey-Best clinics in Turkey</title>
         <meta
           name="description"
-          content="Find world-class doctors and experts qualified in hair transplant, aesthetics, dental and much more in Turkey."
+          content="Discover the highest quality healthcare options in Turkey with our personalized assistance and expert guidance."
         />
       </Head>
 

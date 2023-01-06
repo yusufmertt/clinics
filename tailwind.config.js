@@ -25,6 +25,8 @@ module.exports = {
 
         brightPrimary : "#36BA96",
         darkPrimary: "#36a386",
+
+        bgWhite : "#FFFFFF"
         
         /* 06CDEF koyu mavisi, 00DAF0 mavisi, 14DDAC yeşili */
       },

@@ -16,7 +16,7 @@ export default function AboutUsPage() {
         <h1 className="text-3xl font-bold uppercase text-center mb-10">
           About Us
         </h1>
-        <p>
+        {/* <p>
           We are a group of entrepreneurs including an engineer a medical
           student and couple of people with experience of 10+ years in the
           health tourism. We&apos;ve previously helped people finding clinics in
@@ -30,6 +30,15 @@ export default function AboutUsPage() {
           health toursim countries. Our mission is helping people finding
           perfect clinic for their treatment and make the process as smooth as
           possible.
+        </p> */}
+        <p>
+          Welcome to our agency specializing in health tourism, with a focus on
+          cosmetic surgeries in Turkey. Our team of experienced professionals is
+          dedicated to assisting you in finding the best clinics and healthcare
+          providers, and making the process as smooth and seamless as possible.
+          From appointment scheduling to transportation and accommodation
+          arrangements, we take care of all the details. Contact us with any
+          questions and let us help you achieve your cosmetic goals.
         </p>
       </section>
     </Fragment>

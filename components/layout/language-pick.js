@@ -16,7 +16,7 @@ const data = [
   { language: "عربي", label: "Arabic", image: "/images/icons/arabic.png" },
   { language: "עִברִית", label: "Hebrew", image: "/images/icons/israel.jpg" },
   { language: "Русский", label: "Russian", image: "/images/icons/russian.png" },
-  { language: "French", label: "Français", image: "/images/icons/french.png" },
+  { language: "Français", label: "French", image: "/images/icons/french.png" },
   { language: "Español", label: "Spanish", image: "/images/icons/spanish.png" },
   { language: "Italian", label: "Italian", image: "/images/icons/italian.png" },
 

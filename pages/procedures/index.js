@@ -50,7 +50,7 @@ const ProceduresPage = (props) => {
           <title>Procedures</title>
           <meta
             name="description"
-            content="Find world-class doctors and experts qualified in hair transplant, aethetics, dental and much more in Turkey."
+            content="Discover the highest quality healthcare options in Turkey with our personalized assistance and expert guidance."
           />
         </Head>
         <Procedures procedures={proceduresState} language={language}/>
