@@ -13,7 +13,7 @@ export default function Services(props) {
                 fill="currentColor"
                 stroke="currentColor"
                 strokeLinecap="round"
-                stroke-linejoin="round"
+                strokeLinejoin="round"
                 className="w-6 h-6"
                 viewBox="0 0 24 24"
               >
@@ -39,7 +39,7 @@ export default function Services(props) {
                 fill="currentColor"
                 stroke="currentColor"
                 strokeLinecap="round"
-                stroke-linejoin="round"
+                strokeLinejoin="round"
                 className="w-6 h-6"
                 viewBox="0 -32 576 576"
               >
@@ -64,7 +64,7 @@ export default function Services(props) {
                 fill="currentColor"
                 stroke="currentColor"
                 strokeLinecap="round"
-                stroke-linejoin="round"
+                strokeLinejoin="round"
                 className="w-6 h-6"
                 viewBox="0 0 24 24"
               >
