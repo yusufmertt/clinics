@@ -1,0 +1,46 @@
+[
+  {
+    "name": "btn1",
+    "English": "All Clinics",
+    "German": "Alle Kliniken",
+    "Arabic": "كل العيادات",
+    "Hebrew": "כל המרפאות",
+    "Russian": "Все клиники",
+    "French": "Cliniques",
+    "Spanish": "Clínicas",
+    "Italian": "Cliniche"
+  },
+  {
+    "name": "btn2",
+    "English": "Procedures",
+    "German": "Verfahren",
+    "Arabic": "عمليات",
+    "Hebrew": "תהליכים",
+    "Russian": "Процедуры",
+    "French": "Procédures",
+    "Spanish": "Procedimientos",
+    "Italian": "Procedure"
+  },
+  {
+    "name": "btn3",
+    "English": "Contact",
+    "German": "Kontakt",
+    "Arabic": "اتصل",
+    "Hebrew": "תקשר",
+    "Russian": "Контакт",
+    "French": "Contact",
+    "Spanish": "Contacto",
+    "Italian": "Contatto"
+  },
+  {
+    "name": "btn4",
+    "English": "About Us",
+    "German": "Über uns",
+    "Arabic": "عنا",
+    "Hebrew": "אודותנו",
+    "Russian": "О нас",
+    "French": "À propos de nous",
+    "Spanish": "Sobre nosotros",
+    "Italian": "Chi siamo"
+  }
+]

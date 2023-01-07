@@ -1,0 +1,53 @@
+[
+  {
+    "name": "btn1",
+    "English": "Find Clinics",
+    "German": "Kliniken finden",
+    "Arabic": "إيجاد العيادات",
+    "Hebrew": "מצא מרפאות",
+    "Russian": "Найти клиники",
+    "French": "Trouver des cliniques",
+    "Spanish": "Encuentra clínicas",
+    "Italian": "Trova cliniche"
+  },
+  {
+    "name": "btn2",
+    "English": "Learn more",
+    "German": "Mehr erfahren",
+    "Arabic": "تعلم المزيد",
+    "Hebrew": "למד עוד",
+    "Russian": "Узнать больше",
+    "French": "En savoir plus",
+    "Spanish": "Aprende más",
+    "Italian": "Scopri di più"
+  },
+  {
+    "name": "h1_1",
+    "English": "Turkey's most qualified doctors in ",
+    "German": "Die qualifiziertesten Ärzte in Türkei für ",
+    "Arabic": "أفضل الأطباء المؤهلين في تركيا للعمليات الجمالية",
+    "Hebrew": "הרופאים הכי מקצועיים בטורקיה בתחומי האסתטיקה",
+    "Russian": "Самые квалифицированные врачи в Турции в",
+    "French": "Les médecins les plus qualifiés de Turquie pour les ",
+    "Spanish": "Los médicos más cualificados de Turquía en ",
+    "Italian": "I medici più qualificati in Turchia per le "
+  },
+  {
+    "name": "h1_2",
+    "English": "aesthetic operations",
+    "German": "ästhetische Operationen",
+    "Russian": "эстетических операциях",
+    "French": "opérations esthétiques",
+    "Spanish": "operaciones estéticas",
+    "Italian": "operazioni estetiche"
+  },
+  {
+    "name": "p1_1"
+  },
+  {
+    "name": "p1_2"
+  },
+  {
+    "name": "p1_3"
+  }
+]

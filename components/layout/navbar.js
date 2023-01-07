@@ -3,10 +3,16 @@ import Link from "next/link";
 import { LanguagePicker } from "./language-pick";
 import Image from "next/image";
 import SvgComponent from "./logosvg";
+import Content from "./../../content-files/navbar.json";
 
 const Navbar = (props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { language } = props;
+
+  const btn1 = Content.filter((ele) => ele.name == "btn1");
+  const btn2 = Content.filter((ele) => ele.name == "btn2");
+  const btn3 = Content.filter((ele) => ele.name == "btn3");
+  const btn4 = Content.filter((ele) => ele.name == "btn4");
 
   return (
     <nav className="px-4 py-5 sm:max-w-xl md:max-w-full md:px-24 lg:px-8 bg-bgWhite">
@@ -20,8 +26,8 @@ const Navbar = (props) => {
           >
             {/* <Image src="/assa.png" width={40} height={40} /> */}
             <Image src="/logo/full.png" width={280} height={31} />
-{/*             <SvgComponent />
- */}
+            {/*             <SvgComponent />
+             */}
             {/* <svg
               className="w-8 text-deep-purple-accent-400"
               viewBox="0 0 24 24"
@@ -53,13 +59,14 @@ const Navbar = (props) => {
                 title="Our product"
                 className="font-medium tracking-wide text-white bg-brightPrimary px-4 py-2 rounded-xl transition-colors duration-200 hover:bg-darkPrimary"
               >
-                {(!language || language === "English") && "All Clinics"}
+                {/* {(!language || language === "English") && "All Clinics"}
                 {language === "German" && "Kliniken"}
                 {language === "Arabic" && "عيادات"}
                 {language === "Italian" && "Cliniche"}
                 {language === "Spanish" && "Clínicas"}
                 {language === "Hebrew" && "מרפאות"}
-                {language === "Russian" && "Клиники"}
+                {language === "Russian" && "Клиники"} */}
+                {btn1[0][language]}
               </a>
             </Link>
           </li>
@@ -72,13 +79,14 @@ const Navbar = (props) => {
                 title="About us"
                 className="font-medium tracking-wide text-gray-700 hover:text-brightPrimary transition duration-200"
               >
-                {(!language || language === "English") && "Procedures"}
+                {/*                 {(!language || language === "English") && "Procedures"}
                 {language === "German" && "Bloggen"}
                 {language === "Arabic" && "مقالات"}
                 {language === "Italian" && "Blog"}
                 {language === "Spanish" && "Blog"}
                 {language === "Hebrew" && "בלוג"}
-                {language === "Russian" && "блог"}
+                {language === "Russian" && "блог"} */}
+                {btn2[0][language]}
               </a>
             </Link>
           </li>
@@ -90,13 +98,14 @@ const Navbar = (props) => {
                 title="About us"
                 className="font-medium tracking-wide text-gray-700 hover:text-brightPrimary transition duration-200"
               >
-                {(!language || language === "English") && "Contact"}
+                {/*                 {(!language || language === "English") && "Contact"}
                 {language === "German" && "Kontakt"}
                 {language === "Arabic" && "اتصل"}
                 {language === "Italian" && "Contatto"}
                 {language === "Spanish" && "Contacto"}
                 {language === "Hebrew" && "איש קשר"}
-                {language === "Russian" && "Контакт"}
+                {language === "Russian" && "Контакт"} */}
+                {btn3[0][language]}
               </a>
             </Link>
           </li>
@@ -108,13 +117,14 @@ const Navbar = (props) => {
                 title="About us"
                 className="font-medium tracking-wide text-gray-700 hover:text-brightPrimary transition duration-200"
               >
-                {(!language || language === "English") && "About Us"}
+                {/*                 {(!language || language === "English") && "About Us"}
                 {language === "German" && "Kontakt"}
                 {language === "Arabic" && "اتصل"}
                 {language === "Italian" && "Contatto"}
                 {language === "Spanish" && "Contacto"}
                 {language === "Hebrew" && "איש קשר"}
-                {language === "Russian" && "Контакт"}
+                {language === "Russian" && "Контакт"} */}
+                {btn4[0][language]}
               </a>
             </Link>
           </li>
@@ -210,14 +220,15 @@ const Navbar = (props) => {
                           title="Our product"
                           className="font-medium tracking-wide text-gray-700 hover:text-brightPrimary transition duration-200"
                         >
-                          {(!language || language === "English") &&
+                          {/*                        {(!language || language === "English") &&
                             "All Clinics"}
                           {language === "German" && "Kliniken"}
                           {language === "Arabic" && "عيادات"}
                           {language === "Italian" && "Cliniche"}
                           {language === "Spanish" && "Clínicas"}
                           {language === "Hebrew" && "מרפאות"}
-                          {language === "Russian" && "Клиники"}
+                          {language === "Russian" && "Клиники"} */}{" "}
+                          {btn1[0][language]}
                         </a>
                       </Link>
                     </li>
@@ -231,14 +242,15 @@ const Navbar = (props) => {
                           title="About us"
                           className="font-medium tracking-wide text-gray-700 hover:text-brightPrimary transition duration-200"
                         >
-                          {(!language || language === "English") &&
+                          {/*                          {(!language || language === "English") &&
                             "Procedures"}
                           {language === "German" && "Bloggen"}
                           {language === "Arabic" && "مقالات"}
                           {language === "Italian" && "Blog"}
                           {language === "Spanish" && "Blog"}
                           {language === "Hebrew" && "בלוג"}
-                          {language === "Russian" && "блог"}
+                          {language === "Russian" && "блог"} */}{" "}
+                          {btn2[0][language]}
                         </a>
                       </Link>
                     </li>
@@ -247,17 +259,18 @@ const Navbar = (props) => {
                         <a
                           onClick={() => setIsMenuOpen(false)}
                           href="#"
-                          aria-label="About us"
-                          title="About us"
+                          aria-label="Contact"
+                          title="Contact Us"
                           className="font-medium tracking-wide text-gray-700 hover:text-brightPrimary transition duration-200"
                         >
-                          {(!language || language === "English") && "Contact"}
+                          {/*                {(!language || language === "English") && "Contact"}
                           {language === "German" && "Kontakt"}
                           {language === "Arabic" && "اتصل"}
                           {language === "Italian" && "Contatto"}
                           {language === "Spanish" && "Contacto"}
                           {language === "Hebrew" && "איש קשר"}
-                          {language === "Russian" && "Контакт"}
+                          {language === "Russian" && "Контакт"} */}{" "}
+                          {btn3[0][language]}
                         </a>
                       </Link>
                     </li>
@@ -270,13 +283,14 @@ const Navbar = (props) => {
                           title="About us"
                           className="font-medium tracking-wide text-gray-700 hover:text-brightPrimary transition duration-200"
                         >
-                          {(!language || language === "English") && "About Us"}
+                          {/*                        {(!language || language === "English") && "About Us"}
                           {language === "German" && "Kontakt"}
                           {language === "Arabic" && "اتصل"}
                           {language === "Italian" && "Contatto"}
                           {language === "Spanish" && "Contacto"}
                           {language === "Hebrew" && "איש קשר"}
-                          {language === "Russian" && "Контакт"}
+                          {language === "Russian" && "Контакт"} */}
+                          {btn4[0][language]}
                         </a>
                       </Link>
                     </li>
