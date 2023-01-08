@@ -43,7 +43,7 @@ function Landing(props) {
       <section className="sm:px-16 xl:px-36 xxl:px-48">
         <Search allProcedures={props.allProcedures} language={language} />
       </section>
-      <Services />
+      <Services language={language} />
 
       <section className="sm:px-16 xl:px-36 xxl:px-48">
         {popularProcedures && (

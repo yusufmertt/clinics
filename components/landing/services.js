@@ -1,11 +1,25 @@
+import Content from "./../../content-files/landing/services.json";
+
+const h2 = Content.filter((ele) => ele.name == "h2");
+const transport = Content.filter((ele) => ele.name == "transport");
+const accomodation = Content.filter((ele) => ele.name == "accomodation");
+const support = Content.filter((ele) => ele.name == "support");
+const transport_text = Content.filter((ele) => ele.name == "transport_text");
+const accomodation_text = Content.filter(
+  (ele) => ele.name == "accomodation_text"
+);
+const support_text = Content.filter((ele) => ele.name == "support_text");
+
 export default function Services(props) {
+  const language = props.language;
+
   return (
     <section classNameName="sm:px-16 xl:px-36 xxl:px-48 mb-5">
       <div className="container px-5 py-5 mx-auto">
-        <h1 className="sm:text-3xl text-2xl font-medium title-font text-center text-gray-900 mb-20">
-          Our Services
+        <h2 className="sm:text-3xl text-2xl font-medium title-font text-center text-gray-900 mb-20">
+          {h2[0][language]}
           <br className="hidden sm:block" />
-        </h1>
+        </h2>
         <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
           <div className="p-4 md:w-1/3 flex">
             <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-green-100 text-green-500 mb-4 flex-shrink-0">
@@ -22,13 +36,10 @@ export default function Services(props) {
             </div>
             <div className="flex-grow pl-6">
               <h2 className="text-gray-900 text-lg title-font font-medium mb-2">
-                Transportation
+                {transport[0][language]}
               </h2>
               <p className="leading-relaxed text-base">
-                Leave the driving to us. We offer reliable transportation
-                services to get you to and from the airport, and anywhere else
-                you need to go. Relax and focus on your surgery while we handle
-                the rest.
+                {transport_text[0][language]}
               </p>
             </div>
           </div>
@@ -47,13 +58,10 @@ export default function Services(props) {
             </div>
             <div className="flex-grow pl-6">
               <h2 className="text-gray-900 text-lg title-font font-medium mb-2">
-                Accommodation
+                {accomodation[0][language]}
               </h2>
               <p className="leading-relaxed text-base">
-                Need a comfortable place to stay while you&apos;re in town for your
-                surgery? We offer a range of accommodation options to suit your
-                needs and budget. From hotels to bed and breakfasts, we&apos;ve got
-                you covered.
+                {accomodation_text[0][language]}
               </p>
             </div>
           </div>
@@ -73,14 +81,10 @@ export default function Services(props) {
             </div>
             <div className="flex-grow pl-6">
               <h2 className="text-gray-900 text-lg title-font font-medium mb-2">
-                Medical Support
+                {support[0][language]}
               </h2>
               <p className="leading-relaxed text-base">
-                Let us handle the medical details so you can focus on your
-                recovery. Our team will coordinate with your surgeons and
-                provide post-operative support as needed. Contact us for help
-                with medication, wound care, or any other questions about your
-                recovery.
+                {support_text[0][language]}
               </p>
             </div>
           </div>

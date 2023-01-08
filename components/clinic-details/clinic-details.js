@@ -53,28 +53,28 @@ const ClinicDetails = (props) => {
   const images = [
     {
       original: `/images/clinics/${slug}/1.jpg`,
-      thumbnail: `/images/clinics/${slug}/1.jpg`,
-    },
+/*       thumbnail: `/images/clinics/${slug}/1.jpg`,
+ */    },
     {
       original: `/images/clinics/${slug}/2.jpg`,
-      thumbnail: `/images/clinics/${slug}/2.jpg`,
-    },
+/*       thumbnail: `/images/clinics/${slug}/2.jpg`,
+ */    },
     {
       original: `/images/clinics/${slug}/3.jpg`,
-      thumbnail: `/images/clinics/${slug}/3.jpg`,
-    },
+/*       thumbnail: `/images/clinics/${slug}/3.jpg`,
+ */    },
     {
       original: `/images/clinics/${slug}/4.jpg`,
-      thumbnail: `/images/clinics/${slug}/4.jpg`,
-    },
+/*       thumbnail: `/images/clinics/${slug}/4.jpg`,
+ */    },
     {
       original: `/images/clinics/${slug}/5.jpg`,
-      thumbnail: `/images/clinics/${slug}/5.jpg`,
-    },
+/*       thumbnail: `/images/clinics/${slug}/5.jpg`,
+ */    },
     {
       original: `/images/clinics/${slug}/6.jpg`,
-      thumbnail: `/images/clinics/${slug}/6.jpg`,
-    },
+/*       thumbnail: `/images/clinics/${slug}/6.jpg`,
+ */    },
   ];
 
   let allFeatures = []

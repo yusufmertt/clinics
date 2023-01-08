@@ -1,0 +1,79 @@
+[
+  {
+    "name": "h2",
+    "English": "Our Services",
+    "German": "Unsere Dienstleistungen",
+    "Arabic": "خدماتنا",
+    "Hebrew": "שירותינו",
+    "Russian": "Наши услуги",
+    "French": "Nos services",
+    "Spanish": "Nuestros servicios",
+    "Italian": "I nostri servizi"
+  },
+  {
+    "name": "transport",
+    "English": "Transportation",
+    "German": "Transport",
+    "Arabic": "نقل",
+    "Hebrew": "תחבורה",
+    "Russian": "Транспорт",
+    "French": "Transport",
+    "Spanish": "Transporte",
+    "Italian": "Trasporto"
+  },
+  {
+    "name": "accomodation",
+    "English": "Accommodation",
+    "German": "Unterkunft",
+    "Arabic": "إقامة",
+    "Hebrew": "נופש",
+    "Russian": "Проживание",
+    "French": "Hébergement",
+    "Spanish": "Alojamiento",
+    "Italian": "Alloggio"
+  },
+  {
+    "name": "support",
+    "English": "Medical Support",
+    "German": "Medizinische Unterstützung",
+    "Arabic": "دعم طبي",
+    "Hebrew": "תמיכה רפואית",
+    "Russian": "Медицинская поддержка",
+    "French": "Soutien médical",
+    "Spanish": "Apoyo médico",
+    "Italian": "Supporto medico"
+  },
+  {
+    "name": "transport_text",
+    "English": "Leave the driving to us. We offer reliable transportation services to get you to and from the airport, and anywhere else you need to go. Relax and focus on your surgery while we handle the rest.",
+    "German": "Überlassen Sie uns das Fahren. Wir bieten zuverlässige Transportdienste, um Sie zum und vom Flughafen und überall sonst hin zu bringen, wo Sie hin müssen. Entspannen Sie sich und konzentrieren Sie sich auf Ihre Operation, während wir uns um den Rest kümmern.",
+    "Arabic": "ترك القيادة لنا. نحن نقدم خدمات نقل موثوقة لنقلك من وإلى المطار ، وإلى أي مكان آخر تريد الذهاب إليه. استرخ وركز على الجراحة بينما نتعامل مع الباقي.",
+    "Hebrew": "תשאירו לנו את הנהיגה. אנו מציעים שירותי תחבורה אמינים שיביאו אותך אל ומשדה התעופה, ולכל מקום אחר שאתה צריך ללכת אליו. תירגע והתמקד בניתוח שלך בזמן שאנחנו מטפלים בכל השאר.",
+    "Russian": "Оставьте вождение нам. Мы предлагаем надежные транспортные услуги, чтобы доставить вас в аэропорт и из аэропорта, а также куда угодно. Расслабьтесь и сосредоточьтесь на своей операции, пока мы позаботимся обо всем остальном.",
+    "French": "Laissez-nous conduire. Nous offrons des services de transport fiables pour vous rendre à l'aéroport et partout où vous devez vous rendre. Détendez-vous et concentrez-vous sur votre chirurgie pendant que nous nous occupons du reste.",
+    "Spanish": "Déjenos la conducción a nosotros. Ofrecemos servicios de transporte confiables para llevarlo desde y hacia el aeropuerto, y a cualquier otro lugar al que necesite ir. Relájese y concéntrese en su cirugía mientras nosotros nos encargamos del resto.",
+    "Italian": "Lascia a noi la guida. Offriamo servizi di trasporto affidabili per portarti da e per l'aeroporto e ovunque tu debba andare. Rilassati e concentrati sulla tua operazione mentre noi ci occupiamo del resto."
+  },
+  {
+    "name": "accomodation_text",
+    "English": "Need a comfortable place to stay while you're in town for your surgery? We offer a range of accommodation options to suit your needs and budget. From hotels to bed and breakfasts, we've got you covered.",
+    "German": "Brauchen Sie eine komfortable Unterkunft, während Sie in der Stadt für Ihre Operation sind? Wir bieten eine Auswahl an Unterkunftsmöglichkeiten, die Ihren Bedürfnissen und Ihrem Budget entsprechen. Von Hotels bis hin zu Bed & Breakfasts haben wir alles, was Sie brauchen.",
+    "Arabic": "تحتاج إلى مكان نعيم للبقاء أثناء قضائك في المدينة للجراحة الخاصة بك؟ نحن نقدم عدة خيارات للإقامة لملائمة احتياجاتك وميزانيتك. من الفنادق إلى غرف العطلات والإفطار، نحن نضمن لك الراحة.",
+    "Hebrew": "צריך מקום נוח לשהות כשאתה בעיר לטיפול הרפואי שלך? אנחנו מציעים מגוון אפשרויות לשהייה כדי לענות על צרכיך והתקציב שלך. ממלונות עד מקומות לשהייה עם ארוחת בוקר, אנחנו כולנו מכסים אותך.",
+    "Russian": "Нужно удобное место, чтобы остаться, пока вы в городе для своей хирургии? Мы предлагаем ряд вариантов размещения, которые соответствуют вашим потребностям и бюджету. От отелей до гостевых домов, у нас есть все, что вам нужно.",
+    "French": "Vous avez besoin d'un endroit confortable pour séjourner pendant que vous êtes en ville pour votre chirurgie? Nous proposons une gamme d'options d'hébergement pour répondre à vos besoins et votre budget. Des hôtels aux chambres d'hôtes, nous avons tout ce qu'il vous faut.",
+    "Spanish": "¿Necesitas un lugar cómodo para quedarte mientras estás en la ciudad por tu cirugía? Ofrecemos una gama de opciones de alojamiento para satisfacer tus necesidades y tu presupuesto. Desde hoteles hasta bed and breakfast, tenemos todo lo que necesitas.",
+    "Italian": "Hai bisogno di un luogo confortevole dove soggiornare mentre sei in città per l'intervento chirurgico? Offriamo una gamma di opzioni di alloggio per soddisfare le tue esigenze e il tuo budget. Dai hotel a bed and breakfast, abbiamo tutto ciò di cui hai bisogno."
+  },
+  {
+    "name": "support_text",
+    "English": "Let us handle the medical details so you can focus on your recovery. Our team will coordinate with your surgeons and provide post-operative support as needed. Contact us for help with medication, wound care, or any other questions about your recovery.",
+    "German": "Lassen Sie uns die medizinischen Details regeln, damit Sie sich auf Ihre Genesung konzentrieren können. Unser Team wird mit Ihren Chirurgen koordinieren und nach der Operation, wenn nötig, Unterstützung leisten. Kontaktieren Sie uns für Hilfe bei der Medikation, der Wundversorgung oder jeglichen anderen Fragen zu Ihrer Genesung.",
+    "Arabic": "دعنا نتعامل مع التفاصيل الطبية حتى تتمكن من التركيز على استعادتك. سيتعاون فريقنا مع جراحيك ويوفر الدعم اللازم بعد العملية. اتصل بنا للحصول على المساعدة في الدواء، العناية بالجروح، أو أي أسئلة أخرى حول استعادتك.",
+    "Hebrew": "תתן לנו לטפל בפרטי הרפואיים כך שתוכל לתמוך בניתוח השתלת עצמך. צוות שלנו יתאזן עם הניתוחים שלך ויספק תמיכה אחרי הניתוח, כאשר ידרוש. צור אתנו קשר לעזרה עם התרופות, טיפול בפצעים או כל שאלה אחרת בנוגע לשתייתך.",
+    "Russian": "Позвольте нам разрешить медицинские детали, чтобы вы могли сосредоточиться на своем восстановлении. Наша команда согласуется с вашими хирургами и окажет необходимую послеоперационную поддержку. Свяжитесь с нами за помощью с лекарствами, уходом за ранами или любыми другими вопросами о вашем восстановлении.",
+    "French": "Laissez-nous gérer les détails médicaux afin que vous puissiez vous concentrer sur votre rétablissement. Notre équipe coordonnera avec vos chirurgiens et fournira le soutien post-opératoire nécessaire. Contactez-nous pour obtenir de l'aide avec les médicaments, les soins des plaies ou toute autre question concernant votre rétablissement.",
+    "Spanish": "Déjanos manejar los detalles médicos para que puedas centrarte en tu recuperación. Nuestro equipo se coordinará con tus cirujanos y proporcionará el apoyo postoperatorio necesario. Contáctanos para obtener ayuda con los medicamentos, el cuidado de las heridas o cualquier otra pregunta sobre tu recuperación.",
+    "Italian": "Lasciaci gestire i dettagli medici in modo da poterti concentrare sulla tua guarigione. Il nostro team coordinerà con i tuoi chirurghi e fornirà il supporto post-operatorio necessario. Contattaci per ottenere aiuto con i farmaci, la cura delle ferite o qualsiasi altra domanda riguardante la tua guarigione."
+  }
+]
