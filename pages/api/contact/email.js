@@ -21,16 +21,19 @@ async function handler(req, res) {
     preferredClinic,
   } = body;
 
-  if (email.trim() === "" && phone.trim() === "") {
+  if (!email && !phone && email.trim() === "" && phone.trim() === "") {
     return;
   }
 
-  const client = await connectToDatabase();
+  console.log(body)
+
+/*   const client = await connectToDatabase();
   const contactsCollection = client.db().collection("contacts");
 
   const dbResult = await contactsCollection.insertOne(body);
 
   client.close();
+ */
 
   let message;
   let subject;

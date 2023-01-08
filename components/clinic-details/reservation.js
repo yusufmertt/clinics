@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useRef, useState } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-import GoBack from './../ui/go-back';
+import GoBack from "./../ui/go-back";
 
 function Reservation(props) {
   //const parsedClinic = JSON.parse(props.clinic);
@@ -55,6 +55,7 @@ function Reservation(props) {
       //setClasses("border-red-500")
     } else {
       setIsLoading(true);
+      setEmailError(false);
 
       fetch("/api/reservation/reservation", {
         method: "POST",
@@ -163,7 +164,7 @@ function Reservation(props) {
         </div>
       </form> */}
       <form onSubmit={submitHandler}>
-       {/*  <Link href={`/clinics/${slug}`}>
+        {/*  <Link href={`/clinics/${slug}`}>
           <div className="flex p-3 text-brightPrimary hover:cursor-pointer hover:text-darkPrimary transition duration-200">
             <svg viewBox="0 0 50 50" fill="currentColor" className="h-7">
               <path
@@ -176,7 +177,7 @@ function Reservation(props) {
             Go back
           </div>
         </Link> */}
-          <GoBack allPage/>
+        <GoBack allPage />
 
         <div className="container px-5 pt-4 pb-16 sm:py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-12">

@@ -41,12 +41,13 @@ function ContactPage() {
       phone,
     };
 
-    if (email.trim() === "" && phone.trim() === "") {
+    if (!email && phone && email.trim() === "" && phone.trim() === "") {
       setEmailError(true);
       setSuccess(false);
       //setClasses("border-red-500")
     } else {
       setIsLoading(true);
+      setEmailError(false);
 
       fetch("/api/contact/email", {
         method: "POST",

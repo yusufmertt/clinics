@@ -6,13 +6,13 @@ mail.setApiKey(process.env.SENDGRID_API_KEY);
 
 async function handler(req, res) {
   const body = req.body;
-
+/* 
   const client = await connectToDatabase();
   const contactsCollection = client.db().collection("contacts");
 
   const result = await contactsCollection.insertOne(body);
 
-  client.close();
+  client.close(); */
 
   // add validation ()
 
