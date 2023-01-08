@@ -1,0 +1,79 @@
+[
+  {
+    "name": "p1",
+    "English": "Discover the highest quality healthcare options in Turkey with our personalized assistance and expert guidance.",
+    "German": "Entdecken Sie die hochwertigsten Gesundheitsversorgungsmöglichkeiten in der Türkei mit unserer personalisierten Unterstützung und fachkundiger Beratung.",
+    "Arabic": "اكتشف خيارات الرعاية الصحية الأعلى الجودة في تركيا مع مساعدتنا المخصصة والتوجيه الخبير.",
+    "Hebrew": "גלה את אפשרויות הרפואה הגבוהות ביותר באיכות בטורקיה עם סיוענו המותאם אישית והנחיות המומחים.",
+    "Russian": "Откройте для себя высший качество опций здравоохранения в Турции с нашей персонализированной помощью и экспертным руководством.",
+    "French": "Découvrez les meilleures options de soins de santé en Turquie avec notre assistance personnalisée et notre guidance experte.",
+    "Spanish": "Descubre las mejores opciones de atención médica en Turquía con nuestra asistencia personalizada y guía experta.",
+    "Italian": "Scopri le migliori opzioni per l'assistenza sanitaria in Turchia con il nostro supporto personalizzato e la guida esperta."
+  },
+  {
+    "name": "p2",
+    "English": "If you want to get help, contact us!",
+    "German": "Wenn Sie Hilfe benötigen, kontaktieren Sie uns!",
+    "Arabic": "إذا كنت تريد الحصول على مساعدة، اتصل بنا!",
+    "Hebrew": "אם אתה רוצה לקבל עזרה, צור אתנו קשר!",
+    "Russian": "Если вы хотите получить помощь, свяжитесь с нами!",
+    "French": "Si vous souhaitez obtenir de l'aide, contactez-nous!",
+    "Spanish": "¡Si quieres obtener ayuda, contáctanos!",
+    "Italian": "Se vuoi ricevere aiuto, contattaci!"
+  },
+  {
+    "name": "contacts",
+    "English": "Contacts",
+    "German": "Kontakte",
+    "Arabic": "اتصالات",
+    "Hebrew": "אנשי קשר",
+    "Russian": "Контакты",
+    "French": "Contacts",
+    "Spanish": "Contactos",
+    "Italian": "Contatti"
+  },
+  {
+    "name": "social",
+    "English": "Social",
+    "German": "Sozial",
+    "Arabic": "اجتماعي",
+    "Hebrew": "חברתי",
+    "Russian": "Социальный",
+    "French": "Social",
+    "Spanish": "Social",
+    "Italian": "Social"
+  },
+  {
+    "name": "email",
+    "English": "Email",
+    "German": "E-Mail",
+    "Arabic": "بريد إلكتروني",
+    "Hebrew": "דוא''ל",
+    "Russian": "Электронная почта",
+    "French": "Email",
+    "Spanish": "Correo electrónico",
+    "Italian": "Email"
+  },
+  {
+    "name": "phone",
+    "English": "Phone",
+    "German": "Telefon",
+    "Arabic": "هاتف",
+    "Hebrew": "טלפון",
+    "Russian": "Телефон",
+    "French": "Téléphone",
+    "Spanish": "Teléfono",
+    "Italian": "Telefono"
+  },
+  {
+    "name": "p3",
+    "English": "Contact us through social media!",
+    "German": "Kontaktieren Sie uns über soziale Medien!",
+    "Arabic": "اتصل بنا من خلال وسائل التواصل الاجتماعي!",
+    "Hebrew": "תנו עימנו קשר באמצעות התקשורת החברתית!",
+    "Russian": "Свяжитесь с нами через социальные сети!",
+    "French": "Contactez-nous via les réseaux sociaux!",
+    "Spanish": "¡Contáctanos a través de las redes sociales!",
+    "Italian": "Contattaci attraverso i social media!"
+  }
+]

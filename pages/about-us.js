@@ -1,11 +1,29 @@
 import { Fragment } from "react";
 import Head from "next/head";
+import Content from "./../content-files/about-us/about-us.json";
+import Context from "./../store/context";
+import { useState, useEffect, useContext } from "react";
+
+
+const h1 = Content.filter((ele) => ele.name == "h1");
+const text = Content.filter((ele) => ele.name == "text");
 
 export default function AboutUsPage() {
+  const appCtx = useContext(Context);
+  const [language, setLanguage] = useState("English");
+  useEffect(() => {
+    if (localStorage.getItem("language")) {
+      const localLanguage = localStorage.getItem("language");
+      const parsedLocalLanguage = JSON.parse(localLanguage);
+
+      setLanguage(parsedLocalLanguage.label);
+    }
+  }, [appCtx]);
+
   return (
     <Fragment>
       <Head>
-        <title>About Us</title>
+        <title> {h1[0][language]}</title>
         <meta
           name="description"
           content="Contact us to find clinics in Turkey."
@@ -14,7 +32,7 @@ export default function AboutUsPage() {
       </Head>
       <section className="py-10 px-16 text-center">
         <h1 className="text-3xl font-bold uppercase text-center mb-10">
-          About Us
+        {h1[0][language]}
         </h1>
         {/* <p>
           We are a group of entrepreneurs including an engineer a medical
@@ -31,15 +49,7 @@ export default function AboutUsPage() {
           perfect clinic for their treatment and make the process as smooth as
           possible.
         </p> */}
-        <p>
-          Welcome to our agency specializing in health tourism, with a focus on
-          cosmetic surgeries in Turkey. Our team of experienced professionals is
-          dedicated to assisting you in finding the best clinics and healthcare
-          providers, and making the process as smooth and seamless as possible.
-          From appointment scheduling to transportation and accommodation
-          arrangements, we take care of all the details. Contact us with any
-          questions and let us help you achieve your cosmetic goals.
-        </p>
+        <p>{text[0][language]}</p>
       </section>
     </Fragment>
   );

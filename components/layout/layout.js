@@ -36,7 +36,7 @@ const Layout = (props) => {
         //notificationSound
         chatMessage={chatMessage} //this will change according to language
       />
-      <Footer />
+      <Footer language={language} />
     </div>
   );
 };

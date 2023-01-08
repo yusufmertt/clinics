@@ -6,7 +6,6 @@ export default function Procedures(props) {
 
   let content;
 
-  if (!language || language === "English") {
     content = (
       <section className=" mt-3 px-6 sm:px-16">
         <h1 className="text-2xl uppercase font-bold tracking-wider mb-3 text-center">
@@ -73,6 +72,5 @@ export default function Procedures(props) {
         </div>
       </section>
     );
-  }
   return content;
 }
