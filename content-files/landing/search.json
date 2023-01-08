@@ -1,0 +1,46 @@
+[
+  {
+    "name": "h2",
+    "English": "Find the perfect clinic for you!",
+    "German": "Finden Sie die perfekte Klinik für Sie!",
+    "Arabic": "ابحث عن العيادة المثالية لك!",
+    "Hebrew": "מצא את המרפאה המושלמת עבורך!",
+    "Russian": "Найдите идеальную клинику для вас!",
+    "French": "Trouvez la clinique parfaite pour vous!",
+    "Spanish": "¡Encuentra la clínica perfecta para ti!",
+    "Italian": "Trova la clinica perfetta per te!"
+  },
+  {
+    "name": "p_1",
+    "English": "Look for top-quality treatment at reputable hospitals and clinics.",
+    "German": "Suchen Sie nach hochwertiger Behandlung in renommierten Krankenhäusern und Kliniken.",
+    "Arabic": "بحث عن علاج نوعية عالية في المستشفيات والعيادات المحترمة.",
+    "Hebrew": "חפש טיפול באיכות גבוהה במחסומים ובמרפאות מומחים.",
+    "Russian": "Ищите лечение высокого качества в надежных больницах и клиниках.",
+    "French": "Recherchez des soins de qualité supérieure dans des hôpitaux et cliniques réputés.",
+    "Spanish": "Busque tratamientos de alta calidad en hospitales y clínicas de renombre.",
+    "Italian": "Cerca trattamenti di alta qualità in ospedali e cliniche di alta reputazione."
+  },
+  {
+    "name": "p_2",
+    "English": "Take advantage of a 20% discount by making your appointment through us!",
+    "German": "Nutzen Sie einen 20% Rabatt, indem Sie Ihren Termin über uns vereinbaren!",
+    "Arabic": "استفاد من خصم 20% عن طريق تحديد موعدك معنا!",
+    "Hebrew": "תשתמש בהנחה של 20% על ידי עריכת התור שלך דרך נו!",
+    "Russian": "Воспользуйтесь скидкой 20% путем назначения встречи через нас!",
+    "French": "Profitez d'une réduction de 20% en prenant rendez-vous avec nous!",
+    "Spanish": "Aprovecha un descuento del 20% haciendo tu cita a través de nosotros!",
+    "Italian": "Approfitta di uno sconto del 20% prenotando attraverso di noi!"
+  },
+  {
+    "name": "btn",
+    "English": "Search Clinics",
+    "German": "Kliniken Suchen",
+    "Arabic": "بحث عن العيادات",
+    "Hebrew": "חפש מרפאות",
+    "Russian": "Поиск Клиник",
+    "French": "Rechercher Des Cliniques",
+    "Spanish": "Buscar Clínicas",
+    "Italian": "Cerca Cliniche"
+  }
+]

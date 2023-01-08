@@ -11,7 +11,6 @@ export default function Services(props) {
             <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-green-100 text-green-500 mb-4 flex-shrink-0">
               <svg
                 fill="currentColor"
-                stroke="currentColor"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 className="w-6 h-6"

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import Content from "./../../content-files/hero.json";
+import Content from "./../../content-files/landing/hero.json";
 
 function Hero(props) {
   const { language } = props;

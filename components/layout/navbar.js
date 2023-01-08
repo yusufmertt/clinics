@@ -3,7 +3,7 @@ import Link from "next/link";
 import { LanguagePicker } from "./language-pick";
 import Image from "next/image";
 import SvgComponent from "./logosvg";
-import Content from "./../../content-files/navbar.json";
+import Content from "./../../content-files/layout/navbar.json";
 
 const Navbar = (props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
