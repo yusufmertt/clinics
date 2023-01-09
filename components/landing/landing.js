@@ -12,6 +12,7 @@ import Images from "./images";
 import PopularProcedures from "./popular-procedures";
 import PopularHT from "./popular-ht";
 import Services from "./services";
+import Testimonials from "./testimonials";
 
 function Landing(props) {
   const appCtx = useContext(Context);
@@ -44,6 +45,7 @@ function Landing(props) {
         <Search allProcedures={props.allProcedures} language={language} />
       </section>
       <Services language={language} />
+      <Contracts language={language}/>
 
       <section className="sm:px-16 xl:px-36 xxl:px-48">
         {popularProcedures && (
@@ -54,6 +56,8 @@ function Landing(props) {
         )}
       </section>
 
+{/*       <Testimonials/>
+ */}
       <section className="sm:px-16 xl:px-36 xxl:px-48">
         {featuredClinics && (
           <FeaturedClinics
@@ -68,7 +72,6 @@ function Landing(props) {
           <PopularHT popularHT={popularHtClinics} language={language} />
         )}
       </section>
-      <Contracts />
       <Cta
         allProcedures={props.allProcedures}
         showPreferredClinics

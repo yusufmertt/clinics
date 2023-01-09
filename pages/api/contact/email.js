@@ -25,9 +25,9 @@ async function handler(req, res) {
     return;
   }
 
-  console.log(body)
+  console.log(body);
 
-/*   const client = await connectToDatabase();
+  /*   const client = await connectToDatabase();
   const contactsCollection = client.db().collection("contacts");
 
   const dbResult = await contactsCollection.insertOne(body);
@@ -43,7 +43,10 @@ async function handler(req, res) {
     subject = "New consultation request!";
   } else if (type === "contact") {
     message = `Name:${name}  \r\n Email:${email}\r\n Topic:${topic} \r\n Message:${note} \r\n Phone:${phone}\r\n `;
-    subject = "New contact!";
+    subject = "New contact request!";
+  } else if (type === "reservation") {
+    message = `Name:${name}  \r\n Email:${email}\r\n Clinic:${clinic} \r\n Message:${note} \r\n Phone:${phone}\r\n Treatment:${treatment}\r\n `;
+    subject = "New reservation request!";
   }
 
   /*  else {

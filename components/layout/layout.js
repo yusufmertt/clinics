@@ -1,10 +1,13 @@
 import Navbar from "./navbar";
 import Footer from "./footer";
+import Content from "./../../content-files/layout/whatsapp.json";
 
 import { useState, useContext, useEffect } from "react";
 import Context from "../../store/context";
 
 import FloatingWhatsApp from "react-floating-whatsapp";
+
+const text = Content.filter((ele) => ele.name == "text");
 
 const Layout = (props) => {
   const appCtx = useContext(Context);
@@ -18,7 +21,9 @@ const Layout = (props) => {
     }
   }, [appCtx]);
 
-  let chatMessage = `Hello there! 🤝 \nHow can I help you? `;
+  /*   let chatMessage = `Hello there! 🤝 \nHow can I help you? `;
+   */
+  const chatMessage = text[0][language];
 
   return (
     <div className="flex flex-col h-screen justify-between all-container">

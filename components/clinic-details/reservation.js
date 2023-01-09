@@ -24,7 +24,7 @@ function Reservation(props) {
 
   const timeStamp = new Date();
 
-  const [phone, setPhone] = useState();
+  const [phone, setPhone] = useState("");
 
   function phoneChangeHandler(event) {
     setPhone(event);
@@ -49,21 +49,21 @@ function Reservation(props) {
       clinic,
     };
 
-    if (email.trim() === "" && phone.trim() === "") {
+    if (email.trim() === "" && phone.length < 5) {
       setEmailError(true);
       setSuccess(false);
       //setClasses("border-red-500")
     } else {
       setIsLoading(true);
       setEmailError(false);
-
-      fetch("/api/reservation/reservation", {
+//"/api/reservation/reservation"
+      fetch("/api/contact/email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       }).then((response) => {
         if (response.ok) {
-          fetch("/api/reservation/reservation-feedback", {
+          fetch("/api/contact/feedback-email", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData),

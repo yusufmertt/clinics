@@ -2,10 +2,18 @@ import Link from "next/link";
 import { useRef, useState } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-import { event } from "./../../lib/gtag";
+import Content from "./../../content-files/landing/cta";
+
+const h2 = Content.filter((ele) => ele.name == "h2");
+const text = Content.filter((ele) => ele.name == "text");
 
 function Cta(props) {
-  const { allFeatures, allProcedures, showPreferredClinics = false } = props;
+  const {
+    language,
+    allFeatures,
+    allProcedures,
+    showPreferredClinics = false,
+  } = props;
 
   const nameRef = useRef();
   const emailRef = useRef();
@@ -20,7 +28,7 @@ function Cta(props) {
 
   const timeStamp = new Date();
 
-  const [phone, setPhone] = useState();
+  const [phone, setPhone] = useState("");
 
   function phoneChangeHandler(event) {
     setPhone(event);
@@ -33,7 +41,13 @@ function Cta(props) {
     //const phone = phoneRef.current.value;
     const treatment = treatmentRef.current.value;
     const note = noteRef.current.value;
-    const preferredClinic = preferredClinicRef.current.value;
+
+    let preferredClinic;
+    if (props.clinic) {
+      preferredClinic = props.clinic;
+    } else {
+      preferredClinic = preferredClinicRef.current.value;
+    }
 
     const clinic = props.clinic;
 
@@ -47,9 +61,10 @@ function Cta(props) {
       note,
       clinic,
       preferredClinic,
+      language
     };
 
-    if (email.trim() === "" && phone.trim() === "") {
+    if (email.trim() === "" && phone.length < 5) {
       setEmailError(true);
       setSuccess(false);
       //setClasses("border-red-500")
@@ -165,14 +180,17 @@ function Cta(props) {
       <form onSubmit={submitHandler}>
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-12">
-            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
-              Get free consultation!
-            </h1>
+            <h2 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
+              {/* Get free consultation! */}
+              {h2[0][language]}
+            </h2>
 
             <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-              We and our doctors will help you decide your clinic, treatment
+              {/* We and our doctors will help you decide your clinic, treatment
               options, making reservations, planning your visit, pricing and
-              much more!
+              much more! */}
+              {text[0][language]}
+
               {/*  You can contact us through
               <a
                 target="_blank"

@@ -18,7 +18,7 @@ function ContactPage() {
 
   const [classes, setClasses] = useState("");
 
-  const [phone, setPhone] = useState();
+  const [phone, setPhone] = useState("");
 
   function phoneChangeHandler(event) {
     setPhone(event);
@@ -41,7 +41,7 @@ function ContactPage() {
       phone,
     };
 
-    if (!email && phone && email.trim() === "" && phone.trim() === "") {
+    if (email.trim() === "" && phone.length < 5) {
       setEmailError(true);
       setSuccess(false);
       //setClasses("border-red-500")
