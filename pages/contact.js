@@ -1,9 +1,33 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect, useContext } from "react";
 import Head from "next/head";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import Context from "./../store/context";
+
+import Content from "./../content-files/contact/contact.json";
+
+const h2 = Content.filter((ele) => ele.name == "h2");
+const text = Content.filter((ele) => ele.name == "text");
+const name = Content.filter((ele) => ele.name == "name");
+const email = Content.filter((ele) => ele.name == "email");
+const phoneNum = Content.filter((ele) => ele.name == "phone");
+const message = Content.filter((ele) => ele.name == "message");
+const topic = Content.filter((ele) => ele.name == "topic");
+const send = Content.filter((ele) => ele.name == "send");
+const placeholder = Content.filter((ele) => ele.name == "placeholder");
 
 function ContactPage() {
+  const appCtx = useContext(Context);
+  const [language, setLanguage] = useState("English");
+  useEffect(() => {
+    if (localStorage.getItem("language")) {
+      const localLanguage = localStorage.getItem("language");
+      const parsedLocalLanguage = JSON.parse(localLanguage);
+
+      setLanguage(parsedLocalLanguage.label);
+    }
+  }, [appCtx]);
+
   const nameRef = useRef();
   const emailRef = useRef();
   const topicRef = useRef();
@@ -122,7 +146,7 @@ function ContactPage() {
                     htmlFor="name"
                     className="leading-7 text-sm text-gray-600"
                   >
-                    Name
+                    {name[0][language]}
                   </label>
                   <input
                     ref={nameRef}
@@ -139,7 +163,9 @@ function ContactPage() {
                     htmlFor="email"
                     className="leading-7 text-sm text-gray-600"
                   >
-                    Email{/* <span className="text-red-600"> *</span> */}
+                    {email[0][language]}
+
+                    {/* <span className="text-red-600"> *</span> */}
                   </label>
                   <input
                     ref={emailRef}
@@ -180,7 +206,7 @@ function ContactPage() {
                     htmlFor="phone"
                     className="leading-7 text-sm text-gray-600"
                   >
-                    Phone Number
+                    {phoneNum[0][language]}
                   </label>
                   <PhoneInput
                     enableSearch
@@ -196,7 +222,7 @@ function ContactPage() {
                   className="block tracking-wide text-gray-700 text-xs mb-2"
                   htmlFor="grid-state"
                 >
-                  Topic
+                  {topic[0][language]}
                 </label>
                 <div className="relative">
                   <select
@@ -231,14 +257,14 @@ function ContactPage() {
                     htmlFor="message"
                     className="leading-7 text-sm text-gray-600"
                   >
-                    Message
+                    {message[0][language]}
                   </label>
                   <textarea
                     ref={messageRef}
                     id="message"
                     name="message"
                     className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-brightPrimary focus:bg-white focus:ring-2 focus:ring-purple-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-                    placeholder="You can ask anything!"
+                    placeholder={placeholder[0][language]}
                   ></textarea>
                 </div>
               </div>
@@ -247,7 +273,7 @@ function ContactPage() {
                   type="submit"
                   className="flex mx-auto text-white bg-brightPrimary border-0 py-2 px-8 focus:outline-none hover:bg-darkPrimary rounded text-lg"
                 >
-                  Send
+                  {send[0][language]}
                 </button>
               </div>
               <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
@@ -266,7 +292,12 @@ function ContactPage() {
                 </p> */}
                 <br />
                 <span className="inline-flex my-5">
-                  {/*  <a className="text-gray-500">
+                  <a
+                    href="https://www.facebook.com/profile.php?id=100086847248686"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="ml-4 text-blue-600 hover:text-blue-700 duration-200 transition"
+                  >
                     <svg
                       fill="currentColor"
                       strokeLinecap="round"
@@ -278,7 +309,12 @@ function ContactPage() {
                       <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
                     </svg>
                   </a>
-                  <a className="ml-4 text-gray-500">
+                  <a
+                    href="https://twitter.com/findclinicstr"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="ml-4 text-blue-400 hover:text-blue-500 duration-200 transition"
+                  >
                     <svg
                       fill="currentColor"
                       strokeLinecap="round"
@@ -289,7 +325,7 @@ function ContactPage() {
                     >
                       <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
                     </svg>
-                  </a> */}
+                  </a>
                   <a
                     href="https://www.instagram.com/findclinicsturkey/"
                     target="_blank"

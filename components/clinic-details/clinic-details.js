@@ -4,13 +4,27 @@ import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
 import Cta from "../landing/cta";
-import { Fragment } from "react";
+import { useRef, useState, useEffect, useContext, Fragment } from "react";
 import { marked } from "marked";
 import { useRouter } from "next/router";
 import GoBack from "../ui/go-back";
 
+import Context from "./../../store/context";
+
 const ClinicDetails = (props) => {
   const router = useRouter();
+
+  const appCtx = useContext(Context);
+  const [language, setLanguage] = useState("English");
+  useEffect(() => {
+    if (localStorage.getItem("language")) {
+      const localLanguage = localStorage.getItem("language");
+      const parsedLocalLanguage = JSON.parse(localLanguage);
+
+      setLanguage(parsedLocalLanguage.label);
+    }
+  }, [appCtx]);
+
   /*   const [clinicObject] = props.clinic;
 
   const {
@@ -53,33 +67,41 @@ const ClinicDetails = (props) => {
   const images = [
     {
       original: `/images/clinics/${slug}/1.jpg`,
-/*       thumbnail: `/images/clinics/${slug}/1.jpg`,
- */    },
+      /*       thumbnail: `/images/clinics/${slug}/1.jpg`,
+       */
+    },
     {
       original: `/images/clinics/${slug}/2.jpg`,
-/*       thumbnail: `/images/clinics/${slug}/2.jpg`,
- */    },
+      /*       thumbnail: `/images/clinics/${slug}/2.jpg`,
+       */
+    },
     {
       original: `/images/clinics/${slug}/3.jpg`,
-/*       thumbnail: `/images/clinics/${slug}/3.jpg`,
- */    },
+      /*       thumbnail: `/images/clinics/${slug}/3.jpg`,
+       */
+    },
     {
       original: `/images/clinics/${slug}/4.jpg`,
-/*       thumbnail: `/images/clinics/${slug}/4.jpg`,
- */    },
+      /*       thumbnail: `/images/clinics/${slug}/4.jpg`,
+       */
+    },
     {
       original: `/images/clinics/${slug}/5.jpg`,
-/*       thumbnail: `/images/clinics/${slug}/5.jpg`,
- */    },
+      /*       thumbnail: `/images/clinics/${slug}/5.jpg`,
+       */
+    },
     {
       original: `/images/clinics/${slug}/6.jpg`,
-/*       thumbnail: `/images/clinics/${slug}/6.jpg`,
- */    },
+      /*       thumbnail: `/images/clinics/${slug}/6.jpg`,
+       */
+    },
   ];
 
-  let allFeatures = []
+  let allFeatures = [];
 
-  features.map((feature) => {allFeatures.push(feature)});
+  features.map((feature) => {
+    allFeatures.push(feature);
+  });
 
   return (
     <Fragment>
@@ -278,7 +300,11 @@ const ClinicDetails = (props) => {
         </div>
       </div>
       <div>
-        <Cta clinic={name} /* allProcedures={props.allProcedures} */ allFeatures={allFeatures}/>
+        <Cta
+        language={language}
+          clinic={name}
+          /* allProcedures={props.allProcedures} */ allFeatures={allFeatures}
+        />
       </div>
     </Fragment>
   );

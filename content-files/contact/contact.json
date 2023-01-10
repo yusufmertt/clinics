@@ -1,0 +1,86 @@
+[
+  {
+    "name": "h2"
+  },
+  {
+    "name": "text"
+  },
+  {
+    "name": "name",
+    "Arabic": "الاسم",
+    "Hebrew": "שם",
+    "Russian": "Имя",
+    "French": "Nom",
+    "Spanish": "Nombre",
+    "Italian": "Nome",
+    "English": "Name",
+    "German": "Name"
+  },
+  {
+    "name": "email",
+    "Arabic": "البريد الإلكتروني",
+    "Hebrew": "אימייל",
+    "Russian": "Эл. адрес",
+    "French": "Email",
+    "Spanish": "Email",
+    "Italian": "Email",
+    "English": "Email",
+    "German": "E-Mail"
+  },
+  {
+    "name": "phone",
+    "Arabic": "رقم الهاتف",
+    "Hebrew": "מספר טלפון",
+    "Russian": "Номер телефона",
+    "French": "Numéro de téléphone",
+    "Spanish": "Número de teléfono",
+    "Italian": "Numero di telefono",
+    "English": "Phone Number",
+    "German": "Telefonnummer"
+  },
+
+  {
+    "name": "topic",
+    "Arabic": "الموضوع",
+    "Hebrew": "נושא",
+    "Russian": "Тема",
+    "French": "Sujet",
+    "Spanish": "Tema",
+    "Italian": "Argomento",
+    "English": "Topic",
+    "German": "Thema"
+  },
+  {
+    "name": "message",
+    "Arabic": "الرسالة",
+    "Hebrew": "הודעה",
+    "Russian": "Сообщение",
+    "French": "Message",
+    "Spanish": "Mensaje",
+    "Italian": "Messaggio",
+    "English": "Message",
+    "German": "Nachricht"
+  },
+  {
+    "name": "send",
+    "Arabic": "إرسال",
+    "Hebrew": "שלח",
+    "Russian": "Отправить",
+    "French": "Envoyer",
+    "Spanish": "Enviar",
+    "Italian": "Inviare",
+    "English": "Send",
+    "German": "Senden"
+  },
+  {
+    "name": "placeholder",
+    "Arabic": "يمكنك السؤال عن كل شيء!",
+    "Hebrew": "אתה יכול לשאול כל דבר!",
+    "Russian": "Вы можете спросить о чем угодно!",
+    "French": "Vous pouvez poser n'importe quelle question!",
+    "Spanish": "¡Puedes preguntar cualquier cosa!",
+    "Italian": "Puoi chiedere qualsiasi cosa!",
+    "English": "You can ask anything!",
+    "German": "Du kannst alles fragen!"
+  }
+]

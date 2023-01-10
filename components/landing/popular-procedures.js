@@ -46,7 +46,7 @@ export default function PopularProcedures(props) {
               <p className="text-lg tracking-wider font-medium">
                 {procedure.averagePrice}
               </p>
-              <a className="inline-flex items-center mt-2 py-2 px-3 text-sm font-medium text-center text-white bg-brightPrimary rounded-lg hover:bg-darkPrimary focus:ring-4 focus:outline-none focus:ring-purple-300">
+              <p className="inline-flex items-center mt-2 py-2 px-3 text-sm font-medium text-center text-white bg-brightPrimary rounded-lg hover:bg-darkPrimary focus:ring-4 focus:outline-none focus:ring-purple-300">
                 View Clinics
                 <svg
                   aria-hidden="true"
@@ -61,7 +61,7 @@ export default function PopularProcedures(props) {
                     clipRule="evenodd"
                   ></path>
                 </svg>
-              </a>
+              </p>
             </div>
           </a>
         </Link>

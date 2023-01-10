@@ -14,7 +14,7 @@ export default function Services(props) {
   const language = props.language;
 
   return (
-    <section classNameName="sm:px-16 xl:px-36 xxl:px-48 mb-5">
+    <section className="sm:px-16 xl:px-36 xxl:px-48 mb-5">
       <div className="container px-5 py-5 mx-auto">
         <h2 className="sm:text-3xl text-2xl font-medium title-font text-center text-gray-900 mb-20">
           {h2[0][language]}

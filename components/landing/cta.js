@@ -6,6 +6,13 @@ import Content from "./../../content-files/landing/cta";
 
 const h2 = Content.filter((ele) => ele.name == "h2");
 const text = Content.filter((ele) => ele.name == "text");
+const name = Content.filter((ele) => ele.name == "name");
+const procedure = Content.filter((ele) => ele.name == "procedure");
+const email = Content.filter((ele) => ele.name == "email");
+const phoneNum = Content.filter((ele) => ele.name == "phone");
+const note = Content.filter((ele) => ele.name == "note");
+const clinic = Content.filter((ele) => ele.name == "clinic");
+const send = Content.filter((ele) => ele.name == "send");
 
 function Cta(props) {
   const {
@@ -61,7 +68,7 @@ function Cta(props) {
       note,
       clinic,
       preferredClinic,
-      language
+      language,
     };
 
     if (email.trim() === "" && phone.length < 5) {
@@ -245,7 +252,7 @@ function Cta(props) {
                     htmlFor="name"
                     className="leading-7 text-sm text-gray-600"
                   >
-                    Name
+                    {name[0][language]}
                   </label>
                   <input
                     ref={nameRef}
@@ -258,7 +265,7 @@ function Cta(props) {
               </div>{" "}
               <div className="p-2 w-full md:w-1/2">
                 <div className="relative">
-                  <label>Procedure</label>
+                  <label> {procedure[0][language]}</label>
                   <select
                     ref={treatmentRef}
                     className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
@@ -308,7 +315,7 @@ function Cta(props) {
                     htmlFor="email"
                     className="leading-7 text-sm text-gray-600"
                   >
-                    Email
+                    {email[0][language]}
                   </label>
                   <input
                     ref={emailRef}
@@ -345,7 +352,7 @@ function Cta(props) {
                     htmlFor="phone"
                     className="leading-7 text-sm text-gray-600"
                   >
-                    Phone Number
+                    {phoneNum[0][language]}
                   </label>
                   <PhoneInput
                     country={"de"}
@@ -363,7 +370,7 @@ function Cta(props) {
                       htmlFor="email"
                       className="leading-7 text-sm text-gray-600"
                     >
-                      Preferred Clinic (optional)
+                      {clinic[0][language]}
                     </label>
                     <input
                       ref={preferredClinicRef}
@@ -383,7 +390,7 @@ function Cta(props) {
                     htmlFor="note"
                     className="leading-7 text-sm text-gray-600"
                   >
-                    Your note
+                    {note[0][language]}
                   </label>
                   <textarea
                     ref={noteRef}
@@ -447,7 +454,7 @@ function Cta(props) {
                   type="submit"
                   className="flex mx-auto text-white bg-brightPrimary border-0 py-2 px-8 focus:outline-none hover:bg-darkPrimary rounded text-lg"
                 >
-                  Send
+                  {send[0][language]}
                 </button>
               </div>
             </div>
