@@ -2,11 +2,12 @@ import Head from "next/head";
 import Image from "next/image";
 import Landing from "./../components/landing/landing";
 import Script from "next/script";
-import { Fragment } from "react";
+import { Fragment, useState, useEffect } from "react";
 //import { getFeaturedClinics } from "../lib/clinics-util";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+
 
 function Home(props) {
   const { featuredClinics, popularProcedures, allProcedures, popularHT } =
@@ -24,6 +25,9 @@ function Home(props) {
   const popularHtSorted = popularHT.sort((a, b) =>
     a.featured > b.featured ? -1 : +1
   );
+
+
+
   return (
     <Fragment>
       <Head>
@@ -33,7 +37,7 @@ function Home(props) {
           content="Discover the highest quality healthcare options in Turkey with our personalized assistance and expert guidance."
         />
       </Head>
-
+     
       <main>
         <Landing
           featuredClinics={sortedClinics}

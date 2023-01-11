@@ -14,6 +14,7 @@ import PopularHT from "./popular-ht";
 import Services from "./services";
 import Testimonials from "./testimonials";
 
+
 function Landing(props) {
   const appCtx = useContext(Context);
   const [language, setLanguage] = useState("English");
@@ -40,13 +41,14 @@ function Landing(props) {
 
   return (
     <>
+    
+     
       <Hero language={language} />
       <section className="sm:px-16 xl:px-36 xxl:px-48">
         <Search allProcedures={props.allProcedures} language={language} />
       </section>
       <Services language={language} />
-      <Contracts language={language}/>
-
+      <Contracts language={language} />
       <section className="sm:px-16 xl:px-36 xxl:px-48">
         {popularProcedures && (
           <PopularProcedures
@@ -55,9 +57,8 @@ function Landing(props) {
           />
         )}
       </section>
-
-{/*       <Testimonials/>
- */}
+      {/*       <Testimonials/>
+       */}
       <section className="sm:px-16 xl:px-36 xxl:px-48">
         {featuredClinics && (
           <FeaturedClinics

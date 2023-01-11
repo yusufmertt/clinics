@@ -205,11 +205,11 @@ const ClinicDetails = (props) => {
                   width={12}
                   alt="phone"
                 />
-                <a href="tel:+905458676066" className="mx-2">
+                <a href={phone} className="mx-2">
                   {phone}
                 </a>
               </div>
-              <div>
+              {/* <div>
                 <Image
                   src="/images/icons/website.svg"
                   height={12}
@@ -225,7 +225,7 @@ const ClinicDetails = (props) => {
                     {website}
                   </a>
                 </Link>
-              </div>
+              </div> */}
             </div>
             <div>
               <Image

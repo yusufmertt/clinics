@@ -1,8 +1,9 @@
 import { Container, Title, Accordion, createStyles } from "@mantine/core";
 
-import Content from "../content-files/faq/questions.json";
+import Content from "../content-files/faq/faq.json";
 //import Answers from "../content-files/faq/answers.json";
 
+const env = process.env.NODE_ENV
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -34,6 +35,11 @@ const placeholder =
 
 export default function FaqSimple() {
   const { classes } = useStyles();
+
+  if(env !== "development"){
+    return <p>Coming soon!</p>
+  }
+
   return (
     <Container size="sm" className={classes.wrapper}>
       <Title align="center" className={classes.title}>
